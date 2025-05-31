@@ -183,7 +183,18 @@
             },
             "cache": true,
             "inputs": [
-              "production",
+              "{projectRoot}/package.json",
+              "{workspaceRoot}/tsconfig.base.json",
+              "{projectRoot}/tsconfig.json",
+              "{projectRoot}/tsconfig.app.json",
+              "{projectRoot}/tsconfig.spec.json",
+              "{projectRoot}/src/**/*.ts",
+              "{workspaceRoot}/packages/**/*.ts",
+              "!{projectRoot}/out-tsc",
+              "!{projectRoot}/dist",
+              "!{projectRoot}/jest.config.ts",
+              "!{projectRoot}/src/**/*.spec.ts",
+              "!{projectRoot}/src/**/*.test.ts",
               "^production",
               {
                 "externalDependencies": [
@@ -10407,6 +10418,11 @@
       {
         "source": "@org/auth-service",
         "target": "npm:cors",
+        "type": "static"
+      },
+      {
+        "source": "@org/auth-service",
+        "target": "npm:cookie-parser",
         "type": "static"
       }
     ],
@@ -23297,5 +23313,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1748700650997
+  "computedAt": 1748701378411
 }

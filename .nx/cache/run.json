@@ -1,20 +1,31 @@
 {
   "run": {
-    "command": "nx run @org/api-gateway:build:development",
-    "startTime": "2025-05-31T13:27:50.498Z",
-    "endTime": "2025-05-31T13:27:50.620Z",
+    "command": "nx run-many --target=serve --all",
+    "startTime": "2025-05-31T13:27:43.636Z",
+    "endTime": "2025-05-31T14:22:57.518Z",
     "inner": false
   },
   "tasks": [
     {
+      "taskId": "@org/auth-service:build:production",
+      "target": "build",
+      "projectName": "@org/auth-service",
+      "hash": "10223966457945245390",
+      "startTime": "2025-05-31T13:27:43.893Z",
+      "endTime": "2025-05-31T13:27:45.702Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    },
+    {
       "taskId": "@org/api-gateway:build",
       "target": "build",
       "projectName": "@org/api-gateway",
-      "hash": "13649573576430471213",
-      "startTime": "2025-05-31T13:27:50.583Z",
-      "endTime": "2025-05-31T13:27:50.617Z",
+      "hash": "2564981450979886083",
+      "startTime": "2025-05-31T13:27:43.893Z",
+      "endTime": "2025-05-31T13:27:46.072Z",
       "params": "",
-      "cacheStatus": "local-cache-hit",
+      "cacheStatus": "cache-miss",
       "status": 0
     }
   ]

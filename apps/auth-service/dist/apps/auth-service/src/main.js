@@ -23,9 +23,13 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var import_express = __toESM(require("express"));
 var import_cors = __toESM(require("cors"));
+var import_error_middleware = require("../../../packages/error-middleware");
+var import_cookie_parser = __toESM(require("cookie-parser"));
 const host = process.env.HOST ?? "localhost";
 const port = process.env.PORT ? Number(process.env.PORT) : 6001;
 const app = (0, import_express.default)();
+app.use(import_express.default.json());
+app.use((0, import_cookie_parser.default)());
 app.use((0, import_cors.default)(
   {
     origin: ["http://localhost:3000"],
@@ -36,8 +40,9 @@ app.use((0, import_cors.default)(
 app.get("/", (req, res) => {
   res.send({ "message": "Hello API" });
 });
+app.use(import_error_middleware.errorMiddleware);
 const server = app.listen(port, host, () => {
-  console.log(`[ ready ] http://${host}:${port}`);
+  console.log(`[ ready ] http://${host}:${port}/api`);
 });
 server.on("error", (err) => {
   console.error("Server error:", err);

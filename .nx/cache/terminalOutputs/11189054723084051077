@@ -1,0 +1,917 @@
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/f1b05352-ea79-4ba1-bb75-5de5c25c3212[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/f1b05352-ea79-4ba1-bb75-5de5c25c3212[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[4m[34mapps/auth-service/src/main.ts:9:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'cors'.
+
+[0m [90m  7 | [39m[0m
+[0m [90m  8 | [39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 10 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+[0m [90m 11 | [39m    allowedHeaders[33m:[39m [[32m'Content-Type'[39m[33m,[39m [32m'Authorization'[39m][33m,[39m[0m
+[0m [90m 12 | [39m    credentials[33m:[39m [36mtrue[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:9:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'cors'.
+
+[0m [90m  7 | [39m[0m
+[0m [90m  8 | [39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 10 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+[0m [90m 11 | [39m    allowedHeaders[33m:[39m [[32m'Content-Type'[39m[33m,[39m [32m'Authorization'[39m][33m,[39m[0m
+[0m [90m 12 | [39m    credentials[33m:[39m [36mtrue[39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[4m[34mapps/auth-service/src/main.ts:10:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'cors'.
+
+[0m [90m  8 | [39m[0m
+[0m [90m  9 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 10 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 11 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+[0m [90m 12 | [39m    allowedHeaders[33m:[39m [[32m'Content-Type'[39m[33m,[39m [32m'Authorization'[39m][33m,[39m[0m
+[0m [90m 13 | [39m    credentials[33m:[39m [36mtrue[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:10:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'cors'.
+
+[0m [90m  8 | [39m[0m
+[0m [90m  9 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 10 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 11 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+[0m [90m 12 | [39m    allowedHeaders[33m:[39m [[32m'Content-Type'[39m[33m,[39m [32m'Authorization'[39m][33m,[39m[0m
+[0m [90m 13 | [39m    credentials[33m:[39m [36mtrue[39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/a2c4f51e-d419-4f72-9441-5b25ddbd3791[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/a2c4f51e-d419-4f72-9441-5b25ddbd3791[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/392727be-9443-4845-86bc-25194f4962d2[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/392727be-9443-4845-86bc-25194f4962d2[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[4m[34mapps/auth-service/src/main.ts:21:7[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: 'server' is declared but its value is never read.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m    | [39m      [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}`[39m)[33m;[39m[0m
+[0m [90m 23 | [39m})[33m;[39m[0m
+[0m [90m 24 | [39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:21:7[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: 'server' is declared but its value is never read.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m    | [39m      [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}`[39m)[33m;[39m[0m
+[0m [90m 23 | [39m})[33m;[39m[0m
+[0m [90m 24 | [39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[4m[34mapps/auth-service/src/main.ts:21:7[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: 'server' is declared but its value is never read.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m    | [39m      [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}`[39m)[33m;[39m[0m
+[0m [90m 23 | [39m})[33m;[39m[0m
+[0m [90m 24 | [39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:26:1[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'serv'.
+
+[0m [90m 24 | [39m[0m
+[0m [90m 25 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 26 | [39mserv[0m
+[0m [90m    | [39m[31m[1m^[22m[39m[0m
+[0m [90m 27 | [39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:21:7[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: 'server' is declared but its value is never read.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m    | [39m      [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}`[39m)[33m;[39m[0m
+[0m [90m 23 | [39m})[33m;[39m[0m
+[0m [90m 24 | [39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:26:1[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'serv'.
+
+[0m [90m 24 | [39m[0m
+[0m [90m 25 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 26 | [39mserv[0m
+[0m [90m    | [39m[31m[1m^[22m[39m[0m
+[0m [90m 27 | [39m[0m
+
+Found 4 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/003b9972-8ebd-4413-8e29-a0fdb5901ea6[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/003b9972-8ebd-4413-8e29-a0fdb5901ea6[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/f2e649e8-9e14-4e12-8a8e-0f358cf2fbfe[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/f2e649e8-9e14-4e12-8a8e-0f358cf2fbfe[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/4a167fd6-a1da-4a1b-8928-48a088db795b[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/4a167fd6-a1da-4a1b-8928-48a088db795b[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[4m[34mapps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts:3:1[39m[24m - [31m[1merror[22m[39m [90mTS2593[39m: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+[0m [90m 1 | [39m[36mimport[39m axios from [32m'axios'[39m[33m;[39m[0m
+[0m [90m 2 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 3 | [39mdescribe([32m'GET /'[39m[33m,[39m () [33m=>[39m {[0m
+[0m [90m   | [39m[31m[1m^[22m[39m[0m
+[0m [90m 4 | [39m  it([32m'should return a message'[39m[33m,[39m async () [33m=>[39m {[0m
+[0m [90m 5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m 6 | [39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts:4:3[39m[24m - [31m[1merror[22m[39m [90mTS2593[39m: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+[0m [90m 2 | [39m[0m
+[0m [90m 3 | [39mdescribe([32m'GET /'[39m[33m,[39m () [33m=>[39m {[0m
+[0m[31m[1m>[22m[39m[90m 4 | [39m  it([32m'should return a message'[39m[33m,[39m async () [33m=>[39m {[0m
+[0m [90m   | [39m  [31m[1m^[22m[39m[0m
+[0m [90m 5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m 6 | [39m[0m
+[0m [90m 7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts:7:5[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'expect'.
+
+[0m [90m  5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m  6 | [39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m  8 | [39m    expect(res[33m.[39mdata)[33m.[39mtoEqual({ message[33m:[39m [32m'Hello API'[39m })[33m;[39m[0m
+[0m [90m  9 | [39m  })[33m;[39m[0m
+[0m [90m 10 | [39m})[0m
+
+[4m[34mapps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts:8:5[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'expect'.
+
+[0m [90m  6 | [39m[0m
+[0m [90m  7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m    expect(res[33m.[39mdata)[33m.[39mtoEqual({ message[33m:[39m [32m'Hello API'[39m })[33m;[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m  9 | [39m  })[33m;[39m[0m
+[0m [90m 10 | [39m})[0m
+[0m [90m 11 | [39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/support/global-setup.ts:4:5[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: '__TEARDOWN_MESSAGE__' is declared but its value is never read.
+
+[0m [90m 2 | [39m[0m
+[0m [90m 3 | [39m[90m/* eslint-disable */[39m[0m
+[0m[31m[1m>[22m[39m[90m 4 | [39m[36mvar[39m __TEARDOWN_MESSAGE__[33m:[39m string[33m;[39m[0m
+[0m [90m   | [39m    [31m[1m^[22m[39m[0m
+[0m [90m 5 | [39m[0m
+[0m [90m 6 | [39mmodule[33m.[39mexports [33m=[39m async [36mfunction[39m() {[0m
+[0m [90m 7 | [39m  [90m// Start services that that the app needs to run (e.g. database, docker-compose, etc.).[39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/support/global-setup.ts:15:14[39m[24m - [31m[1merror[22m[39m [90mTS7017[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+
+[0m [90m 13 | [39m[0m
+[0m [90m 14 | [39m  [90m// Hint: Use `globalThis` to pass variables to global teardown.[39m[0m
+[0m[31m[1m>[22m[39m[90m 15 | [39m  globalThis[33m.[39m__TEARDOWN_MESSAGE__ [33m=[39m [32m'\nTearing down...\n'[39m[33m;[39m[0m
+[0m [90m    | [39m             [31m[1m^[22m[39m[0m
+[0m [90m 16 | [39m}[33m;[39m[0m
+[0m [90m 17 | [39m[0m
+[0m [90m 18 | [39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/support/global-teardown.ts:9:26[39m[24m - [31m[1merror[22m[39m [90mTS7017[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+
+[0m [90m  7 | [39m  [36mconst[39m port [33m=[39m process[33m.[39menv[33m.[39m[33mPORT[39m [33m?[39m [33mNumber[39m(process[33m.[39menv[33m.[39m[33mPORT[39m) [33m:[39m [35m3000[39m[33m;[39m[0m
+[0m [90m  8 | [39m  await killPort(port)[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m  console[33m.[39mlog(globalThis[33m.[39m__TEARDOWN_MESSAGE__)[33m;[39m[0m
+[0m [90m    | [39m                         [31m[1m^[22m[39m[0m
+[0m [90m 10 | [39m}[33m;[39m[0m
+[0m [90m 11 | [39m[0m
+
+[4m[34mapps/auth-service-e2e/src/auth-service/auth-service.spec.ts:3:1[39m[24m - [31m[1merror[22m[39m [90mTS2593[39m: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+[0m [90m 1 | [39m[36mimport[39m axios from [32m'axios'[39m[33m;[39m[0m
+[0m [90m 2 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 3 | [39mdescribe([32m'GET /'[39m[33m,[39m () [33m=>[39m {[0m
+[0m [90m   | [39m[31m[1m^[22m[39m[0m
+[0m [90m 4 | [39m  it([32m'should return a message'[39m[33m,[39m async () [33m=>[39m {[0m
+[0m [90m 5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m 6 | [39m[0m
+
+[4m[34mapps/auth-service-e2e/src/auth-service/auth-service.spec.ts:4:3[39m[24m - [31m[1merror[22m[39m [90mTS2593[39m: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+[0m [90m 2 | [39m[0m
+[0m [90m 3 | [39mdescribe([32m'GET /'[39m[33m,[39m () [33m=>[39m {[0m
+[0m[31m[1m>[22m[39m[90m 4 | [39m  it([32m'should return a message'[39m[33m,[39m async () [33m=>[39m {[0m
+[0m [90m   | [39m  [31m[1m^[22m[39m[0m
+[0m [90m 5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m 6 | [39m[0m
+[0m [90m 7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+
+[4m[34mapps/auth-service-e2e/src/auth-service/auth-service.spec.ts:7:5[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'expect'.
+
+[0m [90m  5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m  6 | [39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m  8 | [39m    expect(res[33m.[39mdata)[33m.[39mtoEqual({ message[33m:[39m [32m'Hello API'[39m })[33m;[39m[0m
+[0m [90m  9 | [39m  })[33m;[39m[0m
+[0m [90m 10 | [39m})[0m
+
+[4m[34mapps/auth-service-e2e/src/auth-service/auth-service.spec.ts:8:5[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'expect'.
+
+[0m [90m  6 | [39m[0m
+[0m [90m  7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m    expect(res[33m.[39mdata)[33m.[39mtoEqual({ message[33m:[39m [32m'Hello API'[39m })[33m;[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m  9 | [39m  })[33m;[39m[0m
+[0m [90m 10 | [39m})[0m
+[0m [90m 11 | [39m[0m
+
+[4m[34mapps/auth-service-e2e/src/support/global-setup.ts:4:5[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: '__TEARDOWN_MESSAGE__' is declared but its value is never read.
+
+[0m [90m 2 | [39m[0m
+[0m [90m 3 | [39m[90m/* eslint-disable */[39m[0m
+[0m[31m[1m>[22m[39m[90m 4 | [39m[36mvar[39m __TEARDOWN_MESSAGE__[33m:[39m string[33m;[39m[0m
+[0m [90m   | [39m    [31m[1m^[22m[39m[0m
+[0m [90m 5 | [39m[0m
+[0m [90m 6 | [39mmodule[33m.[39mexports [33m=[39m async [36mfunction[39m() {[0m
+[0m [90m 7 | [39m  [90m// Start services that that the app needs to run (e.g. database, docker-compose, etc.).[39m[0m
+
+[4m[34mapps/auth-service-e2e/src/support/global-setup.ts:15:14[39m[24m - [31m[1merror[22m[39m [90mTS7017[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+
+[0m [90m 13 | [39m[0m
+[0m [90m 14 | [39m  [90m// Hint: Use `globalThis` to pass variables to global teardown.[39m[0m
+[0m[31m[1m>[22m[39m[90m 15 | [39m  globalThis[33m.[39m__TEARDOWN_MESSAGE__ [33m=[39m [32m'\nTearing down...\n'[39m[33m;[39m[0m
+[0m [90m    | [39m             [31m[1m^[22m[39m[0m
+[0m [90m 16 | [39m}[33m;[39m[0m
+[0m [90m 17 | [39m[0m
+[0m [90m 18 | [39m[0m
+
+[4m[34mapps/auth-service-e2e/src/support/global-teardown.ts:9:26[39m[24m - [31m[1merror[22m[39m [90mTS7017[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+
+[0m [90m  7 | [39m  [36mconst[39m port [33m=[39m process[33m.[39menv[33m.[39m[33mPORT[39m [33m?[39m [33mNumber[39m(process[33m.[39menv[33m.[39m[33mPORT[39m) [33m:[39m [35m3000[39m[33m;[39m[0m
+[0m [90m  8 | [39m  await killPort(port)[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m  console[33m.[39mlog(globalThis[33m.[39m__TEARDOWN_MESSAGE__)[33m;[39m[0m
+[0m [90m    | [39m                         [31m[1m^[22m[39m[0m
+[0m [90m 10 | [39m}[33m;[39m[0m
+[0m [90m 11 | [39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts:3:1[39m[24m - [31m[1merror[22m[39m [90mTS2593[39m: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+[0m [90m 1 | [39m[36mimport[39m axios from [32m'axios'[39m[33m;[39m[0m
+[0m [90m 2 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 3 | [39mdescribe([32m'GET /'[39m[33m,[39m () [33m=>[39m {[0m
+[0m [90m   | [39m[31m[1m^[22m[39m[0m
+[0m [90m 4 | [39m  it([32m'should return a message'[39m[33m,[39m async () [33m=>[39m {[0m
+[0m [90m 5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m 6 | [39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts:4:3[39m[24m - [31m[1merror[22m[39m [90mTS2593[39m: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+[0m [90m 2 | [39m[0m
+[0m [90m 3 | [39mdescribe([32m'GET /'[39m[33m,[39m () [33m=>[39m {[0m
+[0m[31m[1m>[22m[39m[90m 4 | [39m  it([32m'should return a message'[39m[33m,[39m async () [33m=>[39m {[0m
+[0m [90m   | [39m  [31m[1m^[22m[39m[0m
+[0m [90m 5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m 6 | [39m[0m
+[0m [90m 7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts:7:5[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'expect'.
+
+[0m [90m  5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m  6 | [39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m  8 | [39m    expect(res[33m.[39mdata)[33m.[39mtoEqual({ message[33m:[39m [32m'Hello API'[39m })[33m;[39m[0m
+[0m [90m  9 | [39m  })[33m;[39m[0m
+[0m [90m 10 | [39m})[0m
+
+[4m[34mapps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts:8:5[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'expect'.
+
+[0m [90m  6 | [39m[0m
+[0m [90m  7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m    expect(res[33m.[39mdata)[33m.[39mtoEqual({ message[33m:[39m [32m'Hello API'[39m })[33m;[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m  9 | [39m  })[33m;[39m[0m
+[0m [90m 10 | [39m})[0m
+[0m [90m 11 | [39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/support/global-setup.ts:4:5[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: '__TEARDOWN_MESSAGE__' is declared but its value is never read.
+
+[0m [90m 2 | [39m[0m
+[0m [90m 3 | [39m[90m/* eslint-disable */[39m[0m
+[0m[31m[1m>[22m[39m[90m 4 | [39m[36mvar[39m __TEARDOWN_MESSAGE__[33m:[39m string[33m;[39m[0m
+[0m [90m   | [39m    [31m[1m^[22m[39m[0m
+[0m [90m 5 | [39m[0m
+[0m [90m 6 | [39mmodule[33m.[39mexports [33m=[39m async [36mfunction[39m() {[0m
+[0m [90m 7 | [39m  [90m// Start services that that the app needs to run (e.g. database, docker-compose, etc.).[39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/support/global-setup.ts:15:14[39m[24m - [31m[1merror[22m[39m [90mTS7017[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+
+[0m [90m 13 | [39m[0m
+[0m [90m 14 | [39m  [90m// Hint: Use `globalThis` to pass variables to global teardown.[39m[0m
+[0m[31m[1m>[22m[39m[90m 15 | [39m  globalThis[33m.[39m__TEARDOWN_MESSAGE__ [33m=[39m [32m'\nTearing down...\n'[39m[33m;[39m[0m
+[0m [90m    | [39m             [31m[1m^[22m[39m[0m
+[0m [90m 16 | [39m}[33m;[39m[0m
+[0m [90m 17 | [39m[0m
+[0m [90m 18 | [39m[0m
+
+[4m[34mapps/api-gateway-e2e/src/support/global-teardown.ts:9:26[39m[24m - [31m[1merror[22m[39m [90mTS7017[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+
+[0m [90m  7 | [39m  [36mconst[39m port [33m=[39m process[33m.[39menv[33m.[39m[33mPORT[39m [33m?[39m [33mNumber[39m(process[33m.[39menv[33m.[39m[33mPORT[39m) [33m:[39m [35m3000[39m[33m;[39m[0m
+[0m [90m  8 | [39m  await killPort(port)[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m  console[33m.[39mlog(globalThis[33m.[39m__TEARDOWN_MESSAGE__)[33m;[39m[0m
+[0m [90m    | [39m                         [31m[1m^[22m[39m[0m
+[0m [90m 10 | [39m}[33m;[39m[0m
+[0m [90m 11 | [39m[0m
+
+[4m[34mapps/auth-service-e2e/src/auth-service/auth-service.spec.ts:3:1[39m[24m - [31m[1merror[22m[39m [90mTS2593[39m: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+[0m [90m 1 | [39m[36mimport[39m axios from [32m'axios'[39m[33m;[39m[0m
+[0m [90m 2 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 3 | [39mdescribe([32m'GET /'[39m[33m,[39m () [33m=>[39m {[0m
+[0m [90m   | [39m[31m[1m^[22m[39m[0m
+[0m [90m 4 | [39m  it([32m'should return a message'[39m[33m,[39m async () [33m=>[39m {[0m
+[0m [90m 5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m 6 | [39m[0m
+
+[4m[34mapps/auth-service-e2e/src/auth-service/auth-service.spec.ts:4:3[39m[24m - [31m[1merror[22m[39m [90mTS2593[39m: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig.
+
+[0m [90m 2 | [39m[0m
+[0m [90m 3 | [39mdescribe([32m'GET /'[39m[33m,[39m () [33m=>[39m {[0m
+[0m[31m[1m>[22m[39m[90m 4 | [39m  it([32m'should return a message'[39m[33m,[39m async () [33m=>[39m {[0m
+[0m [90m   | [39m  [31m[1m^[22m[39m[0m
+[0m [90m 5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m 6 | [39m[0m
+[0m [90m 7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+
+[4m[34mapps/auth-service-e2e/src/auth-service/auth-service.spec.ts:7:5[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'expect'.
+
+[0m [90m  5 | [39m    [36mconst[39m res [33m=[39m await axios[33m.[39mget([32m`/`[39m)[33m;[39m[0m
+[0m [90m  6 | [39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m  8 | [39m    expect(res[33m.[39mdata)[33m.[39mtoEqual({ message[33m:[39m [32m'Hello API'[39m })[33m;[39m[0m
+[0m [90m  9 | [39m  })[33m;[39m[0m
+[0m [90m 10 | [39m})[0m
+
+[4m[34mapps/auth-service-e2e/src/auth-service/auth-service.spec.ts:8:5[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'expect'.
+
+[0m [90m  6 | [39m[0m
+[0m [90m  7 | [39m    expect(res[33m.[39mstatus)[33m.[39mtoBe([35m200[39m)[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m    expect(res[33m.[39mdata)[33m.[39mtoEqual({ message[33m:[39m [32m'Hello API'[39m })[33m;[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m  9 | [39m  })[33m;[39m[0m
+[0m [90m 10 | [39m})[0m
+[0m [90m 11 | [39m[0m
+
+[4m[34mapps/auth-service-e2e/src/support/global-setup.ts:4:5[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: '__TEARDOWN_MESSAGE__' is declared but its value is never read.
+
+[0m [90m 2 | [39m[0m
+[0m [90m 3 | [39m[90m/* eslint-disable */[39m[0m
+[0m[31m[1m>[22m[39m[90m 4 | [39m[36mvar[39m __TEARDOWN_MESSAGE__[33m:[39m string[33m;[39m[0m
+[0m [90m   | [39m    [31m[1m^[22m[39m[0m
+[0m [90m 5 | [39m[0m
+[0m [90m 6 | [39mmodule[33m.[39mexports [33m=[39m async [36mfunction[39m() {[0m
+[0m [90m 7 | [39m  [90m// Start services that that the app needs to run (e.g. database, docker-compose, etc.).[39m[0m
+
+[4m[34mapps/auth-service-e2e/src/support/global-setup.ts:15:14[39m[24m - [31m[1merror[22m[39m [90mTS7017[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+
+[0m [90m 13 | [39m[0m
+[0m [90m 14 | [39m  [90m// Hint: Use `globalThis` to pass variables to global teardown.[39m[0m
+[0m[31m[1m>[22m[39m[90m 15 | [39m  globalThis[33m.[39m__TEARDOWN_MESSAGE__ [33m=[39m [32m'\nTearing down...\n'[39m[33m;[39m[0m
+[0m [90m    | [39m             [31m[1m^[22m[39m[0m
+[0m [90m 16 | [39m}[33m;[39m[0m
+[0m [90m 17 | [39m[0m
+[0m [90m 18 | [39m[0m
+
+[4m[34mapps/auth-service-e2e/src/support/global-teardown.ts:9:26[39m[24m - [31m[1merror[22m[39m [90mTS7017[39m: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+
+[0m [90m  7 | [39m  [36mconst[39m port [33m=[39m process[33m.[39menv[33m.[39m[33mPORT[39m [33m?[39m [33mNumber[39m(process[33m.[39menv[33m.[39m[33mPORT[39m) [33m:[39m [35m3000[39m[33m;[39m[0m
+[0m [90m  8 | [39m  await killPort(port)[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m  console[33m.[39mlog(globalThis[33m.[39m__TEARDOWN_MESSAGE__)[33m;[39m[0m
+[0m [90m    | [39m                         [31m[1m^[22m[39m[0m
+[0m [90m 10 | [39m}[33m;[39m[0m
+[0m [90m 11 | [39m[0m
+
+Found 28 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/34f62980-5340-49a6-852c-c25a11473b24[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/34f62980-5340-49a6-852c-c25a11473b24[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/dcaaf4ab-fe82-4100-9feb-7ab77eccecfa[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/dcaaf4ab-fe82-4100-9feb-7ab77eccecfa[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/7d948716-41f4-4b33-8a1e-6f53f3a1005e[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/7d948716-41f4-4b33-8a1e-6f53f3a1005e[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/cb49840e-e2c2-4dc7-9bfc-fffeac990a75[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/cb49840e-e2c2-4dc7-9bfc-fffeac990a75[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/52d431f6-c94e-4978-9342-d8439f569b6b[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/52d431f6-c94e-4978-9342-d8439f569b6b[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/e0d3f66f-c302-4199-8bea-da11cbc96177[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/e0d3f66f-c302-4199-8bea-da11cbc96177[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/6d594070-cc2e-446a-ae92-fed76571164c[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/6d594070-cc2e-446a-ae92-fed76571164c[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/b29b1acd-815e-4c1b-a603-04bb0c252731[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/b29b1acd-815e-4c1b-a603-04bb0c252731[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001/api
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/baaede82-73dc-4faf-a759-147d91ee8ac5[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/baaede82-73dc-4faf-a759-147d91ee8ac5[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001/api
+[4m[34mapps/auth-service/src/main.ts:21:5[39m[24m - [31m[1merror[22m[39m [90mTS2339[39m: Property 'us' does not exist on type 'Express'.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39mapp[33m.[39mus[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m[0m
+[0m [90m 23 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m 24 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}/api`[39m)[33m;[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:21:5[39m[24m - [31m[1merror[22m[39m [90mTS2339[39m: Property 'us' does not exist on type 'Express'.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39mapp[33m.[39mus[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m[0m
+[0m [90m 23 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m 24 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}/api`[39m)[33m;[39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/180ca4cb-6d0e-4441-9e48-31709c79df4d[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/180ca4cb-6d0e-4441-9e48-31709c79df4d[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[ ready ] http://localhost:6001/api
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/adcfd449-b69f-4d75-aca9-f540181229d1[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/adcfd449-b69f-4d75-aca9-f540181229d1[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m/Users/qss/practice/doc247/node_modules/express/lib/application.js:217[39m[22m
+[1m[31m    throw new TypeError('app.use() requires a middleware function')[39m[22m
+[1m[31m          ^[39m[22m
+[1m[31m[39m[22m
+[1m[31mTypeError: app.use() requires a middleware function[39m[22m
+[1m[31m    at Function.use (/Users/qss/practice/doc247/node_modules/express/lib/application.js:217:11)[39m[22m
+[1m[31m    at Object.<anonymous> (/Users/qss/practice/doc247/apps/auth-service/src/main.ts:21:5)[39m[22m
+[1m[31m    at Module._compile (node:internal/modules/cjs/loader:1730:14)[39m[22m
+[1m[31m    at Object..js (node:internal/modules/cjs/loader:1895:10)[39m[22m
+[1m[31m    at Module.load (node:internal/modules/cjs/loader:1465:32)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1282:12)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[4m[34mapps/auth-service/src/main.ts:21:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'mi'.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39mapp[33m.[39muse(mi)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m[0m
+[0m [90m 23 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m 24 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}/api`[39m)[33m;[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:21:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'mi'.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39mapp[33m.[39muse(mi)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m[0m
+[0m [90m 23 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m 24 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}/api`[39m)[33m;[39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[4m[34mapps/auth-service/src/main.ts:21:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'err'.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39mapp[33m.[39muse(err)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m[0m
+[0m [90m 23 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m 24 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}/api`[39m)[33m;[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:21:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'err'.
+
+[0m [90m 19 | [39m})[33m;[39m[0m
+[0m [90m 20 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 21 | [39mapp[33m.[39muse(err)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 22 | [39m[0m
+[0m [90m 23 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m 24 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}/api`[39m)[33m;[39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/8fed1da1-edf6-4140-b8cd-b4e87694718f[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/8fed1da1-edf6-4140-b8cd-b4e87694718f[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[4m[34mapps/auth-service/src/main.ts:3:1[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: 'errorMiddleware' is declared but its value is never read.
+
+[0m [90m 1 | [39m[36mimport[39m express from [32m'express'[39m[33m;[39m[0m
+[0m [90m 2 | [39m[36mimport[39m cors from [32m'cors'[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 3 | [39m[36mimport[39m { errorMiddleware } from [32m'../../../packages/error-middleware'[39m[33m;[39m[0m
+[0m [90m   | [39m[31m[1m^[22m[39m[0m
+[0m [90m 4 | [39m[0m
+[0m [90m 5 | [39m[36mconst[39m host [33m=[39m process[33m.[39menv[33m.[39m[33mHOST[39m [33m?[39m[33m?[39m [32m'localhost'[39m[33m;[39m[0m
+[0m [90m 6 | [39m[36mconst[39m port [33m=[39m process[33m.[39menv[33m.[39m[33mPORT[39m [33m?[39m [33mNumber[39m(process[33m.[39menv[33m.[39m[33mPORT[39m) [33m:[39m [35m6001[39m[33m;[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:22:9[39m[24m - [31m[1merror[22m[39m [90mTS2552[39m: Cannot find name 'errorMiddlewarem'. Did you mean 'errorMiddleware'?
+
+[0m [90m 20 | [39m})[33m;[39m[0m
+[0m [90m 21 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 22 | [39mapp[33m.[39muse(errorMiddlewarem)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 23 | [39m[0m
+[0m [90m 24 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m 25 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}/api`[39m)[33m;[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:3:1[39m[24m - [31m[1merror[22m[39m [90mTS6133[39m: 'errorMiddleware' is declared but its value is never read.
+
+[0m [90m 1 | [39m[36mimport[39m express from [32m'express'[39m[33m;[39m[0m
+[0m [90m 2 | [39m[36mimport[39m cors from [32m'cors'[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 3 | [39m[36mimport[39m { errorMiddleware } from [32m'../../../packages/error-middleware'[39m[33m;[39m[0m
+[0m [90m   | [39m[31m[1m^[22m[39m[0m
+[0m [90m 4 | [39m[0m
+[0m [90m 5 | [39m[36mconst[39m host [33m=[39m process[33m.[39menv[33m.[39m[33mHOST[39m [33m?[39m[33m?[39m [32m'localhost'[39m[33m;[39m[0m
+[0m [90m 6 | [39m[36mconst[39m port [33m=[39m process[33m.[39menv[33m.[39m[33mPORT[39m [33m?[39m [33mNumber[39m(process[33m.[39menv[33m.[39m[33mPORT[39m) [33m:[39m [35m6001[39m[33m;[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:22:9[39m[24m - [31m[1merror[22m[39m [90mTS2552[39m: Cannot find name 'errorMiddlewarem'. Did you mean 'errorMiddleware'?
+
+[0m [90m 20 | [39m})[33m;[39m[0m
+[0m [90m 21 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 22 | [39mapp[33m.[39muse(errorMiddlewarem)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 23 | [39m[0m
+[0m [90m 24 | [39m[36mconst[39m server [33m=[39m  app[33m.[39mlisten(port[33m,[39m host[33m,[39m () [33m=>[39m {[0m
+[0m [90m 25 | [39m    console[33m.[39mlog([32m`[ ready ] http://${host}:${port}/api`[39m)[33m;[39m[0m
+
+Found 4 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/201cda70-2434-4316-9087-aba33f74c8c9[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/201cda70-2434-4316-9087-aba33f74c8c9[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/ccdc0545-0b6a-4bc1-92b3-442af6d989e5[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/ccdc0545-0b6a-4bc1-92b3-442af6d989e5[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/9b267d50-3e03-4246-ad82-d0c9f0120047[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/9b267d50-3e03-4246-ad82-d0c9f0120047[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[4m[34mapps/auth-service/src/main.ts:10:5[39m[24m - [31m[1merror[22m[39m [90mTS2339[39m: Property 'us' does not exist on type 'Express'.
+
+[0m [90m  8 | [39m[36mconst[39m app [33m=[39m express()[33m;[39m[0m
+[0m [90m  9 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 10 | [39mapp[33m.[39mus[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m 11 | [39m[0m
+[0m [90m 12 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m 13 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:10:5[39m[24m - [31m[1merror[22m[39m [90mTS2339[39m: Property 'us' does not exist on type 'Express'.
+
+[0m [90m  8 | [39m[36mconst[39m app [33m=[39m express()[33m;[39m[0m
+[0m [90m  9 | [39m[0m
+[0m[31m[1m>[22m[39m[90m 10 | [39mapp[33m.[39mus[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m[0m
+[0m [90m 11 | [39m[0m
+[0m [90m 12 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m 13 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/4030fe08-917b-43bb-873a-1728f83f88c8[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/4030fe08-917b-43bb-873a-1728f83f88c8[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/8671aa3d-fbc2-4469-9dbf-d46927cf945f[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/8671aa3d-fbc2-4469-9dbf-d46927cf945f[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/6c8e790e-9cd5-4da5-9801-bb78929c70d1[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/6c8e790e-9cd5-4da5-9801-bb78929c70d1[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/c2e25835-6678-4b97-ac21-5c31065d45dd[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/c2e25835-6678-4b97-ac21-5c31065d45dd[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[4m[34mapps/auth-service/src/main.ts:11:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'cooki'.
+
+[0m [90m  9 | [39m[0m
+[0m [90m 10 | [39mapp[33m.[39muse(express[33m.[39mjson({ limit[33m:[39m [32m'10mb'[39m }))[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 11 | [39mapp[33m.[39muse(cooki)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 12 | [39m[0m
+[0m [90m 13 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m 14 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:11:9[39m[24m - [31m[1merror[22m[39m [90mTS2304[39m: Cannot find name 'cooki'.
+
+[0m [90m  9 | [39m[0m
+[0m [90m 10 | [39mapp[33m.[39muse(express[33m.[39mjson({ limit[33m:[39m [32m'10mb'[39m }))[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 11 | [39mapp[33m.[39muse(cooki)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 12 | [39m[0m
+[0m [90m 13 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m 14 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[4m[34mapps/auth-service/src/main.ts:12:9[39m[24m - [31m[1merror[22m[39m [90mTS2769[39m: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'typeof cookieParser' is not assignable to parameter of type 'PathParams'.
+
+[0m [90m 10 | [39m[0m
+[0m [90m 11 | [39mapp[33m.[39muse(express[33m.[39mjson({ limit[33m:[39m [32m'10mb'[39m }))[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 12 | [39mapp[33m.[39muse(cookieParser)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 13 | [39m[0m
+[0m [90m 14 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m 15 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+
+[4m[34mapps/auth-service/src/main.ts:12:9[39m[24m - [31m[1merror[22m[39m [90mTS2769[39m: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'typeof cookieParser' is not assignable to parameter of type 'PathParams'.
+
+[0m [90m 10 | [39m[0m
+[0m [90m 11 | [39mapp[33m.[39muse(express[33m.[39mjson({ limit[33m:[39m [32m'10mb'[39m }))[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m 12 | [39mapp[33m.[39muse(cookieParser)[0m
+[0m [90m    | [39m        [31m[1m^[22m[39m[0m
+[0m [90m 13 | [39m[0m
+[0m [90m 14 | [39mapp[33m.[39muse(cors({[0m
+[0m [90m 15 | [39m    origin[33m:[39m [[32m'http://localhost:3000'[39m][33m,[39m[0m
+
+Found 2 errors.
+[ [31mwatch[39m ] build finished with errors (see above), watching for changes...
+[1m[31mBuild failed, waiting for changes to restart...[39m[22m
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/899410b7-8785-4cb4-b128-ba0945365953[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/899410b7-8785-4cb4-b128-ba0945365953[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+[ [32mwatch[39m ] build succeeded, watching for changes...
+[1m[31mDebugger listening on ws://localhost:9229/11608400-e80a-42d8-943d-a49f7bf3054d[39m[22m
+[1m[31mDebugger listening on ws://localhost:9229/11608400-e80a-42d8-943d-a49f7bf3054d[39m[22m
+[1m[31mFor help, see: https://nodejs.org/en/docs/inspector[39m[22m
+[1m[31m[39m[22m
+[1m[31mError: Cannot find module '../../../packages/error-middleware'[39m[22m
+[1m[31mRequire stack:[39m[22m
+[1m[31m- /Users/qss/practice/doc247/apps/auth-service/dist/apps/auth-service/src/main.js[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1401:15)[39m[22m
+[1m[31m    at Function.Module._resolveFilename (/Users/qss/practice/doc247/tmp/@org/auth-service/main-with-require-overrides.js:41:36)[39m[22m
+[1m[31m    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)[39m[22m
+[1m[31m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)[39m[22m
+[1m[31m    at Function.<anonymous> (node:internal/modules/cjs/loader:1211:37)[39m[22m
+[1m[31m    at Function.Module._load (/Users/qss/practice/doc247/node_modules/@nx/js/src/executors/node/node-with-require-overrides.js:18:31)[39m[22m
+[1m[31m    at TracingChannel.traceSync (node:diagnostics_channel:322:14)[39m[22m
+[1m[31m    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)[39m[22m
+[1m[31m    at Module.require (node:internal/modules/cjs/loader:1487:12)[39m[22m
+[1m[31m    at require (node:internal/modules/helpers:135:16)[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mProcess exited with code 1, waiting for changes to restart...[22m
+
+
+[2m../dist/src/assets[22m
+[1m[31mWatch error: Daemon closed the connection[39m[22m

@@ -1,0 +1,105 @@
+[?25l
+[2m> [22m[2mnx run[22m @org/api-gateway:build
+
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+[?25lchunk (runtime: main) [1m[32mmain.js[39m[22m (main) 2.12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ba10ef2f2ddc8446)
+[0K
+[2m[32m—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m[0K
+[0K
+[0m[7m[1m[32m NX [39m[22m[27m[0m  [32mSuccessfully ran target [1mbuild[22m for project @org/api-gateway[39m[2m (2s)[22m[0K
+[0K
+[0J[?25h[?25h[?25h[1m[31mStarting inspector on localhost:9229 failed: address already in use[39m[22m
+[1m[31m[39m[22m
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+Listening at http://localhost:8080/api
+[?25l
+[2m> [22m[2mnx run[22m @org/api-gateway:build
+
+
+[2m> [22m[2mnx run[22m @org/api-gateway:build  [2m[existing outputs match the cache, left as is][22m
+
+> webpack-cli build --node-env=production
+
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 2.12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ba10ef2f2ddc8446)
+[0K
+[2m[32m—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m[0K
+[0K
+[0m[7m[1m[32m NX [39m[22m[27m[0m  [32mSuccessfully ran target [1mbuild[22m for project @org/api-gateway[39m[2m (214ms)[22m[0K
+[2m[22m
+[2mNx read the output from the cache instead of running the command for 1 out of 1 tasks.[22m[0K
+[0K
+[0J[?25h[?25h[?25h
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+[?25lchunk (runtime: main) [1m[32mmain.js[39m[22m (main) 2.12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ba10ef2f2ddc8446)
+[0K
+[2m[32m—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m[0K
+[0K
+[0m[7m[1m[32m NX [39m[22m[27m[0m  [32mSuccessfully ran target [1mbuild[22m for project @org/api-gateway[39m[2m (1s)[22m[0K
+[0K
+[0J[?25h[?25h[?25h[1m[31mStarting inspector on localhost:9229 failed: address already in use[39m[22m
+[1m[31m[39m[22m
+
+[2m> [22m[2mnx run[22m @org/api-gateway:build  [2m[existing outputs match the cache, left as is][22m
+
+> webpack-cli build --node-env=production
+
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 2.12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ba10ef2f2ddc8446)
+[0K
+[2m[32m—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m[0K
+[0K
+[0m[7m[1m[32m NX [39m[22m[27m[0m  [32mSuccessfully ran target [1mbuild[22m for project @org/api-gateway[39m[2m (229ms)[22m[0K
+[2m[22m
+[2mNx read the output from the cache instead of running the command for 1 out of 1 tasks.[22m[0K
+[0K
+[0J[?25hListening at http://localhost:8080/api
+
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+[?25h[?25h[?25l
+[2m> [22m[2mnx run[22m @org/api-gateway:build  [2m[local cache][22m
+
+> webpack-cli build --node-env=production
+
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 2.12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ba10ef2f2ddc8446)
+[0K
+[2m[32m—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m[0K
+[0K
+[0m[7m[1m[32m NX [39m[22m[27m[0m  [32mSuccessfully ran target [1mbuild[22m for project @org/api-gateway[39m[2m (199ms)[22m[0K
+[2m[22m
+[2mNx read the output from the cache instead of running the command for 1 out of 1 tasks.[22m[0K
+[0K
+[0J[?25h[?25h[?25h
+[7m[1m[36m NX [39m[22m[27m [1mFile change detected. Restarting...[22m
+
+[1m[31mStarting inspector on localhost:9229 failed: address already in use[39m[22m
+[1m[31m[39m[22m
+Listening at http://localhost:8080/api
+[?25l
+[2m> [22m[2mnx run[22m @org/api-gateway:build  [2m[existing outputs match the cache, left as is][22m
+
+> webpack-cli build --node-env=production
+
+chunk (runtime: main) [1m[32mmain.js[39m[22m (main) 2.12 KiB [1m[33m[entry][39m[22m [1m[32m[rendered][39m[22m
+webpack compiled [1m[32msuccessfully[39m[22m (ba10ef2f2ddc8446)
+[0K
+[2m[32m—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————[39m[22m[0K
+[0K
+[0m[7m[1m[32m NX [39m[22m[27m[0m  [32mSuccessfully ran target [1mbuild[22m for project @org/api-gateway[39m[2m (250ms)[22m[0K
+[2m[22m
+[2mNx read the output from the cache instead of running the command for 1 out of 1 tasks.[22m[0K
+[0K
+[0J[?25h[?25h[?25h[1m[31mStarting inspector on localhost:9229 failed: address already in use[39m[22m
+[1m[31m[39m[22m
+Listening at http://localhost:8080/api
+[0mGET / [32m200[0m 53.410 ms - 23[0m
+[1m[31mWatch error: Daemon closed the connection[39m[22m
