@@ -1,0 +1,3 @@
+> nx run @org/auth-service:build:production
+
+

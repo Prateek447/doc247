@@ -1,0 +1,1610 @@
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:45.988Z - Started listening on: /var/folders/44/bzzv5g5x13b9mj1dgyzq2vhc0000gn/T/5d59c24095594aee2f4f/d.sock
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:45.991Z - [WATCHER]: Subscribed to changes within: /Users/qss/practice/doc247 (native)
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:45.992Z - Established a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:45.992Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:45.993Z - Closed a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:45.994Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.051Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.122Z - Time taken for 'Load Nx Plugin: /Users/qss/practice/doc247/node_modules/nx/src/plugins/package-json' 126.14441700000002ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.130Z - Time taken for 'Load Nx Plugin: /Users/qss/practice/doc247/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 133.85583400000002ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.140Z - Time taken for 'loadDefaultNxPlugins' 144.45220899999998ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.168Z - Time taken for 'Load Nx Plugin: @nx/jest/plugin' 172.59991699999998ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.172Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.172Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.172Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.177Z - Time taken for 'loadSpecifiedNxPlugins' 177.392875ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.180Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.180Z - Closed a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.180Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.181Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.181Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:46.181Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+(node:82939) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.031Z - Time taken for 'build-project-configs' 846.267ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.032Z - Time taken for '@nx/js/typescript:createDependencies' 2.5970839999999953ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.058Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.058Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.058Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.058Z - Time taken for 'total for creating and serializing project graph' 1064.52925ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.060Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.060Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1064. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.091Z - Closed a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.158Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.275Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.275Z - Established a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.276Z - Closed a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.276Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.276Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.276Z - Time taken for 'total for creating and serializing project graph' 0.12791700000002493ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.277Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.277Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.280Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:13:47.280Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 121.26254199999994ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:01.100Z - Established a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:01.101Z - Established a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:01.101Z - Closed a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:01.106Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:01.106Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:01.106Z - Time taken for 'total for creating and serializing project graph' 0.4269999999960419ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:01.108Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:01.108Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.032Z - Established a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.033Z - Established a connection. Number of open connections: 5
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.033Z - Closed a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.035Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.035Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.035Z - Time taken for 'total for creating and serializing project graph' 0.3710830000054557ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.037Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.037Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.051Z - [REQUEST]: Responding to the client. handleMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.051Z - Done responding to the client handleMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.051Z - Handled MULTI_GLOB. Handling time: 10. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.140Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:15:33.141Z - [WATCHER]: 14 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+/Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/resolve-plugin.js:119
+    throw new Error('Unable to resolve local plugin with import path ' + importPath);
+          ^
+
+Error: Unable to resolve local plugin with import path @nx/webpack/plugin
+    at findNxProjectForImportPath (/Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/resolve-plugin.js:119:11)
+    at lookupLocalPlugin (/Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/resolve-plugin.js:79:27)
+    at resolveLocalNxPlugin (/Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/resolve-plugin.js:42:12)
+    at getPluginPathAndName (/Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/resolve-plugin.js:56:28)
+    at resolveNxPlugin (/Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/resolve-plugin.js:25:62)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async loadRemoteNxPlugin (/Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/isolation/plugin-pool.js:34:62)
+    at async /Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/get-plugins.js:119:52
+    at async Promise.all (index 2)
+    at async loadSpecifiedNxPlugins (/Users/qss/practice/doc247/node_modules/nx/src/project-graph/plugins/get-plugins.js:116:9)
+
+Node.js v22.15.0
+The plugin worker is exiting as it was not connected to within 5 seconds.
+The plugin worker is exiting as it was not connected to within 5 seconds.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.324Z - Started listening on: /var/folders/44/bzzv5g5x13b9mj1dgyzq2vhc0000gn/T/5d59c24095594aee2f4f/d.sock
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.327Z - [WATCHER]: Subscribed to changes within: /Users/qss/practice/doc247 (native)
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.328Z - Established a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.328Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.329Z - Closed a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.330Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.471Z - Time taken for 'Load Nx Plugin: /Users/qss/practice/doc247/node_modules/nx/src/plugins/js' 138.38437499999998ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.473Z - Time taken for 'Load Nx Plugin: /Users/qss/practice/doc247/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 140.267792ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.478Z - Time taken for 'loadDefaultNxPlugins' 146.00958300000002ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.514Z - Time taken for 'Load Nx Plugin: @nx/jest/plugin' 183.08362499999998ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.519Z - Time taken for 'Load Nx Plugin: @nx/js/typescript' 188.522917ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.545Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.545Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.545Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.550Z - Time taken for 'loadSpecifiedNxPlugins' 213.89550000000003ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.553Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.553Z - Closed a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.553Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.556Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.556Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.556Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.556Z - Established a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.557Z - Established a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.557Z - Closed a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.558Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.558Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.558Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+(node:84730) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.887Z - Time taken for 'build-project-configs' 328.76491599999997ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.892Z - Time taken for '@nx/js/typescript:createDependencies' 6.252749999999992ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.929Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.929Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.929Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.929Z - Time taken for 'total for creating and serializing project graph' 599.3641660000001ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.931Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.931Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 599. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.934Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.934Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.934Z - Handled PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.934Z - Time taken for 'preTasksExecution' 0.20162500000003547ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.936Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.936Z - [SYNC]: clearing scheduled run
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.936Z - [SYNC]: @nx/js:typescript-sync already scheduled or not cached, running it now
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:44.936Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.050Z - Established a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.051Z - Established a connection. Number of open connections: 5
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.051Z - Closed a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.051Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.051Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.052Z - Time taken for 'total for creating and serializing project graph' 0.15929100000005292ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.052Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.052Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.056Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.056Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.056Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.056Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 120. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.056Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 119.11266699999999ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.149Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.150Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:45.150Z - Handled HASH_TASKS. Handling time: 15. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:46.659Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:46.659Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:46.659Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 19. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.111Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.112Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.211Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.212Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts,apps/auth-service/dist/apps/auth-service/src/main.d.ts.map,apps/auth-service/dist/tsconfig.app.tsbuildinfo,tmp/@org/auth-service/main-with-require-overrides.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.212Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.215Z - Time taken for 'hash changed files from watcher' 0.25170799999978044ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.227Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.227Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.227Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.232Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.232Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.232Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.244Z - Time taken for 'build-project-configs' 28.942083000000366ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.247Z - Time taken for '@nx/js/typescript:createDependencies' 4.166291999999885ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.259Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.259Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.259Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.259Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.259Z - Time taken for 'total execution time for createProjectGraph()' 13.708625000000211ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.354Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.355Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.355Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.359Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.361Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.361Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.361Z - Time taken for 'total for creating and serializing project graph' 0.13412500000049477ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.362Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.362Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.365Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.365Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 5.917707999999948ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.393Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.393Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.495Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.495Z - [REQUEST]: apps/auth-service/dist/main.js,apps/auth-service/dist/tsconfig.app.tsbuildinfo,apps/auth-service/dist/apps/auth-service/src/main.d.ts,apps/auth-service/dist/apps/auth-service/src/main.js,apps/auth-service/dist/apps/auth-service/src/main.d.ts.map
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.495Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.499Z - Time taken for 'hash changed files from watcher' 0.40599999999994907ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.501Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.501Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.501Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.502Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.502Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.502Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.511Z - Time taken for 'build-project-configs' 11.674749999999221ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.513Z - Time taken for '@nx/js/typescript:createDependencies' 3.615000000000691ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.528Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.528Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.528Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.528Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.528Z - Time taken for 'total execution time for createProjectGraph()' 14.799833000000035ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.697Z - Established a connection. Number of open connections: 5
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.698Z - Closed a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.698Z - Established a connection. Number of open connections: 5
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.699Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.699Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.699Z - Time taken for 'total for creating and serializing project graph' 0.12058299999989686ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.700Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.700Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.703Z - Established a connection. Number of open connections: 6
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.729Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.730Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.730Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.730Z - Time taken for 'total for creating and serializing project graph' 0.14995799999996962ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.731Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.731Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.734Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.735Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 5.66504199999963ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.761Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 3 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.762Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.762Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.762Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.763Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.763Z - Time taken for 'changed-projects' 0.1064169999999649ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.861Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.861Z - [REQUEST]: apps/auth-service/dist/main.js.map,apps/auth-service/dist/main.js,apps/auth-service/dist/apps/auth-service/src/main.js.map,apps/auth-service/dist/apps/auth-service/src/main.js,tmp/@org/auth-service/main-with-require-overrides.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.861Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts,apps/auth-service/dist/apps/auth-service/src/main.d.ts.map,apps/auth-service/dist/tsconfig.app.tsbuildinfo
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.865Z - Time taken for 'hash changed files from watcher' 0.19866600000023027ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.870Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.870Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.870Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.872Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.872Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.872Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.880Z - Time taken for 'build-project-configs' 14.78570899999977ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.890Z - Time taken for '@nx/js/typescript:createDependencies' 12.114415999999437ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.908Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.909Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.909Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.909Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.910Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.910Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.910Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.910Z - Time taken for 'total execution time for createProjectGraph()' 26.398334000000432ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.912Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.912Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.912Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.941Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:48.941Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.041Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.041Z - [REQUEST]: apps/api-gateway/dist/main.js,apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/package.json
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.041Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.045Z - Time taken for 'hash changed files from watcher' 0.20554200000060519ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.048Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.048Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.048Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.050Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.050Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.050Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.061Z - Time taken for 'build-project-configs' 14.228041000000303ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.064Z - Time taken for '@nx/js/typescript:createDependencies' 6.270292000000154ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.075Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.076Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.076Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.076Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.076Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.076Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.076Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.076Z - Time taken for 'total execution time for createProjectGraph()' 13.703583000000435ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.118Z - Established a connection. Number of open connections: 7
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.119Z - Closed a connection. Number of open connections: 6
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.120Z - Established a connection. Number of open connections: 7
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.122Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.123Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.123Z - Time taken for 'total for creating and serializing project graph' 0.42862499999955617ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.126Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.126Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 3.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.129Z - Established a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.210Z - [WATCHER]: 2 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.210Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.287Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.287Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.287Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.288Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.288Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.288Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts.map,apps/auth-service/dist/apps/auth-service/src/main.d.ts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.288Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.290Z - Time taken for 'hash changed files from watcher' 0.10837499999979627ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.292Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.292Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.292Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.292Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.292Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.292Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.298Z - Time taken for 'build-project-configs' 6.6434999999992215ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.299Z - Time taken for '@nx/js/typescript:createDependencies' 2.718417000000045ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.312Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.312Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.312Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.312Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.312Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.312Z - Time taken for 'total for creating and serializing project graph' 23.70037500000035ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.312Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.313Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.313Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.313Z - Time taken for 'total for creating and serializing project graph' 0.16333399999984977ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.314Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.314Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.318Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.318Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 5.36004099999991ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.323Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.323Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 24. Response time: 11.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.327Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.327Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.327Z - Handled PRE_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.327Z - Time taken for 'preTasksExecution' 0.08783299999959127ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.330Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.331Z - [SYNC]: @nx/js:typescript-sync not scheduled and has cached result, returning cached result
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.331Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.331Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.331Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.366Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.367Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.367Z - Handled HASH_TASKS. Handling time: 8. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.546Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.546Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:49.546Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.528Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.530Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 4 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.533Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.533Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.533Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.533Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.533Z - Handled FILE-WATCH-CHANGED. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.533Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.533Z - Time taken for 'changed-projects' 0.45020800000020245ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.634Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.635Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.635Z - [REQUEST]: apps/api-gateway/dist/main.js,apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/package.json
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.646Z - Time taken for 'hash changed files from watcher' 0.6916670000000522ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.659Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.659Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.659Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.660Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.660Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.660Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.676Z - Time taken for 'build-project-configs' 33.64066699999967ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.680Z - Time taken for '@nx/js/typescript:createDependencies' 4.4418329999998605ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.689Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.690Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.690Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.690Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.690Z - Time taken for 'total execution time for createProjectGraph()' 10.786124999999629ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.730Z - Established a connection. Number of open connections: 10
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.730Z - Established a connection. Number of open connections: 11
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.730Z - Closed a connection. Number of open connections: 10
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.731Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.731Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.732Z - Time taken for 'total for creating and serializing project graph' 0.18329199999971024ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.737Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.737Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 6.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.742Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.742Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.742Z - Handled PRE_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.742Z - Time taken for 'preTasksExecution' 0.10595899999952962ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.746Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.746Z - [SYNC]: clearing scheduled run
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.746Z - [SYNC]: @nx/js:typescript-sync already scheduled or not cached, running it now
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.746Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.747Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.747Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.747Z - Time taken for 'total for creating and serializing project graph' 0.09850000000005821ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.748Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.748Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.751Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.751Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.752Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.752Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 5. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.752Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 5.322500000000218ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.794Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.795Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.795Z - Handled HASH_TASKS. Handling time: 10. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.866Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.866Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.866Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.902Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:50.902Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.010Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.010Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.010Z - Handled PROCESS_IN_BACKGROUND. Handling time: 75. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.012Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.017Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.017Z - [REQUEST]: apps/api-gateway/dist/main.js,apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/package.json,apps/api-gateway/dist/package-lock.json
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.017Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.022Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.022Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.022Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.024Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.024Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.024Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.025Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.025Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.025Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.025Z - Time taken for 'hash changed files from watcher' 0.3157919999994192ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.028Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.028Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.028Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.032Z - Time taken for 'postTasksExecution' 0.49991700000009587ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.098Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.098Z - Done responding to the client outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.098Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.098Z - Closed a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.104Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.104Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.104Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.109Z - Time taken for 'build-project-configs' 89.00929199999973ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.115Z - Time taken for '@nx/js/typescript:createDependencies' 7.037541000000601ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.143Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.143Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.143Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.143Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.144Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.144Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.144Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.144Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.144Z - Handled FILE-WATCH-CHANGED. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.144Z - Handled FILE-WATCH-CHANGED. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.144Z - Time taken for 'total execution time for createProjectGraph()' 30.40320900000006ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.154Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.154Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.193Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.193Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.193Z - Handled PROCESS_IN_BACKGROUND. Handling time: 26. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.194Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.194Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.194Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.197Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.197Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.197Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.197Z - Time taken for 'postTasksExecution' 0.10433300000022427ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.201Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.243Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.244Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.244Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.244Z - [REQUEST]: apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/main.js,apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/package.json
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.244Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.247Z - Time taken for 'hash changed files from watcher' 0.4119590000000244ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.248Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.249Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.249Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.249Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.249Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.249Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.257Z - Time taken for 'build-project-configs' 9.075458000000253ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.261Z - Time taken for '@nx/js/typescript:createDependencies' 4.86829200000011ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.271Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.272Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.272Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.273Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.273Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.273Z - Time taken for 'total for creating and serializing project graph' 28.706583000000137ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.275Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.275Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 29. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.283Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.283Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 39.92158299999937ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.331Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.332Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.333Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.334Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.334Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.334Z - Time taken for 'total for creating and serializing project graph' 0.18000000000029104ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.336Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.336Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.341Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.341Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.341Z - Handled PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.341Z - Time taken for 'preTasksExecution' 0.08562499999970896ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.344Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.344Z - [SYNC]: clearing scheduled run
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.344Z - [SYNC]: @nx/js:typescript-sync already scheduled or not cached, running it now
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.345Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.345Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.345Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.346Z - Time taken for 'total for creating and serializing project graph' 0.11979200000041601ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.347Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.347Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.350Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.350Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.350Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.350Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 6. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.350Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 5.0931659999996555ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.393Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.394Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.394Z - Handled HASH_TASKS. Handling time: 9. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.587Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.587Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.587Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.594Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.594Z - Done responding to the client outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.594Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.620Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.620Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.620Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.624Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.671Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.671Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.707Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.707Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.707Z - Handled PROCESS_IN_BACKGROUND. Handling time: 30. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.708Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.708Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.708Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.713Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.713Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.713Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.713Z - Time taken for 'postTasksExecution' 0.09699999999975262ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.718Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.774Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.774Z - [REQUEST]: apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/main.js,apps/api-gateway/dist/package.json,apps/api-gateway/dist/assets/.gitkeep
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.774Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.776Z - Time taken for 'hash changed files from watcher' 1.0385419999993246ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.782Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.782Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.782Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.783Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.783Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.783Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.800Z - Time taken for 'build-project-configs' 22.313500000000204ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.806Z - Time taken for '@nx/js/typescript:createDependencies' 8.105542000000241ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.814Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.815Z - Time taken for 'total execution time for createProjectGraph()' 12.962249999999585ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.915Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.916Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.916Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.916Z - Time taken for 'total for creating and serializing project graph' 0.11245799999960582ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.917Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.917Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.920Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.920Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 4.645416999999725ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.951Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.952Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.952Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.953Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.953Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.953Z - Time taken for 'total for creating and serializing project graph' 0.21883300000081363ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.955Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.955Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.959Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.959Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.959Z - Handled PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.959Z - Time taken for 'preTasksExecution' 0.10929200000009587ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.970Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.970Z - [SYNC]: @nx/js:typescript-sync not scheduled and has cached result, returning cached result
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.971Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.971Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:51.971Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.044Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.044Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.044Z - Handled HASH_TASKS. Handling time: 9. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.112Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.196Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.196Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.196Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.203Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.203Z - Done responding to the client outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.203Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.228Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.228Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.228Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.283Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.283Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.283Z - Handled PROCESS_IN_BACKGROUND. Handling time: 15. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.284Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.284Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.284Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.286Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.286Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.286Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.286Z - Time taken for 'postTasksExecution' 0.09900000000016007ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.291Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:52.681Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:53.450Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:53.451Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:22:53.876Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.013Z - Closed a connection. Number of open connections: 7
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.026Z - Closed a connection. Number of open connections: 6
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.027Z - Closed a connection. Number of open connections: 5
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.029Z - Closed a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.126Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.127Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.127Z - Handled PROCESS_IN_BACKGROUND. Handling time: 24. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.128Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.172Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.172Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.172Z - Handled POST_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.172Z - Time taken for 'postTasksExecution' 0.8307920000515878ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:01.188Z - Closed a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:03.867Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:03.867Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:32:04.270Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.819Z - [WATCHER]: package.json was modified
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.820Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.922Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.922Z - [REQUEST]: package.json
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.922Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.939Z - Time taken for 'hash changed files from watcher' 1.7936670000199229ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.964Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.964Z - Closed a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.965Z - Closed a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.965Z - Closed a connection. Number of open connections: 0
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.965Z - [WATCHER]: Stopping the watcher for /Users/qss/practice/doc247 (sources)
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.965Z - [WATCHER]: Stopping the watcher for /Users/qss/practice/doc247 (outputs)
+[NX v21.1.2 Daemon Server] - 2025-05-31T12:33:21.982Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:41.815Z - Started listening on: /var/folders/44/bzzv5g5x13b9mj1dgyzq2vhc0000gn/T/5d59c24095594aee2f4f/d.sock
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:41.819Z - [WATCHER]: Subscribed to changes within: /Users/qss/practice/doc247 (native)
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:41.823Z - Established a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:41.824Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:41.825Z - Closed a connection. Number of open connections: 1
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:41.825Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:41.994Z - Time taken for 'Load Nx Plugin: /Users/qss/practice/doc247/node_modules/nx/src/plugins/package-json' 166.39325ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.002Z - Time taken for 'Load Nx Plugin: /Users/qss/practice/doc247/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 173.59337499999998ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.008Z - Time taken for 'loadDefaultNxPlugins' 179.99733299999997ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.036Z - Time taken for 'Load Nx Plugin: @nx/jest/plugin' 209.65749999999997ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.039Z - Time taken for 'Load Nx Plugin: @nx/js/typescript' 213.80837499999998ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.066Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.066Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.066Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.072Z - Time taken for 'loadSpecifiedNxPlugins' 239.83800000000002ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.074Z - Established a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.076Z - Established a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.076Z - Closed a connection. Number of open connections: 2
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.077Z - Established a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.080Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.080Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.080Z - Handled HASH_GLOB. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.080Z - Established a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.081Z - Closed a connection. Number of open connections: 3
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.081Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.082Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.082Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.332Z - Time taken for 'build-project-configs' 252.54900000000004ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.338Z - Time taken for '@nx/js/typescript:createDependencies' 6.325500000000034ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.379Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.379Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.379Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.379Z - Time taken for 'total for creating and serializing project graph' 553.956875ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.380Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.380Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 554. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.385Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.385Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.385Z - Handled PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.385Z - Time taken for 'preTasksExecution' 0.19716700000003584ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.387Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.387Z - [SYNC]: clearing scheduled run
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.387Z - [SYNC]: @nx/js:typescript-sync already scheduled or not cached, running it now
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.387Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.503Z - Established a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.504Z - Established a connection. Number of open connections: 5
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.504Z - Closed a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.504Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.504Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.504Z - Time taken for 'total for creating and serializing project graph' 0.1549160000000711ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.505Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.505Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.508Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.508Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.508Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.508Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 121. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.508Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 121.02033299999994ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.650Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.650Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:42.650Z - Handled HASH_TASKS. Handling time: 12. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:43.862Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:43.863Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:43.863Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 14. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.024Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.030Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 6 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.131Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.131Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.131Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.js.map,apps/auth-service/dist/apps/auth-service/src/main.d.ts,apps/auth-service/dist/apps/auth-service/src/main.d.ts.map,apps/auth-service/dist/apps/auth-service/src/main.js,apps/auth-service/dist/main.js,apps/auth-service/dist/main.js.map
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.136Z - Time taken for 'hash changed files from watcher' 0.1218749999998181ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.215Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.215Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.215Z - Handled HASH_GLOB. Handling time: 26. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.216Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.216Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.216Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.254Z - Time taken for 'build-project-configs' 112.1488330000002ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.263Z - Time taken for '@nx/js/typescript:createDependencies' 11.604583000000275ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.300Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.301Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.301Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.301Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.301Z - Time taken for 'total execution time for createProjectGraph()' 44.191249999999854ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.402Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.410Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.410Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.411Z - Time taken for 'total for creating and serializing project graph' 0.47954200000003766ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.413Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.413Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 3.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.420Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.420Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 16.875833000000057ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.635Z - [WATCHER]: 3 file(s) created or restored, 1 file(s) modified, 4 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.635Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.706Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.706Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.706Z - Handled RECORD_OUTPUTS_HASH. Handling time: 4. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.736Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.736Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts,apps/auth-service/dist/apps/auth-service/src/main.d.ts.map,apps/auth-service/dist/tsconfig.app.tsbuildinfo,tmp/@org/auth-service/main-with-require-overrides.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.736Z - [REQUEST]: apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/package.json,apps/api-gateway/dist/main.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.741Z - Time taken for 'hash changed files from watcher' 0.21199999999998909ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.742Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.743Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.743Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.743Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.743Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.743Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.747Z - [WATCHER]: 5 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.747Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.756Z - Time taken for 'build-project-configs' 13.838249999999789ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.765Z - Time taken for '@nx/js/typescript:createDependencies' 12.03012499999977ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.781Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.781Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.781Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.781Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.781Z - Time taken for 'total execution time for createProjectGraph()' 23.97770900000023ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.848Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.848Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.848Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.855Z - Time taken for 'hash changed files from watcher' 0.04283399999985704ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.856Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.856Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.856Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.857Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.857Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.857Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.863Z - Time taken for 'build-project-configs' 11.567667000000256ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.866Z - Time taken for '@nx/js/typescript:createDependencies' 4.779334000000745ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.894Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.894Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.894Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.894Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.894Z - Time taken for 'total execution time for createProjectGraph()' 28.858125000000655ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.982Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.991Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.991Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.992Z - Time taken for 'total for creating and serializing project graph' 0.7330409999995027ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.994Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:45.994Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 3.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.003Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.003Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 20.882916999999907ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.075Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.076Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.076Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.111Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.112Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.148Z - Established a connection. Number of open connections: 5
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.149Z - Closed a connection. Number of open connections: 4
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.149Z - Established a connection. Number of open connections: 5
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.150Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.150Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.150Z - [REQUEST]: apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/package.json,apps/api-gateway/dist/main.js,apps/api-gateway/dist/assets/.gitkeep
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.150Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.154Z - Time taken for 'hash changed files from watcher' 0.3776669999997466ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.161Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.161Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.161Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.162Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.162Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.162Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.171Z - Time taken for 'build-project-configs' 16.526542000000518ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.175Z - Time taken for '@nx/js/typescript:createDependencies' 5.337624999999207ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.206Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.206Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.206Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.206Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.206Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.206Z - Time taken for 'total for creating and serializing project graph' 56.2480000000005ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.210Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.211Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 56. Response time: 5.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.211Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 5 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.214Z - Established a connection. Number of open connections: 6
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.220Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.286Z - [WATCHER]: 4 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.287Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.287Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.287Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.287Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.287Z - Time taken for 'changed-projects' 0.05325000000084401ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.305Z - Established a connection. Number of open connections: 7
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.305Z - Established a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.305Z - Closed a connection. Number of open connections: 7
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.307Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.307Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.308Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.js.map,apps/auth-service/dist/apps/auth-service/src/main.js,apps/auth-service/dist/main.js,apps/auth-service/dist/main.js.map,tmp/@org/auth-service/main-with-require-overrides.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.308Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts,apps/auth-service/dist/apps/auth-service/src/main.d.ts.map,apps/auth-service/dist/tsconfig.app.tsbuildinfo
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.311Z - Time taken for 'hash changed files from watcher' 0.39366700000027777ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.316Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.316Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.317Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.318Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.319Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.319Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.339Z - Time taken for 'build-project-configs' 23.433500000000095ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.346Z - Time taken for '@nx/js/typescript:createDependencies' 9.656415999999808ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.376Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.376Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.376Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.376Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.376Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.376Z - Time taken for 'total for creating and serializing project graph' 69.5424579999999ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.381Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.381Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 69. Response time: 5.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.384Z - Established a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.606Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.608Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.608Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.608Z - Time taken for 'total for creating and serializing project graph' 0.15779199999997218ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.609Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.609Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.614Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.614Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 6.932416999999987ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.614Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.614Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.615Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.616Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.616Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.617Z - Time taken for 'total for creating and serializing project graph' 0.2537080000001879ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.620Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.620Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.624Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.624Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.624Z - Handled PRE_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.624Z - Time taken for 'preTasksExecution' 0.13670900000033726ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.629Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.629Z - [SYNC]: @nx/js:typescript-sync not scheduled and has cached result, returning cached result
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.629Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.629Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.629Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.666Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.667Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.667Z - Handled HASH_TASKS. Handling time: 8. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.787Z - [WATCHER]: 2 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.787Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.830Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.830Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.830Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.888Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.888Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts.map,apps/auth-service/dist/apps/auth-service/src/main.d.ts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.888Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.891Z - Time taken for 'hash changed files from watcher' 0.27504100000078324ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.893Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.893Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.893Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.894Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.894Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.894Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.899Z - Time taken for 'build-project-configs' 7.6823330000006536ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.902Z - Time taken for '@nx/js/typescript:createDependencies' 3.6654170000001614ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.913Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.913Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.913Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.913Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.913Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.914Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.914Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:46.914Z - Time taken for 'total execution time for createProjectGraph()' 11.220874999999978ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.013Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.015Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.015Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.015Z - Time taken for 'total for creating and serializing project graph' 0.1416669999998703ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.016Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.016Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.020Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.020Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 6.53466600000047ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.839Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 4 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.842Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.843Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.843Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.843Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.843Z - Handled FILE-WATCH-CHANGED. Handling time: 1. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.843Z - Handled FILE-WATCH-CHANGED. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.843Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.844Z - Time taken for 'changed-projects' 0.6775829999996859ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.940Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.940Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.940Z - [REQUEST]: apps/api-gateway/dist/package.json,apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/main.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.943Z - Time taken for 'hash changed files from watcher' 0.2016249999996944ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.948Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.948Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.948Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.949Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.949Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.949Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.967Z - Time taken for 'build-project-configs' 22.12683300000026ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.972Z - Time taken for '@nx/js/typescript:createDependencies' 6.549792000000707ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.987Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.987Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.987Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.987Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:47.987Z - Time taken for 'total execution time for createProjectGraph()' 17.77624999999989ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.015Z - Established a connection. Number of open connections: 10
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.016Z - Closed a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.016Z - Established a connection. Number of open connections: 10
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.017Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.017Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.017Z - Time taken for 'total for creating and serializing project graph' 0.1617919999998776ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.021Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.021Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 4.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.026Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.026Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.026Z - Handled PRE_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.026Z - Time taken for 'preTasksExecution' 0.10945900000024267ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.028Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.028Z - [SYNC]: clearing scheduled run
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.028Z - [SYNC]: @nx/js:typescript-sync already scheduled or not cached, running it now
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.028Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.029Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.029Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.029Z - Time taken for 'total for creating and serializing project graph' 0.1477500000000873ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.030Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.030Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.033Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.034Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.034Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.034Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 5. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.034Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 5.36987500000032ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.078Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.078Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.078Z - Handled HASH_TASKS. Handling time: 9. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.148Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.148Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.148Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.180Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.181Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.255Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.255Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.255Z - Handled PROCESS_IN_BACKGROUND. Handling time: 63. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.258Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.258Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.258Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.259Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.264Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.264Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.264Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.264Z - Time taken for 'postTasksExecution' 0.12712499999997817ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.304Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.304Z - [REQUEST]: apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/main.js,apps/api-gateway/dist/package.json
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.304Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.307Z - Time taken for 'hash changed files from watcher' 0.18137500000011642ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.307Z - Closed a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.308Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.308Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.308Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.309Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.309Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.309Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.317Z - Time taken for 'build-project-configs' 9.049457999999504ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.323Z - Time taken for '@nx/js/typescript:createDependencies' 7.853084000000308ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.352Z - Time taken for 'total execution time for createProjectGraph()' 33.114708000000064ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.453Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.454Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.454Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.454Z - Time taken for 'total for creating and serializing project graph' 0.1064169999999649ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.454Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.454Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.457Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.458Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 4.721792000000278ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.500Z - Established a connection. Number of open connections: 10
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.501Z - Closed a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.501Z - Established a connection. Number of open connections: 10
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.502Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.502Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.502Z - Time taken for 'total for creating and serializing project graph' 0.13704200000029232ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.504Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.504Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.508Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.508Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.508Z - Handled PRE_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.508Z - Time taken for 'preTasksExecution' 0.09462499999972351ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.510Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.510Z - [SYNC]: @nx/js:typescript-sync not scheduled and has cached result, returning cached result
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.510Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.510Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.510Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.546Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.546Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.546Z - Handled HASH_TASKS. Handling time: 7. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.706Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.706Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.706Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.713Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.713Z - Done responding to the client outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.713Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.736Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.736Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.736Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.792Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.792Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.792Z - Handled PROCESS_IN_BACKGROUND. Handling time: 16. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.793Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.793Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.793Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.795Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.795Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.795Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.795Z - Time taken for 'postTasksExecution' 0.09858299999996234ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:48.799Z - Closed a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.141Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 4 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.142Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.142Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.142Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.142Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.142Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.142Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.142Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.142Z - Time taken for 'changed-projects' 0.032749999999396096ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.219Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.241Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.241Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.242Z - [REQUEST]: apps/api-gateway/dist/package.json,apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/main.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.247Z - Time taken for 'hash changed files from watcher' 0.18041700000048877ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.252Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.252Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.252Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.254Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.254Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.254Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.261Z - Time taken for 'build-project-configs' 13.166957999999795ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.263Z - Time taken for '@nx/js/typescript:createDependencies' 4.169666000000689ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.272Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.272Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.272Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.272Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.272Z - Time taken for 'total execution time for createProjectGraph()' 10.410915999999816ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.312Z - Established a connection. Number of open connections: 10
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.312Z - Closed a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.312Z - Established a connection. Number of open connections: 10
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.313Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.313Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.313Z - Time taken for 'total for creating and serializing project graph' 0.12491599999975733ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.315Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.315Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.320Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.320Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.320Z - Handled PRE_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.320Z - Time taken for 'preTasksExecution' 0.13879199999973935ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.323Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.323Z - [SYNC]: clearing scheduled run
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.324Z - [SYNC]: @nx/js:typescript-sync already scheduled or not cached, running it now
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.324Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.324Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.324Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.324Z - Time taken for 'total for creating and serializing project graph' 0.09020799999962037ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.325Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.325Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.329Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.329Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.329Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.329Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 6. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.329Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 4.973917000000256ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.378Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.378Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.378Z - Handled HASH_TASKS. Handling time: 15. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.463Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.463Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.463Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.516Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.516Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.516Z - Handled PROCESS_IN_BACKGROUND. Handling time: 15. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.517Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.517Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.517Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.520Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.520Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.520Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.520Z - Time taken for 'postTasksExecution' 0.07354200000008859ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.525Z - Closed a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.539Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.539Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.539Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.545Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.545Z - Done responding to the client outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.545Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.568Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.568Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.568Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.629Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.629Z - [REQUEST]: apps/api-gateway/dist/package.json,apps/api-gateway/dist/main.js,apps/api-gateway/dist/package-lock.json,apps/api-gateway/dist/assets/.gitkeep
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.629Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.632Z - Time taken for 'hash changed files from watcher' 0.7059170000002268ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.642Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.642Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.642Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.644Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.644Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.644Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.650Z - Time taken for 'build-project-configs' 17.157125000000633ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.671Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.671Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.671Z - Handled PROCESS_IN_BACKGROUND. Handling time: 15. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.671Z - Time taken for '@nx/js/typescript:createDependencies' 22.51533399999971ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - Time taken for 'total execution time for createProjectGraph()' 24.889083000000028ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.676Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.677Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.677Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.679Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.679Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.679Z - Handled POST_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.679Z - Time taken for 'postTasksExecution' 0.07933400000001711ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.682Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.776Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.777Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.778Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.778Z - Time taken for 'total for creating and serializing project graph' 0.14895800000067538ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.778Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.778Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.781Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.781Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 4.679834000000483ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.809Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.809Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.810Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.810Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.810Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.811Z - Time taken for 'total for creating and serializing project graph' 0.09737500000028376ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.812Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.812Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.816Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.816Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.816Z - Handled PRE_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.816Z - Time taken for 'preTasksExecution' 0.09445800000048621ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.821Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.822Z - [SYNC]: @nx/js:typescript-sync not scheduled and has cached result, returning cached result
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.822Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.822Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.822Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.854Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.855Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.855Z - Handled HASH_TASKS. Handling time: 8. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.997Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.997Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:49.997Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.002Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.002Z - Done responding to the client outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.002Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.028Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.028Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.028Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.076Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.076Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.076Z - Handled PROCESS_IN_BACKGROUND. Handling time: 15. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.077Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.078Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.078Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.079Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.079Z - [WATCHER]: 4 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.079Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.080Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.080Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.080Z - Handled POST_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.081Z - Time taken for 'postTasksExecution' 0.07470800000010058ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.084Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.139Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.139Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.153Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.153Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.180Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.180Z - [REQUEST]: apps/api-gateway/dist/assets/.gitkeep,apps/api-gateway/dist/main.js,apps/api-gateway/dist/package.json,apps/api-gateway/dist/package-lock.json
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.180Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.183Z - Time taken for 'hash changed files from watcher' 0.7389579999999114ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.184Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.185Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.185Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.186Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.186Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.186Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.193Z - Time taken for 'build-project-configs' 9.322666000000027ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.195Z - Time taken for '@nx/js/typescript:createDependencies' 3.2477920000001177ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.203Z - Time taken for 'total execution time for createProjectGraph()' 8.27245799999946ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.304Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.305Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.305Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.306Z - Time taken for 'total for creating and serializing project graph' 0.14229100000011385ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.307Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.307Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.310Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.310Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 5.449708000000101ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.351Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.351Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.352Z - Established a connection. Number of open connections: 9
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.353Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.353Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.353Z - Time taken for 'total for creating and serializing project graph' 0.12191600000005565ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.354Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.354Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.358Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.358Z - Done responding to the client handleRunPreTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.358Z - Handled PRE_TASKS_EXECUTION. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.358Z - Time taken for 'preTasksExecution' 0.07941699999901175ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.360Z - [SYNC]: get sync generators changes on demand ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.360Z - [SYNC]: @nx/js:typescript-sync not scheduled and has cached result, returning cached result
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.360Z - [REQUEST]: Responding to the client. handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.361Z - Done responding to the client handleGetSyncGeneratorChanges
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.361Z - Handled GET_SYNC_GENERATOR_CHANGES. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.394Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.394Z - Done responding to the client handleHashTasks
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.394Z - Handled HASH_TASKS. Handling time: 8. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.487Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.571Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.571Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.574Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 1. Response time: 3.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.595Z - [REQUEST]: Responding to the client. outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.596Z - Done responding to the client outputsHashesMatch
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.596Z - Handled OUTPUTS_HASHES_MATCH. Handling time: 3. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.619Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.619Z - Done responding to the client recordOutputsHash
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.619Z - Handled RECORD_OUTPUTS_HASH. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.668Z - [REQUEST]: Responding to the client. PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.668Z - Done responding to the client PROCESS_IN_BACKGROUND
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.668Z - Handled PROCESS_IN_BACKGROUND. Handling time: 15. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.670Z - Uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.670Z - Done uploading file artifacts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.670Z - Sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.671Z - [REQUEST]: Responding to the client. handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.671Z - Done responding to the client handleRunPostTasksExecution
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.671Z - Handled POST_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.671Z - Time taken for 'postTasksExecution' 0.07295799999883457ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.675Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:50.676Z - Closed a connection. Number of open connections: 8
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:51.076Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:27:52.462Z - Done sending EndRun request
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.286Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.299Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.300Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.300Z - Handled FILE-WATCH-CHANGED. Handling time: 2. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.300Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.301Z - Time taken for 'changed-projects' 2.666291999979876ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.396Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.397Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.js.map,apps/auth-service/src/main.ts,apps/auth-service/dist/apps/auth-service/src/main.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.397Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.412Z - Time taken for 'hash changed files from watcher' 2.3760410000104457ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.471Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.471Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.472Z - Handled HASH_GLOB. Handling time: 3. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.480Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.480Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.480Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+(node:88360) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.946Z - Time taken for 'build-project-configs' 533.0770419999608ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.951Z - Time taken for '@nx/js/typescript:createDependencies' 6.903707999968901ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.968Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.969Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.969Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.969Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:31.969Z - Time taken for 'total execution time for createProjectGraph()' 21.31604199996218ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:32.070Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:32.073Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:32.073Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:32.073Z - Time taken for 'total for creating and serializing project graph' 0.14591600000858307ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:32.074Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:32.074Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:32.078Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:32.079Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 8.70916699996451ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.102Z - [WATCHER]: apps/auth-service/src/main.ts was modified
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.102Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.103Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.103Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.103Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.103Z - Time taken for 'changed-projects' 0.10754200001247227ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.202Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.203Z - [REQUEST]: apps/auth-service/src/main.ts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.203Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.208Z - Time taken for 'hash changed files from watcher' 0.21266700001433492ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.225Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.226Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.226Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.227Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.227Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.227Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.238Z - Time taken for 'build-project-configs' 29.50966600002721ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.241Z - Time taken for '@nx/js/typescript:createDependencies' 4.447458999988157ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.255Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.255Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.255Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.255Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.255Z - Time taken for 'total execution time for createProjectGraph()' 13.30920800002059ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.454Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.456Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.456Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.456Z - Time taken for 'total for creating and serializing project graph' 0.16933399997651577ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.457Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.457Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.462Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:36.463Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 8.063708000001498ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.277Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.278Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.278Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.279Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.279Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.279Z - Time taken for 'changed-projects' 0.1260420000180602ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.379Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.379Z - [REQUEST]: apps/auth-service/src/main.ts,apps/auth-service/dist/apps/auth-service/src/main.js.map
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.379Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.382Z - Time taken for 'hash changed files from watcher' 0.13529199996264651ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.388Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.388Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.388Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.390Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.390Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.390Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.417Z - Time taken for 'build-project-configs' 22.006541999988258ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.426Z - Time taken for '@nx/js/typescript:createDependencies' 11.785832999972627ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.448Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.448Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.448Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.448Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.448Z - Time taken for 'total execution time for createProjectGraph()' 31.791749999974854ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.849Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.850Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.850Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.850Z - Time taken for 'total for creating and serializing project graph' 0.11983300000429153ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.851Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.851Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.855Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:42.855Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 5.9925420000217855ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.612Z - [WATCHER]: apps/auth-service/src/main.ts was modified
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.613Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.613Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.613Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.613Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.614Z - Time taken for 'changed-projects' 0.13137499999720603ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.714Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.715Z - [REQUEST]: apps/auth-service/src/main.ts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.715Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.718Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.719Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.719Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.719Z - Handled FILE-WATCH-CHANGED. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.719Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.719Z - Time taken for 'hash changed files from watcher' 0.1280419999966398ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.732Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.732Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.732Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.734Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.734Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.734Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.761Z - Time taken for 'build-project-configs' 42.193292000039946ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.766Z - Time taken for '@nx/js/typescript:createDependencies' 6.668000000005122ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.779Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.780Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.780Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.780Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.780Z - Time taken for 'total execution time for createProjectGraph()' 17.39112500002375ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.919Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.919Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.919Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.922Z - Time taken for 'hash changed files from watcher' 0.04762500000651926ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.924Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.924Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.924Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.926Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.926Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.926Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.932Z - Time taken for 'build-project-configs' 9.666792000003625ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.935Z - Time taken for '@nx/js/typescript:createDependencies' 4.158791999972891ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.947Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.948Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.948Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.948Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.948Z - Time taken for 'total execution time for createProjectGraph()' 10.196625000040513ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.974Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.975Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.975Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.975Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.975Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:45.975Z - Time taken for 'changed-projects' 0.023792000021785498ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.375Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.375Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts,apps/auth-service/dist/apps/auth-service/src/main.d.ts.map
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.375Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.380Z - Time taken for 'hash changed files from watcher' 0.2814580000122078ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.381Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.381Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.382Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.383Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.384Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.384Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.400Z - Time taken for 'build-project-configs' 18.589916999975685ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.404Z - Time taken for '@nx/js/typescript:createDependencies' 6.337707999977283ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.415Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.415Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.415Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.415Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.415Z - Time taken for 'total execution time for createProjectGraph()' 13.137374999991152ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.580Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.582Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.582Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.582Z - Time taken for 'total for creating and serializing project graph' 0.13220900000305846ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.583Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.583Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.587Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:35:46.587Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 6.498707999999169ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.734Z - [WATCHER]: apps/auth-service/src/main.ts was modified
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.738Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.739Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.739Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.739Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.740Z - Time taken for 'changed-projects' 0.5640419999836013ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.797Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.799Z - [WATCHER]: apps/auth-service/dist/apps/auth-service/src/main.js.map was modified
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.799Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.799Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.799Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.799Z - Time taken for 'changed-projects' 0.02174999995622784ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.841Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.841Z - [REQUEST]: apps/auth-service/src/main.ts,apps/auth-service/dist/apps/auth-service/src/main.js.map
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.841Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.854Z - Time taken for 'hash changed files from watcher' 3.090042000054382ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.914Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.914Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.914Z - Handled HASH_GLOB. Handling time: 15. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.918Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.918Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:20.918Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.000Z - Time taken for 'build-project-configs' 144.90399999998044ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.013Z - Time taken for '@nx/js/typescript:createDependencies' 14.778084000106901ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.036Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.037Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.037Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.037Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.037Z - Time taken for 'total execution time for createProjectGraph()' 32.297083999961615ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.192Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.192Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.193Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.193Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.193Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.193Z - Time taken for 'changed-projects' 0.024875000002793968ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.412Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.413Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts.map,apps/auth-service/dist/apps/auth-service/src/main.d.ts
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.413Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.426Z - Time taken for 'hash changed files from watcher' 2.921708000008948ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.427Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.427Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.427Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.429Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.429Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.429Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.441Z - Time taken for 'build-project-configs' 16.63525000005029ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.444Z - Time taken for '@nx/js/typescript:createDependencies' 3.9877080000005662ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.457Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.458Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.458Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.458Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:21.458Z - Time taken for 'total execution time for createProjectGraph()' 12.563834000029601ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:22.638Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:22.642Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:22.642Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:22.643Z - Time taken for 'total for creating and serializing project graph' 0.19358299998566508ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:22.644Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:22.644Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:22.649Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:22.649Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 10.870166999986395ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.183Z - [WATCHER]: apps/auth-service/src/main.ts was modified
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.183Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.184Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.184Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.184Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.184Z - Time taken for 'changed-projects' 0.07645799999590963ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.279Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.279Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.279Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.279Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.279Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.279Z - Time taken for 'changed-projects' 0.02741699991747737ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.284Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.284Z - [REQUEST]: apps/auth-service/src/main.ts,apps/auth-service/dist/apps/auth-service/src/main.js,apps/auth-service/dist/apps/auth-service/src/main.js.map
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.284Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.287Z - Time taken for 'hash changed files from watcher' 0.3862920000683516ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.292Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.292Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.292Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.293Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.293Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.293Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.311Z - Time taken for 'build-project-configs' 18.032250000047497ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.322Z - Time taken for '@nx/js/typescript:createDependencies' 13.198417000006884ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.342Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.342Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.342Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.342Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:24.342Z - Time taken for 'total execution time for createProjectGraph()' 32.24004100007005ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:27.543Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:27.550Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:27.551Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:27.551Z - Time taken for 'total for creating and serializing project graph' 0.35070800001267344ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:27.553Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:27.553Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:27.563Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:27.563Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 17.69091699994169ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.179Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.180Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.180Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.180Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.181Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.181Z - Time taken for 'changed-projects' 0.1915830000070855ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.281Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.281Z - [REQUEST]: apps/auth-service/src/main.ts,apps/auth-service/dist/apps/auth-service/src/main.js.map,apps/auth-service/dist/apps/auth-service/src/main.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.281Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.290Z - Time taken for 'hash changed files from watcher' 0.4922919999808073ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.292Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.292Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.292Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.293Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.293Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.293Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.308Z - Time taken for 'build-project-configs' 22.586249999934807ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.313Z - Time taken for '@nx/js/typescript:createDependencies' 6.867958000046201ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.342Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.343Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.343Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.343Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:33.343Z - Time taken for 'total execution time for createProjectGraph()' 30.711000000010245ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:35.846Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:35.848Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:35.848Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:35.848Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:35.848Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:35.849Z - Time taken for 'changed-projects' 0.2962080000434071ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.048Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.048Z - [REQUEST]: apps/auth-service/src/main.ts,apps/auth-service/dist/apps/auth-service/src/main.js.map,apps/auth-service/dist/apps/auth-service/src/main.js
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.048Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.052Z - Time taken for 'hash changed files from watcher' 0.6302089999662712ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.061Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.064Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.064Z - Handled HASH_GLOB. Handling time: 1. Response time: 3.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.083Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.083Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.083Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.098Z - Time taken for 'build-project-configs' 45.29554199997801ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.112Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.112Z - [REQUEST]: Responding to the client. File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.113Z - Done responding to the client File watch changed
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.114Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.114Z - [WATCHER]: Processing file changes in outputs
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.114Z - Time taken for 'changed-projects' 0.028042000019922853ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.120Z - Time taken for '@nx/js/typescript:createDependencies' 23.0642499999376ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.130Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.131Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.131Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.131Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.131Z - Time taken for 'total execution time for createProjectGraph()' 31.108459000010043ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.538Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.538Z - [REQUEST]: apps/auth-service/dist/apps/auth-service/src/main.d.ts,apps/auth-service/dist/apps/auth-service/src/main.d.ts.map
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.538Z - [REQUEST]: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.607Z - Time taken for 'hash changed files from watcher' 4.636583000072278ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.611Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.611Z - Done responding to the client handleHashGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.611Z - Handled HASH_GLOB. Handling time: 2. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.616Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.616Z - Done responding to the client handleHashMultiGlob
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.617Z - Handled HASH_GLOB. Handling time: 5. Response time: 0.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.625Z - Time taken for 'build-project-configs' 19.165957999997772ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.627Z - Time taken for '@nx/js/typescript:createDependencies' 4.716541999951005ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.636Z - [SYNC]: collect registered sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.637Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.637Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.637Z - [SYNC]: scheduling: ["@nx/js:typescript-sync"]
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:36.637Z - Time taken for 'total execution time for createProjectGraph()' 11.076999999932013ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:39.745Z - [SYNC]: running scheduled generator @nx/js:typescript-sync
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:39.751Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:39.751Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:39.752Z - Time taken for 'total for creating and serializing project graph' 0.2105829999782145ms
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:39.753Z - Done responding to the client project-graph
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:39.753Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:39.758Z - [SYNC]: @nx/js:typescript-sync changes: 
+[NX v21.1.2 Daemon Server] - 2025-05-31T13:38:39.758Z - Time taken for 'run-sync-generator:@nx/js:typescript-sync' 11.493374999961816ms

@@ -1,0 +1,332 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.1.2",
+  "pathMappings": {},
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    },
+    {
+      "name": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "name": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "buildDepsTargetName": "build-deps",
+        "watchDepsTargetName": "watch-deps"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".DS_Store",
+        "hash": "11875340247259596860"
+      },
+      {
+        "file": "package.json",
+        "hash": "4620852837147146636"
+      },
+      {
+        "file": "nx.json",
+        "hash": "1833882927333840410"
+      },
+      {
+        "file": "README.md",
+        "hash": "8511243543986758461"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "13737983450217408137"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "14556703730165273965"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7807293561533594609"
+      },
+      {
+        "file": "tmp/@org/auth-service/main-with-require-overrides.js",
+        "hash": "3691358310437684392"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "14236175072743533737"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "8900268571896142108"
+      }
+    ],
+    "projectFileMap": {
+      "@org/auth-service": [
+        {
+          "file": "apps/auth-service/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "apps/auth-service/Dockerfile",
+          "hash": "2041026435537104193"
+        },
+        {
+          "file": "apps/auth-service/dist/apps/auth-service/src/main.d.ts",
+          "hash": "10418610560732189788"
+        },
+        {
+          "file": "apps/auth-service/dist/apps/auth-service/src/main.d.ts.map",
+          "hash": "2356921000123316348"
+        },
+        {
+          "file": "apps/auth-service/dist/apps/auth-service/src/main.js",
+          "hash": "14576728432588017693",
+          "deps": [
+            "npm:express",
+            "npm:cors"
+          ]
+        },
+        {
+          "file": "apps/auth-service/dist/apps/auth-service/src/main.js.map",
+          "hash": "8336472940000382364"
+        },
+        {
+          "file": "apps/auth-service/dist/main.js",
+          "hash": "13077204797405705857"
+        },
+        {
+          "file": "apps/auth-service/dist/main.js.map",
+          "hash": "6089078551007315852"
+        },
+        {
+          "file": "apps/auth-service/jest.config.ts",
+          "hash": "14753624320934086452"
+        },
+        {
+          "file": "apps/auth-service/package.json",
+          "hash": "6031281436632934229"
+        },
+        {
+          "file": "apps/auth-service/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/auth-service/src/main.ts",
+          "hash": "11416414700058760740",
+          "deps": [
+            "npm:express",
+            "npm:cors"
+          ]
+        },
+        {
+          "file": "apps/auth-service/tsconfig.app.json",
+          "hash": "11319222975831184529"
+        },
+        {
+          "file": "apps/auth-service/tsconfig.json",
+          "hash": "9214820933160915425"
+        },
+        {
+          "file": "apps/auth-service/tsconfig.spec.json",
+          "hash": "8540766730778431787"
+        }
+      ],
+      "@org/api-gateway": [
+        {
+          "file": "apps/api-gateway/dist/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api-gateway/dist/main.js",
+          "hash": "1306840635076588810",
+          "deps": [
+            [
+              "npm:tslib",
+              "dynamic"
+            ],
+            [
+              "npm:express",
+              "dynamic"
+            ],
+            [
+              "npm:cors",
+              "dynamic"
+            ],
+            [
+              "npm:morgan",
+              "dynamic"
+            ],
+            [
+              "npm:cookie-parser",
+              "dynamic"
+            ],
+            [
+              "npm:express-rate-limit",
+              "dynamic"
+            ],
+            [
+              "npm:express-http-proxy",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "apps/api-gateway/dist/package-lock.json",
+          "hash": "11477687120430363423"
+        },
+        {
+          "file": "apps/api-gateway/dist/package.json",
+          "hash": "1210770927260261644"
+        },
+        {
+          "file": "apps/api-gateway/package.json",
+          "hash": "12930959467977865083"
+        },
+        {
+          "file": "apps/api-gateway/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/api-gateway/src/main.ts",
+          "hash": "9780807820516715809",
+          "deps": [
+            "npm:express",
+            "npm:cors",
+            "npm:morgan",
+            "npm:cookie-parser",
+            "npm:express-rate-limit",
+            "npm:express-http-proxy"
+          ]
+        },
+        {
+          "file": "apps/api-gateway/tsconfig.app.json",
+          "hash": "16690789125392469436"
+        },
+        {
+          "file": "apps/api-gateway/tsconfig.json",
+          "hash": "6240538891403235665"
+        },
+        {
+          "file": "apps/api-gateway/webpack.config.js",
+          "hash": "8354317366887649689",
+          "deps": [
+            "npm:@nx/webpack"
+          ]
+        }
+      ],
+      "@org/api-gateway-e2e": [
+        {
+          "file": "apps/api-gateway-e2e/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "apps/api-gateway-e2e/jest.config.ts",
+          "hash": "7770615444200803877"
+        },
+        {
+          "file": "apps/api-gateway-e2e/package.json",
+          "hash": "8640016752457180671"
+        },
+        {
+          "file": "apps/api-gateway-e2e/src/api-gateway/api-gateway.spec.ts",
+          "hash": "7531705588582374674",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/api-gateway-e2e/src/support/global-setup.ts",
+          "hash": "3444053551545844372",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/api-gateway-e2e/src/support/global-teardown.ts",
+          "hash": "18176614999450167852",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/api-gateway-e2e/src/support/test-setup.ts",
+          "hash": "11749744855473391997",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/api-gateway-e2e/tsconfig.json",
+          "hash": "11291748059450055739"
+        }
+      ],
+      "@org/auth-service-e2e": [
+        {
+          "file": "apps/auth-service-e2e/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "apps/auth-service-e2e/jest.config.ts",
+          "hash": "1785621231060520775"
+        },
+        {
+          "file": "apps/auth-service-e2e/package.json",
+          "hash": "14087905661536586562"
+        },
+        {
+          "file": "apps/auth-service-e2e/src/auth-service/auth-service.spec.ts",
+          "hash": "7531705588582374674",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/auth-service-e2e/src/support/global-setup.ts",
+          "hash": "3444053551545844372",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/auth-service-e2e/src/support/global-teardown.ts",
+          "hash": "18176614999450167852",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/auth-service-e2e/src/support/test-setup.ts",
+          "hash": "11749744855473391997",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/auth-service-e2e/tsconfig.json",
+          "hash": "15079505531949571033"
+        }
+      ]
+    }
+  }
+}
