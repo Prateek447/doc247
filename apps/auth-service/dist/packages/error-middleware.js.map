@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../packages/error-middleware.ts"],
+  "sourcesContent": ["import { AppError } from \".\";\nimport { Request, Response } from \"express\";\n\nexport const errorMiddleware = (err : Error, req : Request, res : Response) => {\n\n    if (err instanceof AppError) {\n        return res.status(err.statusCode).json({\n            status: 'error',\n            message: err.message,\n            details: err.details\n        });\n    }\n    console.error(\"Unhandled Error\",err); // Log the error for debugging\n    return res.status(500).json({\n        status: 'error',\n        message: 'Internal server error',\n        details: 'An unexpected error occurred. Please try again later.'\n    });\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,eAAyB;AAGlB,MAAM,kBAAkB,CAAC,KAAa,KAAe,QAAmB;AAE3E,MAAI,eAAe,mBAAU;AACzB,WAAO,IAAI,OAAO,IAAI,UAAU,EAAE,KAAK;AAAA,MACnC,QAAQ;AAAA,MACR,SAAS,IAAI;AAAA,MACb,SAAS,IAAI;AAAA,IACjB,CAAC;AAAA,EACL;AACA,UAAQ,MAAM,mBAAkB,GAAG;AACnC,SAAO,IAAI,OAAO,GAAG,EAAE,KAAK;AAAA,IACxB,QAAQ;AAAA,IACR,SAAS;AAAA,IACT,SAAS;AAAA,EACb,CAAC;AACL;",
+  "names": []
+}

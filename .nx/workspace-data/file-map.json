@@ -37,12 +37,24 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".DS_Store",
-        "hash": "2639373961351220156"
+        "file": "tsconfig.json",
+        "hash": "14556703730165273965"
       },
       {
         "file": ".gitignore",
-        "hash": "4591841680392328334"
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "8900268571896142108"
+      },
+      {
+        "file": "packages/error-middleware.ts",
+        "hash": "2662491103499895977"
+      },
+      {
+        "file": "nx.json",
+        "hash": "1833882927333840410"
       },
       {
         "file": "README.md",
@@ -53,89 +65,31 @@
         "hash": "14236175072743533737"
       },
       {
-        "file": "jest.preset.js",
-        "hash": "13737983450217408137"
-      },
-      {
-        "file": "nx.json",
-        "hash": "1833882927333840410"
-      },
-      {
         "file": "package-lock.json",
         "hash": "7807293561533594609"
       },
       {
-        "file": "package.json",
-        "hash": "4620852837147146636"
+        "file": "jest.preset.js",
+        "hash": "13737983450217408137"
       },
       {
-        "file": "packages/error-middleware.ts",
-        "hash": "2662491103499895977"
+        "file": ".DS_Store",
+        "hash": "2639373961351220156"
       },
       {
         "file": "packages/index.ts",
         "hash": "13811328633302000243"
       },
       {
+        "file": "package.json",
+        "hash": "4620852837147146636"
+      },
+      {
         "file": "tmp/@org/auth-service/main-with-require-overrides.js",
         "hash": "3691358310437684392"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "8900268571896142108"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "14556703730165273965"
       }
     ],
     "projectFileMap": {
-      "@org/auth-service-e2e": [
-        {
-          "file": "apps/auth-service-e2e/.spec.swcrc",
-          "hash": "18201067170784284381"
-        },
-        {
-          "file": "apps/auth-service-e2e/jest.config.ts",
-          "hash": "1785621231060520775"
-        },
-        {
-          "file": "apps/auth-service-e2e/package.json",
-          "hash": "14087905661536586562"
-        },
-        {
-          "file": "apps/auth-service-e2e/src/auth-service/auth-service.spec.ts",
-          "hash": "7531705588582374674",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/auth-service-e2e/src/support/global-setup.ts",
-          "hash": "3444053551545844372",
-          "deps": [
-            "npm:@nx/node"
-          ]
-        },
-        {
-          "file": "apps/auth-service-e2e/src/support/global-teardown.ts",
-          "hash": "18176614999450167852",
-          "deps": [
-            "npm:@nx/node"
-          ]
-        },
-        {
-          "file": "apps/auth-service-e2e/src/support/test-setup.ts",
-          "hash": "11749744855473391997",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
-          "file": "apps/auth-service-e2e/tsconfig.json",
-          "hash": "15079505531949571033"
-        }
-      ],
       "@org/auth-service": [
         {
           "file": "apps/auth-service/.spec.swcrc",
@@ -186,12 +140,28 @@
           "hash": "12945391700768008130"
         },
         {
+          "file": "apps/auth-service/dist/packages/error-middleware.js",
+          "hash": "16830081233395105134"
+        },
+        {
+          "file": "apps/auth-service/dist/packages/error-middleware.js.map",
+          "hash": "13769833915994901034"
+        },
+        {
           "file": "apps/auth-service/dist/packages/index.d.ts",
           "hash": "4444908339470250795"
         },
         {
           "file": "apps/auth-service/dist/packages/index.d.ts.map",
           "hash": "14598442240573846351"
+        },
+        {
+          "file": "apps/auth-service/dist/packages/index.js",
+          "hash": "4402213752705031906"
+        },
+        {
+          "file": "apps/auth-service/dist/packages/index.js.map",
+          "hash": "15849536421122788122"
         },
         {
           "file": "apps/auth-service/jest.config.ts",
@@ -350,6 +320,52 @@
           "deps": [
             "npm:@nx/webpack"
           ]
+        }
+      ],
+      "@org/auth-service-e2e": [
+        {
+          "file": "apps/auth-service-e2e/.spec.swcrc",
+          "hash": "18201067170784284381"
+        },
+        {
+          "file": "apps/auth-service-e2e/jest.config.ts",
+          "hash": "1785621231060520775"
+        },
+        {
+          "file": "apps/auth-service-e2e/package.json",
+          "hash": "14087905661536586562"
+        },
+        {
+          "file": "apps/auth-service-e2e/src/auth-service/auth-service.spec.ts",
+          "hash": "7531705588582374674",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/auth-service-e2e/src/support/global-setup.ts",
+          "hash": "3444053551545844372",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/auth-service-e2e/src/support/global-teardown.ts",
+          "hash": "18176614999450167852",
+          "deps": [
+            "npm:@nx/node"
+          ]
+        },
+        {
+          "file": "apps/auth-service-e2e/src/support/test-setup.ts",
+          "hash": "11749744855473391997",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "apps/auth-service-e2e/tsconfig.json",
+          "hash": "15079505531949571033"
         }
       ]
     }
