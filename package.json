@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx run-many --target=serve --all"
+    "dev": "nx run-many --target=serve --all --verbose"
   },
   "private": true,
   "dependencies": {

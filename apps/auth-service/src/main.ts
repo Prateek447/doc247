@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { errorMiddleware } from '../../../packages/error-middleware';
+import { errorMiddleware } from '@packages/error-middleware';
 import cookieParser from 'cookie-parser';
 
 const host = process.env.HOST ?? 'localhost';

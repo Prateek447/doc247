@@ -5,30 +5,36 @@
   "scripts": {
     "dev": "node src/main.ts"
   },
-  "nx":{
+  "nx": {
     "name": "auth-service",
     "projectType": "application",
     "sourceRoot": "auth-service/src",
-    "targets":{
-      "serve":{
+    "targets": {
+      "serve": {
         "executor": "@nx/js:node",
         "defaultConfiguration": "development",
         "dependsOn": [
           "build"
-],
+        ],
         "options": {
           "buildTarget": "@org/auth-service:build",
           "runBuildTargetDependencies": false
         },
-        "configurations":{
-          "development":{
+        "configurations": {
+          "development": {
             "buildTarget": "@org/auth-service:build:development"
           },
-          "production":{
+          "production": {
             "buildTarget": "@org/auth-service:build:production"
           }
         }
       }
     }
-  }
+  },
+  "dependencies": {
+    "cookie-parser": "1.4.7",
+    "cors": "2.8.5",
+    "express": "4.21.2"
+  },
+  "main": "main.js"
 }
