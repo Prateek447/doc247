@@ -26,6 +26,8 @@ app.use(cors({
   }
 ));
 
+app.use(require('cors')());
+
 app.get('/', (req, res) => {
     res.send({ 'message': 'Hello API'});
 });

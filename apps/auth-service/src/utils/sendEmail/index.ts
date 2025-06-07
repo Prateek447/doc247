@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 
 //render ejs email template
 const renderEmailTemplate = async (template: string, data: Record<string, any>) : Promise<string> => {
-    const templatePath =  path.join(process.cwd(), "auth-service", "src", "utils", "email-template", `${template}.ejs`);
+    const templatePath =  path.join(process.cwd(),"apps", "auth-service", "src", "utils", "email-template", `${template}.ejs`);
 
     return ejs.renderFile(templatePath,data);
 }

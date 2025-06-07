@@ -344,7 +344,7 @@ const transporter = nodemailer_1.default.createTransport({
 });
 //render ejs email template
 const renderEmailTemplate = async (template, data) => {
-    const templatePath = path_1.default.join(process.cwd(), "auth-service", "src", "utils", "email-template", `${template}.ejs`);
+    const templatePath = path_1.default.join(process.cwd(), "apps", "auth-service", "src", "utils", "email-template", `${template}.ejs`);
     return ejs_1.default.renderFile(templatePath, data);
 };
 //send an email using nodemailer
@@ -4140,6 +4140,7 @@ app.use((0, cors_1.default)({
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
+app.use(__webpack_require__(3)());
 app.get('/', (req, res) => {
     res.send({ 'message': 'Hello API' });
 });
