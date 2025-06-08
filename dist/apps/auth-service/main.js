@@ -133,6 +133,7 @@ const express_1 = tslib_1.__importDefault(__webpack_require__(2));
 const auth_controller_1 = __webpack_require__(8);
 const router = express_1.default.Router();
 router.post("/user-registration", auth_controller_1.userRegisteration);
+router.post("/verify-user", auth_controller_1.verifyUser);
 exports["default"] = router;
 
 
@@ -142,11 +143,12 @@ exports["default"] = router;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.userRegisteration = void 0;
+exports.verifyUser = exports.userRegisteration = void 0;
 const tslib_1 = __webpack_require__(1);
 const auth_helper_1 = __webpack_require__(9);
 const prisma_1 = tslib_1.__importDefault(__webpack_require__(18));
 const error_handler_1 = __webpack_require__(10);
+const bcryptjs_1 = tslib_1.__importDefault(__webpack_require__(33));
 const userRegisteration = async (req, res, next) => {
     try {
         console.log('📝 Registration request received:', { email: req.body.email, name: req.body.name });
@@ -156,7 +158,7 @@ const userRegisteration = async (req, res, next) => {
         const existingUser = await prisma_1.default.users.findUnique({ where: { email } });
         if (existingUser) {
             console.log('❌ User already exists:', email);
-            return next(new error_handler_1.ValidationError("User already exists", 400));
+            throw new error_handler_1.ValidationError("User already exists", 400);
         }
         console.log('✅ User validation passed, checking OTP restrictions');
         await (0, auth_helper_1.checkOtpRestrictions)(email, next);
@@ -175,6 +177,39 @@ const userRegisteration = async (req, res, next) => {
     }
 };
 exports.userRegisteration = userRegisteration;
+const verifyUser = async (req, res, next) => {
+    try {
+        const { email, otp, password, name } = req.body;
+        if (!email || !otp || !password || !name) {
+            throw new error_handler_1.ValidationError("All fields are required", 400);
+        }
+        console.log('🔍 Verifying OTP for user:', email);
+        const existingUser = await prisma_1.default.users.findUnique({ where: { email } });
+        if (existingUser) {
+            throw new error_handler_1.ValidationError("User already exists", 400);
+        }
+        await (0, auth_helper_1.verifyOtp)(email, otp, next);
+        const hashedPassword = await bcryptjs_1.default.hash(password, 10);
+        const user = await prisma_1.default.users.create({
+            data: {
+                email,
+                password: hashedPassword,
+                name,
+            }
+        });
+        console.log('✅ OTP verified successfully for:', email);
+        res.status(200).json({
+            message: "User registered successfully",
+            user,
+            status: "success"
+        });
+    }
+    catch (error) {
+        console.error('❌ Verification error:', error);
+        return next(error);
+    }
+};
+exports.verifyUser = verifyUser;
 
 
 /***/ }),
@@ -183,7 +218,7 @@ exports.userRegisteration = userRegisteration;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.sendOtp = exports.trackOtpRequests = exports.checkOtpRestrictions = exports.validateRegistrationData = void 0;
+exports.verifyOtp = exports.sendOtp = exports.trackOtpRequests = exports.checkOtpRestrictions = exports.validateRegistrationData = void 0;
 const tslib_1 = __webpack_require__(1);
 const error_handler_1 = __webpack_require__(10);
 const redis_1 = tslib_1.__importDefault(__webpack_require__(11));
@@ -229,6 +264,25 @@ const sendOtp = async (email, name, template) => {
     await redis_1.default.set(`otp_cooldown:${email}`, "true", "EX", 60); // Set cooldown for 1 minute
 };
 exports.sendOtp = sendOtp;
+const verifyOtp = async (email, otp, next) => {
+    const storedOtp = await redis_1.default.get(`otp:${email}`);
+    if (!storedOtp) {
+        return next(new error_handler_1.ValidationError("OTP has expired or is invalid", 400));
+    }
+    const failedAttemptsKey = `otp_attempts:${email}`;
+    if (storedOtp !== otp) {
+        let failedAttempts = parseInt(await redis_1.default.get(failedAttemptsKey) || "0");
+        if (failedAttempts >= 3) {
+            await redis_1.default.set(`otp_lock:${email}`, "locked", "EX", 1800); // Lock for 1 hour
+            await redis_1.default.del(`otp:${email}`, failedAttemptsKey);
+            return next(new error_handler_1.ValidationError("You have exceeded the maximum number of OTP attempts. Please try again later.", 429));
+        }
+        await redis_1.default.set(failedAttemptsKey, (failedAttempts + 1), "EX", 3000); // Increment failed attempts and set expiration to 1 hour
+        return next(new error_handler_1.ValidationError(`Incorrect OTP - ${2 - failedAttempts} attempts left`, 400));
+    }
+    await redis_1.default.del(`otp:${email}`, failedAttemptsKey); // Clear OTP after successful verification
+};
+exports.verifyOtp = verifyOtp;
 
 
 /***/ }),
@@ -476,8 +530,7 @@ exports.Prisma.UsersScalarFieldEnum = {
     password: 'password',
     following: 'following',
     createdAt: 'createdAt',
-    updatedAt: 'updatedAt',
-    imagesId: 'imagesId'
+    updatedAt: 'updatedAt'
 };
 exports.Prisma.SortOrder = {
     asc: 'asc',
@@ -530,7 +583,6 @@ const config = {
         "db"
     ],
     "activeProvider": "mongodb",
-    "postinstall": false,
     "inlineDatasources": {
         "db": {
             "url": {
@@ -539,8 +591,8 @@ const config = {
             }
         }
     },
-    "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel images {\n  id      String  @id @default(auto()) @map(\"_id\") @db.ObjectId\n  file_id String\n  url     String\n  userId  String? @unique @db.ObjectId\n  users   users?  @relation(fields: [userId], references: [id])\n}\n\nmodel users {\n  id        String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  name      String\n  email     String   @unique\n  password  String?\n  following String[]\n  avatar    images?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  imagesId  String   @db.ObjectId\n}\n",
-    "inlineSchemaHash": "f4592bb4c9a159bcc4a83b99e30acb3168d38bae7e2cf2f10528f8cd5f989083",
+    "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel images {\n  id      String  @id @default(auto()) @map(\"_id\") @db.ObjectId\n  file_id String\n  url     String\n  userId  String? @unique @db.ObjectId\n  users   users?  @relation(fields: [userId], references: [id])\n}\n\nmodel users {\n  id        String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  name      String\n  email     String   @unique\n  password  String?\n  following String[]\n  avatar    images?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n}\n",
+    "inlineSchemaHash": "ef3d7f52773d5babab1441ab68c51ad495dc69aace2349a7f2cb2bf6ed450369",
     "copyEngine": true
 };
 const fs = __webpack_require__(32);
@@ -556,7 +608,7 @@ if (!fs.existsSync(path.join(__dirname, 'schema.prisma'))) {
     config.dirname = path.join(process.cwd(), alternativePath);
     config.isBundled = true;
 }
-config.runtimeDataModel = JSON.parse("{\"models\":{\"images\":{\"dbName\":null,\"schema\":null,\"fields\":[{\"name\":\"id\",\"dbName\":\"_id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"default\":{\"name\":\"auto\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"file_id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"url\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"userId\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":true,\"isId\":false,\"isReadOnly\":true,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"users\",\"kind\":\"object\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"users\",\"nativeType\":null,\"relationName\":\"imagesTousers\",\"relationFromFields\":[\"userId\"],\"relationToFields\":[\"id\"],\"isGenerated\":false,\"isUpdatedAt\":false}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false},\"users\":{\"dbName\":null,\"schema\":null,\"fields\":[{\"name\":\"id\",\"dbName\":\"_id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"default\":{\"name\":\"auto\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"name\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"email\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":true,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"password\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"following\",\"kind\":\"scalar\",\"isList\":true,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"avatar\",\"kind\":\"object\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"images\",\"nativeType\":null,\"relationName\":\"imagesTousers\",\"relationFromFields\":[],\"relationToFields\":[],\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"DateTime\",\"nativeType\":null,\"default\":{\"name\":\"now\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"DateTime\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":true},{\"name\":\"imagesId\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"isGenerated\":false,\"isUpdatedAt\":false}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false}},\"enums\":{},\"types\":{}}");
+config.runtimeDataModel = JSON.parse("{\"models\":{\"images\":{\"dbName\":null,\"schema\":null,\"fields\":[{\"name\":\"id\",\"dbName\":\"_id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"default\":{\"name\":\"auto\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"file_id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"url\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"userId\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":true,\"isId\":false,\"isReadOnly\":true,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"users\",\"kind\":\"object\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"users\",\"nativeType\":null,\"relationName\":\"imagesTousers\",\"relationFromFields\":[\"userId\"],\"relationToFields\":[\"id\"],\"isGenerated\":false,\"isUpdatedAt\":false}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false},\"users\":{\"dbName\":null,\"schema\":null,\"fields\":[{\"name\":\"id\",\"dbName\":\"_id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"default\":{\"name\":\"auto\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"name\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"email\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":true,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"password\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"following\",\"kind\":\"scalar\",\"isList\":true,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"avatar\",\"kind\":\"object\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"images\",\"nativeType\":null,\"relationName\":\"imagesTousers\",\"relationFromFields\":[],\"relationToFields\":[],\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"createdAt\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"DateTime\",\"nativeType\":null,\"default\":{\"name\":\"now\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"updatedAt\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"DateTime\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":true}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false}},\"enums\":{},\"types\":{}}");
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel);
 config.engineWasm = undefined;
 config.compilerWasm = undefined;
@@ -4071,16 +4123,22 @@ module.exports = require("fs");
 /* 33 */
 /***/ ((module) => {
 
-module.exports = require("swagger-ui-express");
+module.exports = require("bcryptjs");
 
 /***/ }),
 /* 34 */
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"swagger":"2.0","info":{"version":"1.0.0","title":"Auth Service API","description":"Authentication Service API Documentation"},"host":"localhost:6001","basePath":"/","schemes":["http"],"paths":{"/":{"get":{"summary":"Root endpoint","description":"Returns a welcome message","produces":["application/json"],"responses":{"200":{"description":"Successful response","schema":{"type":"object","properties":{"message":{"type":"string","example":"Hello API"}}}}}}},"/api/user-registration":{"post":{"tags":["Authentication"],"summary":"Register a new user","description":"Register a new user and send OTP for verification","produces":["application/json"],"consumes":["application/json"],"parameters":[{"in":"body","name":"body","description":"User registration details","required":true,"schema":{"type":"object","required":["name","email"],"properties":{"name":{"type":"string","example":"Doctor Sharma"},"email":{"type":"string","example":"sharmaji@example.com"}}}}],"responses":{"200":{"description":"OTP sent successfully","schema":{"type":"object","properties":{"message":{"type":"string","example":"OTP sent successfully. Please check your email to verify your account."},"status":{"type":"string","example":"success"}}}},"400":{"description":"Validation Error","schema":{"type":"object","properties":{"message":{"type":"string","example":"User already exists"}}}},"429":{"description":"Too Many Requests","schema":{"type":"object","properties":{"message":{"type":"string","example":"You have reached the maximum number of OTP requests. Please try again later."}}}}}}}},"definitions":{},"responses":{},"parameters":{},"securityDefinitions":{}}');
+module.exports = require("swagger-ui-express");
 
 /***/ }),
 /* 35 */
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"swagger":"2.0","info":{"title":"Auth Service API","description":"API documentation for the Auth Service","version":"1.0.0"},"host":"localhost:6001","basePath":"/api","tags":[{"name":"Auth","description":"Authentication endpoints"}],"schemes":["http"],"securityDefinitions":{"bearerAuth":{"type":"apiKey","name":"Authorization","in":"header"}},"paths":{"/user-registration":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"name":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}},"/verify-user":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"otp":{"example":"any"},"password":{"example":"any"},"name":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}}}}');
+
+/***/ }),
+/* 36 */
 /***/ ((module) => {
 
 module.exports = require("morgan");
@@ -4125,9 +4183,9 @@ const cors_1 = tslib_1.__importDefault(__webpack_require__(3));
 const error_middleware_1 = __webpack_require__(4);
 const cookie_parser_1 = tslib_1.__importDefault(__webpack_require__(6));
 const auth_router_1 = tslib_1.__importDefault(__webpack_require__(7));
-const swagger_ui_express_1 = tslib_1.__importDefault(__webpack_require__(33));
-const swagger_output_json_1 = tslib_1.__importDefault(__webpack_require__(34));
-const morgan_1 = tslib_1.__importDefault(__webpack_require__(35));
+const swagger_ui_express_1 = tslib_1.__importDefault(__webpack_require__(34));
+const swagger_output_json_1 = tslib_1.__importDefault(__webpack_require__(35));
+const morgan_1 = tslib_1.__importDefault(__webpack_require__(36));
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 6001;
 const app = (0, express_1.default)();

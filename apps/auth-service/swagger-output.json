@@ -6,7 +6,7 @@
     "version": "1.0.0"
   },
   "host": "localhost:6001",
-  "basePath": "/api",
+  "basePath": "/",
   "tags": [
     {
       "name": "Auth",
@@ -16,13 +16,6 @@
   "schemes": [
     "http"
   ],
-  "securityDefinitions": {
-    "bearerAuth": {
-      "type": "apiKey",
-      "name": "Authorization",
-      "in": "header"
-    }
-  },
   "paths": {
     "/user-registration": {
       "post": {
@@ -81,6 +74,42 @@
           "200": {
             "description": "OK"
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "VerifyUserRequest": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "user@example.com"
+        },
+        "otp": {
+          "type": "string",
+          "example": "123456"
+        },
+        "password": {
+          "type": "string",
+          "example": "password123"
+        },
+        "name": {
+          "type": "string",
+          "example": "John Doe"
+        }
+      }
+    },
+    "UserRegistrationRequest": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "example": "user@example.com"
+        },
+        "name": {
+          "type": "string",
+          "example": "John Doe"
         }
       }
     }

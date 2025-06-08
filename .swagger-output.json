@@ -6,23 +6,10 @@
     "version": "1.0.0"
   },
   "host": "localhost:6001",
-  "basePath": "/api",
-  "tags": [
-    {
-      "name": "Auth",
-      "description": "Authentication endpoints"
-    }
-  ],
+  "basePath": "/",
   "schemes": [
     "http"
   ],
-  "securityDefinitions": {
-    "bearerAuth": {
-      "type": "apiKey",
-      "name": "Authorization",
-      "in": "header"
-    }
-  },
   "paths": {
     "/user-registration": {
       "post": {

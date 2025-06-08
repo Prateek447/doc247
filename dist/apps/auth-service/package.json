@@ -3,18 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/morgan": "^1.9.10",
+    "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "16.5.0",
     "ejs": "3.1.10",
     "express": "^4.18.2",
-    "morgan": "1.10.0",
+    "morgan": "^1.10.0",
     "nodemailer": "7.0.3",
     "swagger-autogen": "2.23.7",
     "swagger-ui-express": "^5.0.0"
   },
   "scripts": {
-    "dev": "node src/main.ts"
+    "dev": "node src/main.ts",
+    "auth-docs": "node src/swagger.js"
   },
   "nx": {
     "name": "auth-service",
