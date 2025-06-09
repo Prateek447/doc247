@@ -3,6 +3,8 @@ import { checkOtpRestrictions, sendOtp, trackOtpRequests, validateRegistrationDa
 import prisma from "@packages/libs/prisma";
 import { ValidationError } from "@packages/error-handler";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import { setCookie } from "../utils/cookies/setCookie";
 
 export const userRegisteration = async (req: Request, res: Response, next: NextFunction) => {   
     try {
@@ -70,4 +72,45 @@ export const verifyUser =  async (req: Request, res: Response, next: NextFunctio
         return next(error);
       }
 
+}
+
+
+export const loginUser = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { email, password } = req.body;
+        if (!email || !password) {
+            throw new ValidationError("Email and password are required", 400);
+        }
+
+        console.log('🔍 Checking user credentials for:', email);
+        const user = await prisma.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new ValidationError("User not found", 404);
+        }
+
+        if (!user.password) {
+            throw new ValidationError("Password is not set for this user", 400);
+        }
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if (!isPasswordValid) {
+            throw new ValidationError("Invalid password", 401);
+        }
+
+        const accessToken = jwt.sign({id: user.id, role: "user"},process.env.ACCESS_TOKEN_SECRET as string, { expiresIn: "15m" });
+
+        const refreshToken = jwt.sign({id: user.id, role: "user"}, process.env.REFRESH_TOKEN_SECRET as string, { expiresIn: "7d" });
+
+        setCookie(res, "accessToken", accessToken);
+        setCookie(res, "refreshToken", refreshToken);
+
+        console.log('✅ User logged in successfully:', email);
+        res.status(200).json({
+            message: "Login successful",
+            user,
+            status: "success"
+        });
+    } catch (error) {
+        console.error('❌ Login error:', error);
+        return next(error);
+    }
 }
