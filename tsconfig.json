@@ -16,7 +16,7 @@
       "path": "./apps/api-gateway"
     },
     {
-      "path": "./app/user-ui"
+      "path": "./apps/user-ui"
     }
   ]
 }

@@ -134,6 +134,7 @@ const auth_controller_1 = __webpack_require__(8);
 const router = express_1.default.Router();
 router.post("/user-registration", auth_controller_1.userRegisteration);
 router.post("/verify-user", auth_controller_1.verifyUser);
+router.post("/login-user", auth_controller_1.loginUser);
 exports["default"] = router;
 
 
@@ -143,12 +144,14 @@ exports["default"] = router;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.verifyUser = exports.userRegisteration = void 0;
+exports.loginUser = exports.verifyUser = exports.userRegisteration = void 0;
 const tslib_1 = __webpack_require__(1);
 const auth_helper_1 = __webpack_require__(9);
 const prisma_1 = tslib_1.__importDefault(__webpack_require__(18));
 const error_handler_1 = __webpack_require__(10);
 const bcryptjs_1 = tslib_1.__importDefault(__webpack_require__(33));
+const jsonwebtoken_1 = tslib_1.__importDefault(__webpack_require__(34));
+const setCookie_1 = __webpack_require__(35);
 const userRegisteration = async (req, res, next) => {
     try {
         console.log('📝 Registration request received:', { email: req.body.email, name: req.body.name });
@@ -210,6 +213,41 @@ const verifyUser = async (req, res, next) => {
     }
 };
 exports.verifyUser = verifyUser;
+const loginUser = async (req, res, next) => {
+    try {
+        const { email, password } = req.body;
+        if (!email || !password) {
+            throw new error_handler_1.ValidationError("Email and password are required", 400);
+        }
+        console.log('🔍 Checking user credentials for:', email);
+        const user = await prisma_1.default.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new error_handler_1.ValidationError("User not found", 404);
+        }
+        if (!user.password) {
+            throw new error_handler_1.ValidationError("Password is not set for this user", 400);
+        }
+        const isPasswordValid = await bcryptjs_1.default.compare(password, user.password);
+        if (!isPasswordValid) {
+            throw new error_handler_1.ValidationError("Invalid password", 401);
+        }
+        const accessToken = jsonwebtoken_1.default.sign({ id: user.id, role: "user" }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15m" });
+        const refreshToken = jsonwebtoken_1.default.sign({ id: user.id, role: "user" }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "7d" });
+        (0, setCookie_1.setCookie)(res, "accessToken", accessToken);
+        (0, setCookie_1.setCookie)(res, "refreshToken", refreshToken);
+        console.log('✅ User logged in successfully:', email);
+        res.status(200).json({
+            message: "Login successful",
+            user,
+            status: "success"
+        });
+    }
+    catch (error) {
+        console.error('❌ Login error:', error);
+        return next(error);
+    }
+};
+exports.loginUser = loginUser;
 
 
 /***/ }),
@@ -4129,16 +4167,41 @@ module.exports = require("bcryptjs");
 /* 34 */
 /***/ ((module) => {
 
-module.exports = require("swagger-ui-express");
+module.exports = require("jsonwebtoken");
 
 /***/ }),
 /* 35 */
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.setCookie = void 0;
+const setCookie = (res, name, value) => {
+    const cookieOptions = {
+        httpOnly: true,
+        secure: true, // Use secure cookies in production
+        sameSite: 'none', // Adjust as necessary
+        maxAge: 24 * 60 * 60 * 1000 // 1 day in milliseconds
+    };
+    res.cookie(name, value, cookieOptions);
+};
+exports.setCookie = setCookie;
+
+
+/***/ }),
+/* 36 */
+/***/ ((module) => {
+
+module.exports = require("swagger-ui-express");
+
+/***/ }),
+/* 37 */
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"swagger":"2.0","info":{"title":"Auth Service API","description":"API documentation for the Auth Service","version":"1.0.0"},"host":"localhost:6001","basePath":"/api","tags":[{"name":"Auth","description":"Authentication endpoints"}],"schemes":["http"],"securityDefinitions":{"bearerAuth":{"type":"apiKey","name":"Authorization","in":"header"}},"paths":{"/user-registration":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"name":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}},"/verify-user":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"otp":{"example":"any"},"password":{"example":"any"},"name":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}}}}');
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ ((module) => {
 
 module.exports = require("morgan");
@@ -4183,9 +4246,9 @@ const cors_1 = tslib_1.__importDefault(__webpack_require__(3));
 const error_middleware_1 = __webpack_require__(4);
 const cookie_parser_1 = tslib_1.__importDefault(__webpack_require__(6));
 const auth_router_1 = tslib_1.__importDefault(__webpack_require__(7));
-const swagger_ui_express_1 = tslib_1.__importDefault(__webpack_require__(34));
-const swagger_output_json_1 = tslib_1.__importDefault(__webpack_require__(35));
-const morgan_1 = tslib_1.__importDefault(__webpack_require__(36));
+const swagger_ui_express_1 = tslib_1.__importDefault(__webpack_require__(36));
+const swagger_output_json_1 = tslib_1.__importDefault(__webpack_require__(37));
+const morgan_1 = tslib_1.__importDefault(__webpack_require__(38));
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 6001;
 const app = (0, express_1.default)();

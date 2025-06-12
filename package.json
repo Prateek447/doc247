@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx run-many --target=serve --all --verbose",
-    "auth-docs": "node apps/auth-service/src/swagger.js"
+    "dev": "npx nx run-many --target=serve --all --verbose",
+    "auth-docs": "node apps/auth-service/src/swagger.js",
+    "user-ui": "npx nx run-many --target=dev --all  --projects=user-ui"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "express-rate-limit": "^7.5.0",
     "ioredis": "^5.6.1",
     "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.514.0",
     "morgan": "^1.10.0",
     "next": "~15.2.4",
     "nodemailer": "^7.0.3",
