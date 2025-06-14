@@ -4,7 +4,10 @@ export default function Index() {
 
   return (
     <>
-       <HeaderBottom/>
+       <div className="">
+
+       {/* <HeaderBottom/> */}
+       </div>
     </>
   );
 };

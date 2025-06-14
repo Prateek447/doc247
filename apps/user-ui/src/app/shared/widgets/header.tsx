@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { HeartIcon, Search, ShoppingBag } from 'lucide-react';
 import ProfileIcon from 'apps/user-ui/src/assets/svgs/profile-icon';
+import HeaderBottom from './HeaderBottom';
 
 export default function Header() {
   return (
@@ -20,7 +21,7 @@ export default function Header() {
                <Search color="#fff"/>
             </div>
          </div>
-            <div className='flex items-center gap-2'>
+            <div className='flex items-center gap-8 pb-2'>
                <div className="flex items-center gap-2">
                 <Link href={"/login"} className='border-2 w-[50px] h-[50px] flex items-center justify-center rounded-full border-[#010f1c1a]' >
                 <ProfileIcon/>
@@ -50,7 +51,7 @@ export default function Header() {
 
        <div className='border-b border-b-[#99999938]'/>
         
-    
+       <HeaderBottom/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 'use client';
+import ProfileIcon from "apps/user-ui/src/assets/svgs/profile-icon";
 import { navItems } from "apps/user-ui/src/configs/constants";
-import { AlignLeft, ChevronDown } from "lucide-react";
+import { AlignLeft, ChevronDown, HeartIcon, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -48,6 +49,37 @@ const HeaderBottom = () => {
                     {navItems.map((i: NavbarItemTypes, index: number) => (
                         <Link className="px-5 font-medium text-lg" href={i.href} key={index} > {i.title} </Link>
                     ))}
+                 </div>
+
+                 <div>
+                    {isSticky && (
+                         <div className='flex items-center gap-8 pb-2'>
+                         <div className="flex items-center gap-2">
+                          <Link href={"/login"} className='border-2 w-[50px] h-[50px] flex items-center justify-center rounded-full border-[#010f1c1a]' >
+                          <ProfileIcon/>
+                          </Link>
+                         
+                          <Link href={"/login"}>
+                          <span className='block font-medium'>Hello,</span>
+                          <span className='font-semibold '>Sign In</span>
+                          </Link>
+                      </div>
+                      <div className="flex items-center gap-5">
+                        <Link href={"/wishlist"} className='relative'>
+                        <HeartIcon/>
+                        <div className='w-6 h-6  border-2 border-white bg-red-500 rounded-full flex items-center justify-center absolute  top-[-10px] right-[-10px]'>
+                          <span className='text-white text-xs font-semibold'>0</span>
+                        </div>
+                        </Link>
+                        <Link href={"/cart"} className='relative'>
+                        <ShoppingBag/>
+                        <div className='w-6 h-6  border-2 border-white bg-red-500 rounded-full flex items-center justify-center absolute  top-[-10px] right-[-10px]'>
+                          <span className='text-white text-xs font-semibold'>0</span>
+                        </div>
+                        </Link>
+                      </div>
+                      </div>
+                    )}
                  </div>
             </div>
        </div>
