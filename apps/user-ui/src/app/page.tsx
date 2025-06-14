@@ -1,8 +1,10 @@
+import HeaderBottom from "./shared/widgets/HeaderBottom";
+
 export default function Index() {
 
   return (
     <>
-      Hello Prateek
+       <HeaderBottom/>
     </>
   );
 };
