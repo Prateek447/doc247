@@ -1,5 +1,7 @@
 'use client';
+import { navItems } from "apps/user-ui/src/configs/constants";
 import { AlignLeft, ChevronDown } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 
@@ -41,6 +43,12 @@ const HeaderBottom = () => {
 
                     </div>
                  )}
+
+                 <div className="flex items-center">
+                    {navItems.map((i: NavbarItemTypes, index: number) => (
+                        <Link className="px-5 font-medium text-lg" href={i.href} key={index} > {i.title} </Link>
+                    ))}
+                 </div>
             </div>
        </div>
     );
