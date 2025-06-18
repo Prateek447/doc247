@@ -23,7 +23,7 @@ const Signup = () => {
   const [timer, setTimer] = useState(0);
   const  [userData, setUserData] = useState<FormData | null>(null);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
-  const [showOtp, setShowOtp] = useState(true);
+  const [showOtp, setShowOtp] = useState(false);
 
   const router = useRouter();
   const {
@@ -32,7 +32,9 @@ const Signup = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {};
+  const onSubmit = (data: FormData) => {
+    console.log(data)
+  };
 
   const handleOtpChange =  (index: number , value: string) => {
     if(!/^[0-9]?$/.test(value)) return;
@@ -95,8 +97,8 @@ const Signup = () => {
                    type="text"
                    placeholder="Ram"
                    className="w-full p-2 border border-gray-300 outline-o !rounded mb-1"
-                   {...register("email", {
-                     required: "Email is required",
+                   {...register("name", {
+                     required: "Name is required",
                      minLength: {
                          value: 3,
                          message: "Name must be at least 3 characters",
@@ -157,7 +159,7 @@ const Signup = () => {
                    </button>
                  </div>
                  <button type="submit" className="w-full text-lg cursor-pointer mt-4 bg-black text-white py-2 rounded-lg">
-                     Login
+                     SignUp
                  </button>
                  {serverError && (<p className="text-red-500 text-sm">{serverError}</p>)}
                </form>
