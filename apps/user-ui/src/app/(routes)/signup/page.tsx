@@ -8,7 +8,7 @@ import GoogleButton from "react-google-button";
 import { Eye, EyeOff } from "lucide-react";
 import e from "express";
 import { useMutation } from "@tanstack/react-query";
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 
 type FormData = {
   name: string
@@ -18,7 +18,7 @@ type FormData = {
 
 const Signup = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [serverError, setServerError] = useState<string | null>(null);
+  // const [serverError, setServerError] = useState<string | null>(null);
   const [rememberMe, setRememberMe] = useState(false);
   const [canResend, setCanResend] = useState(true);
   const [otp, setOtp] = useState(["","","",""]);
@@ -87,6 +87,21 @@ const Signup = () => {
         setCanResend(false);
         setTimer(60);
         startResendTimer()
+    }
+  })
+
+
+  const verifyMutation =  useMutation({
+    mutationFn: async () => {
+      if(!userData) return;
+      const response  =  await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URI}/api/verify-user`,{
+        ...userData,
+        otp: otp.join("")
+      })
+      return response.data;
+    },
+    onSuccess: () => {
+      router.push("/login")
     }
   })
 
@@ -190,10 +205,10 @@ const Signup = () => {
                      {passwordVisible ? <Eye /> : <EyeOff />}
                    </button>
                  </div>
-                 <button type="submit" className="w-full text-lg cursor-pointer mt-4 bg-black text-white py-2 rounded-lg">
-                     Signup
+                 <button type="submit" disabled={signupMutation.isPending ? true : false} className="w-full text-lg cursor-pointer mt-4 bg-black text-white py-2 rounded-lg">
+                     {signupMutation.isPending ? "Signing up..." : "Signup"}
                  </button>
-                 {serverError && (<p className="text-red-500 text-sm">{serverError}</p>)}
+                 {/* {serverError && (<p className="text-red-500 text-sm">{serverError}</p>)} */}
                </form>
                :
                <div>
@@ -210,12 +225,19 @@ const Signup = () => {
                     onKeyDown={(e) => handleOtpKeyDown(index, e)}
                     />))}
                    </div>
-                   <button className="w-full mt-4 text-lg cursor-pointer bg-blue-500 text-white py-2 rounded-lg">
-                    Verify OTP
+                   <button disabled={verifyMutation.isPending} className="w-full mt-4 text-lg cursor-pointer bg-blue-500 text-white py-2 rounded-lg">
+                    {verifyMutation.isPending ? "Verifying..." : "Verify OTP"}
                     </button>
                     <p className="text-center text-sm mt-4">
                         {canResend ? ( <button onClick={resendOtp} className="text-blue-500 cursor-pointer">Resend OTP</button> ) : (`Resend OTP in ${timer}`)}
                     </p>
+                    {verifyMutation?.isError &&
+                    verifyMutation.error instanceof AxiosError && (
+                      <p className="text-red-500 text-sm mt-2">
+                         {verifyMutation.error.response?.data?.message || verifyMutation.error.message}
+                      </p>
+                    )
+                    }
                </div>
            }
         </div>
