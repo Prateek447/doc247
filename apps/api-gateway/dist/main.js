@@ -41,7 +41,7 @@ module.exports = require("express-rate-limit");
 /* 7 */
 /***/ ((module) => {
 
-module.exports = require("express-http-proxy");
+module.exports = require("http-proxy-middleware");
 
 /***/ })
 /******/ 	]);
@@ -87,36 +87,57 @@ const cors_1 = tslib_1.__importDefault(__webpack_require__(3));
 const morgan_1 = tslib_1.__importDefault(__webpack_require__(4));
 const cookie_parser_1 = tslib_1.__importDefault(__webpack_require__(5));
 const express_rate_limit_1 = tslib_1.__importDefault(__webpack_require__(6));
-const express_http_proxy_1 = tslib_1.__importDefault(__webpack_require__(7));
+const http_proxy_middleware_1 = __webpack_require__(7);
 const app = (0, express_1.default)();
-app.use((0, cors_1.default)({
-    origin: ['http://localhost:3000'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
-}));
+// Basic middleware
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json({ limit: '10mb' }));
 app.use(express_1.default.urlencoded({ extended: true, limit: '10mb' }));
 app.use((0, cookie_parser_1.default)());
-app.set('trust proxy', true);
+// CORS configuration
+app.use((0, cors_1.default)({
+    origin: ['http://127.0.0.1:3001'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
+// Rate limiting
 const limiter = (0, express_rate_limit_1.default)({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: (req) => (req.user ? 1000 : 100), // Limit each IP to 100 requests per windowMs
-    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-    legacyHeaders: true, // Disable the `X-RateLimit-*` headers
+    windowMs: 15 * 60 * 1000,
+    max: (req) => (req.user ? 1000 : 100),
+    standardHeaders: true,
+    legacyHeaders: true,
     message: { error: 'Too many requests, please try again later.' },
     keyGenerator: (req) => req.ip
 });
 app.use(limiter);
+// Health check endpoint
 app.get('/gateway-health', (req, res) => {
     res.send({ message: 'Welcome to api-gateway!' });
 });
-app.use("/", (0, express_http_proxy_1.default)("http://localhost:6001"));
-const port = process.env.PORT || 8080;
-const server = app.listen(port, () => {
-    console.log(`Listening at http://localhost:${port}/api`);
+// Proxy configuration
+const proxyOptions = {
+    target: 'http://127.0.0.1:6001',
+    changeOrigin: true,
+    ws: true,
+    logLevel: 'debug',
+    onError: (err, req, res) => {
+        console.error('Proxy Error:', err);
+        res.status(500).send('Proxy Error');
+    },
+    onProxyReq: (proxyReq, req, res) => {
+        // Log proxy requests for debugging
+        console.log('Proxying:', req.method, req.url, 'to', proxyOptions.target + req.url);
+    }
+};
+// Apply proxy middleware
+app.use('/', (0, http_proxy_middleware_1.createProxyMiddleware)(proxyOptions));
+const port = Number(process.env.PORT) || 8080;
+const server = app.listen(port, '0.0.0.0', () => {
+    console.log(`API Gateway is running on http://127.0.0.1:${port}`);
 });
-server.on('error', console.error);
+server.on('error', (err) => {
+    console.error('Server error:', err);
+});
 
 })();
 

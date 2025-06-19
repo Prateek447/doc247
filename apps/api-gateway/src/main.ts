@@ -4,47 +4,68 @@
  */
 
 import express from 'express';
-import cors from 'cors'
+import cors from 'cors';
 import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
-import proxy from 'express-http-proxy';
-
+import { createProxyMiddleware } from 'http-proxy-middleware';
 
 const app = express();
 
-app.use(cors({
-  origin: ['http://localhost:3000'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}
-));
-
+// Basic middleware
 app.use(morgan('dev'));
 app.use(express.json({limit: '10mb'}));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
-app.set('trust proxy', true);
 
-const limiter  =  rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: (req : any) => (req.user ?  1000 : 100), // Limit each IP to 100 requests per windowMs
-  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-  legacyHeaders: true, // Disable the `X-RateLimit-*` headers
+// CORS configuration
+app.use(cors({
+  origin: ['http://127.0.0.1:3001'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
+// Rate limiting
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: (req: any) => (req.user ? 1000 : 100),
+  standardHeaders: true,
+  legacyHeaders: true,
   message: { error: 'Too many requests, please try again later.' },
-  keyGenerator: (req : any) => req.ip }
-);
+  keyGenerator: (req: any) => req.ip
+});
 
-app.use(limiter)
+app.use(limiter);
 
+// Health check endpoint
 app.get('/gateway-health', (req, res) => {
   res.send({ message: 'Welcome to api-gateway!' });
 });
 
-app.use("/" , proxy("http://localhost:6001"))
+// Proxy configuration
+const proxyOptions = {
+  target: 'http://127.0.0.1:6001',
+  changeOrigin: true,
+  ws: true,
+  logLevel: 'debug' as const,
+  onError: (err: Error, req: express.Request, res: express.Response) => {
+    console.error('Proxy Error:', err);
+    res.status(500).send('Proxy Error');
+  },
+  onProxyReq: (proxyReq: any, req: express.Request, res: express.Response) => {
+    // Log proxy requests for debugging
+    console.log('Proxying:', req.method, req.url, 'to', proxyOptions.target + req.url);
+  }
+};
 
-const port = process.env.PORT || 8080;
-const server = app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}/api`);
+// Apply proxy middleware
+app.use('/', createProxyMiddleware(proxyOptions));
+
+const port = Number(process.env.PORT) || 8080;
+const server = app.listen(port, '0.0.0.0', () => {
+  console.log(`API Gateway is running on http://127.0.0.1:${port}`);
 });
-server.on('error', console.error);
+
+server.on('error', (err) => {
+  console.error('Server error:', err);
+});

@@ -4249,19 +4249,18 @@ const auth_router_1 = tslib_1.__importDefault(__webpack_require__(7));
 const swagger_ui_express_1 = tslib_1.__importDefault(__webpack_require__(36));
 const swagger_output_json_1 = tslib_1.__importDefault(__webpack_require__(37));
 const morgan_1 = tslib_1.__importDefault(__webpack_require__(38));
-const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 6001;
 const app = (0, express_1.default)();
 // Add morgan logger
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
+// Single CORS configuration
 app.use((0, cors_1.default)({
-    origin: ['http://localhost:3000'],
+    origin: ['http://127.0.0.1:3000', 'http://127.0.0.1:8080'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
-app.use(__webpack_require__(3)());
 app.get('/', (req, res) => {
     res.send({ 'message': 'Hello API' });
 });
@@ -4273,9 +4272,10 @@ app.get('/api-docs.json', (req, res) => {
 //Define your routes here
 app.use('/api', auth_router_1.default);
 app.use(error_middleware_1.errorMiddleware);
-const server = app.listen(port, () => {
-    console.log(`Auth service is running on http://localhost:${port}/api`);
-    console.log(`Swagger UI is available at http://localhost:${port}/api-docs`);
+// Listen on all interfaces
+const server = app.listen(port, '0.0.0.0', () => {
+    console.log(`Auth service is running on http://127.0.0.1:${port}/api`);
+    console.log(`Swagger UI is available at http://127.0.0.1:${port}/api-docs`);
 });
 server.on('error', (err) => {
     console.error('Server error:', err);

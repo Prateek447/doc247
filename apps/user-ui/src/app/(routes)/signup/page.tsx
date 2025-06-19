@@ -7,6 +7,8 @@ import { useForm } from "react-hook-form";
 import GoogleButton from "react-google-button";
 import { Eye, EyeOff } from "lucide-react";
 import e from "express";
+import { useMutation } from "@tanstack/react-query";
+import axios from 'axios';
 
 type FormData = {
   name: string
@@ -32,9 +34,6 @@ const Signup = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data)
-  };
 
   const handleOtpChange =  (index: number , value: string) => {
     if(!/^[0-9]?$/.test(value)) return;
@@ -57,6 +56,39 @@ const Signup = () => {
   const resendOtp = () => {
     
   }
+
+  const startResendTimer = () => {
+    const interval =  setInterval(() => {
+        setTimer((prev) =>{
+            if(prev <= 1){
+                clearInterval(interval);
+                setCanResend(true);
+                return 0;
+            }
+            return prev - 1;
+        });
+    }, 1000)
+  }
+
+  const onSubmit = (data: FormData) => {
+    console.log("formData = ", data)
+    signupMutation.mutate(data)
+  };
+
+  const signupMutation =  useMutation({
+    mutationFn: async (data: FormData) => {
+        const response =  await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URI}/api/user-registeration`, data);
+        console.log(JSON.stringify(response?.data))
+        return response.data;
+    },
+    onSuccess: (_, formData) => {
+        setUserData(formData);
+        setShowOtp(true);
+        setCanResend(false);
+        setTimer(60);
+        startResendTimer()
+    }
+  })
 
   return (
     <div className="w-full py-10 min-h-[85vh]">
@@ -159,7 +191,7 @@ const Signup = () => {
                    </button>
                  </div>
                  <button type="submit" className="w-full text-lg cursor-pointer mt-4 bg-black text-white py-2 rounded-lg">
-                     SignUp
+                     Signup
                  </button>
                  {serverError && (<p className="text-red-500 text-sm">{serverError}</p>)}
                </form>
