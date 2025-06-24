@@ -54,7 +54,9 @@ const Signup = () => {
 
 
   const resendOtp = () => {
-    
+    if(userData){
+      signupMutation.mutate(userData)
+    }
   }
 
   const startResendTimer = () => {
