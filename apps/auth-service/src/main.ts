@@ -17,11 +17,19 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 
-// Single CORS configuration
+// Updated CORS configuration to allow all frontend origins
 app.use(cors({
-    origin: ['http://127.0.0.1:3000', 'http://127.0.0.1:8080'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
+    origin: [
+        'http://localhost:3000',
+        'http://127.0.0.1:3000',
+        'http://localhost:3001',
+        'http://127.0.0.1:3001',
+        'http://127.0.0.1:8080'
+    ],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    credentials: true,
+    optionsSuccessStatus: 200
 }));
 
 app.get('/', (req, res) => {

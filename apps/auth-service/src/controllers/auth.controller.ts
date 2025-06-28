@@ -6,7 +6,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { setCookie } from "../utils/cookies/setCookie";
 
-export const userRegisteration = async (req: Request, res: Response, next: NextFunction) => {   
+export const userRegistration = async (req: Request, res: Response, next: NextFunction) => {   
     try {
         console.log('📝 Registration request received:', { email: req.body.email, name: req.body.name });
         
@@ -111,6 +111,180 @@ export const loginUser = async (req: Request, res: Response, next: NextFunction)
         });
     } catch (error) {
         console.error('❌ Login error:', error);
+        return next(error);
+    }
+}
+
+export const refreshToken = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { refreshToken } = req.cookies;
+        
+        if (!refreshToken) {
+            throw new ValidationError("Refresh token is required", 401);
+        }
+
+        console.log('🔄 Refreshing token');
+        
+        // Verify the refresh token
+        const decoded = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET as string) as { id: string; role: string };
+        
+        if (!decoded) {
+            throw new ValidationError("Invalid refresh token", 401);
+        }
+
+        // Check if user still exists
+        const user = await prisma.users.findUnique({ where: { id: decoded.id } });
+        if (!user) {
+            throw new ValidationError("User not found", 404);
+        }
+
+        // Generate new tokens
+        const newAccessToken = jwt.sign(
+            { id: user.id, role: "user" },
+            process.env.ACCESS_TOKEN_SECRET as string,
+            { expiresIn: "15m" }
+        );
+
+        const newRefreshToken = jwt.sign(
+            { id: user.id, role: "user" },
+            process.env.REFRESH_TOKEN_SECRET as string,
+            { expiresIn: "7d" }
+        );
+
+        // Set new cookies
+        setCookie(res, "accessToken", newAccessToken);
+        setCookie(res, "refreshToken", newRefreshToken);
+
+        console.log('✅ Token refreshed successfully for user:', user.email);
+        res.status(200).json({
+            message: "Token refreshed successfully",
+            status: "success"
+        });
+    } catch (error) {
+        console.error('❌ Token refresh error:', error);
+        return next(error);
+    }
+}
+
+export const userForgotPassword = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { email } = req.body;
+        
+        if (!email) {
+            throw new ValidationError("Email is required", 400);
+        }
+
+        console.log('🔍 Checking if user exists for password reset:', email);
+        
+        // Check if user exists
+        const user = await prisma.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new ValidationError("User not found", 404);
+        }
+
+        // Check OTP restrictions
+        await checkOtpRestrictions(email, next);
+        await trackOtpRequests(email, next);
+
+        console.log('📧 Sending password reset OTP to:', email);
+        await sendOtp(email, user.name, "password-reset-mail"); // Using password reset template
+
+        console.log('✅ Password reset OTP sent to:', email);
+        res.status(200).json({
+            message: "Password reset OTP sent successfully. Please check your email.",
+            status: "success"
+        });
+    } catch (error) {
+        console.error('❌ Forgot password error:', error);
+        return next(error);
+    }
+}
+
+export const verifyForgotpasswordOtp = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { email, otp } = req.body;
+        
+        if (!email || !otp) {
+            throw new ValidationError("Email and OTP are required", 400);
+        }
+
+        console.log('🔍 Verifying password reset OTP for:', email);
+        
+        // Check if user exists
+        const user = await prisma.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new ValidationError("User not found", 404);
+        }
+
+        // Verify OTP
+        await verifyOtp(email, otp, next);
+
+        // Generate a temporary token for password reset (valid for 10 minutes)
+        const resetToken = jwt.sign(
+            { id: user.id, email: user.email, type: "password_reset" },
+            process.env.ACCESS_TOKEN_SECRET as string,
+            { expiresIn: "10m" }
+        );
+
+        console.log('✅ Password reset OTP verified for:', email);
+        res.status(200).json({
+            message: "OTP verified successfully. You can now reset your password.",
+            resetToken,
+            status: "success"
+        });
+    } catch (error) {
+        console.error('❌ Verify forgot password OTP error:', error);
+        return next(error);
+    }
+}
+
+export const resetUserPassword = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { resetToken, newPassword } = req.body;
+        
+        if (!resetToken || !newPassword) {
+            throw new ValidationError("Reset token and new password are required", 400);
+        }
+
+        if (newPassword.length < 6) {
+            throw new ValidationError("Password must be at least 6 characters long", 400);
+        }
+
+        console.log('🔍 Verifying reset token and updating password');
+        
+        // Verify the reset token
+        const decoded = jwt.verify(resetToken, process.env.ACCESS_TOKEN_SECRET as string) as {
+            id: string;
+            email: string;
+            type: string;
+        };
+
+        if (!decoded || decoded.type !== "password_reset") {
+            throw new ValidationError("Invalid or expired reset token", 401);
+        }
+
+        // Check if user exists
+        const user = await prisma.users.findUnique({ where: { id: decoded.id } });
+        if (!user) {
+            throw new ValidationError("User not found", 404);
+        }
+
+        // Hash the new password
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+        // Update the user's password
+        await prisma.users.update({
+            where: { id: decoded.id },
+            data: { password: hashedPassword }
+        });
+
+        console.log('✅ Password reset successfully for:', user.email);
+        res.status(200).json({
+            message: "Password reset successfully",
+            status: "success"
+        });
+    } catch (error) {
+        console.error('❌ Reset password error:', error);
         return next(error);
     }
 }

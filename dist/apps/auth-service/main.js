@@ -132,9 +132,13 @@ const tslib_1 = __webpack_require__(1);
 const express_1 = tslib_1.__importDefault(__webpack_require__(2));
 const auth_controller_1 = __webpack_require__(8);
 const router = express_1.default.Router();
-router.post("/user-registration", auth_controller_1.userRegisteration);
+router.post("/user-registration", auth_controller_1.userRegistration);
 router.post("/verify-user", auth_controller_1.verifyUser);
 router.post("/login-user", auth_controller_1.loginUser);
+router.post("/refresh-token-user", auth_controller_1.refreshToken);
+router.post("/forgot-password-user", auth_controller_1.userForgotPassword);
+router.post("/reset-password-user", auth_controller_1.resetUserPassword);
+router.post("/verify-forgot-password-user", auth_controller_1.verifyForgotpasswordOtp);
 exports["default"] = router;
 
 
@@ -144,7 +148,7 @@ exports["default"] = router;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.loginUser = exports.verifyUser = exports.userRegisteration = void 0;
+exports.resetUserPassword = exports.verifyForgotpasswordOtp = exports.userForgotPassword = exports.refreshToken = exports.loginUser = exports.verifyUser = exports.userRegistration = void 0;
 const tslib_1 = __webpack_require__(1);
 const auth_helper_1 = __webpack_require__(9);
 const prisma_1 = tslib_1.__importDefault(__webpack_require__(18));
@@ -152,7 +156,7 @@ const error_handler_1 = __webpack_require__(10);
 const bcryptjs_1 = tslib_1.__importDefault(__webpack_require__(33));
 const jsonwebtoken_1 = tslib_1.__importDefault(__webpack_require__(34));
 const setCookie_1 = __webpack_require__(35);
-const userRegisteration = async (req, res, next) => {
+const userRegistration = async (req, res, next) => {
     try {
         console.log('📝 Registration request received:', { email: req.body.email, name: req.body.name });
         (0, auth_helper_1.validateRegistrationData)(req.body, "user");
@@ -179,7 +183,7 @@ const userRegisteration = async (req, res, next) => {
         return next(error);
     }
 };
-exports.userRegisteration = userRegisteration;
+exports.userRegistration = userRegistration;
 const verifyUser = async (req, res, next) => {
     try {
         const { email, otp, password, name } = req.body;
@@ -248,6 +252,138 @@ const loginUser = async (req, res, next) => {
     }
 };
 exports.loginUser = loginUser;
+const refreshToken = async (req, res, next) => {
+    try {
+        const { refreshToken } = req.cookies;
+        if (!refreshToken) {
+            throw new error_handler_1.ValidationError("Refresh token is required", 401);
+        }
+        console.log('🔄 Refreshing token');
+        // Verify the refresh token
+        const decoded = jsonwebtoken_1.default.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
+        if (!decoded) {
+            throw new error_handler_1.ValidationError("Invalid refresh token", 401);
+        }
+        // Check if user still exists
+        const user = await prisma_1.default.users.findUnique({ where: { id: decoded.id } });
+        if (!user) {
+            throw new error_handler_1.ValidationError("User not found", 404);
+        }
+        // Generate new tokens
+        const newAccessToken = jsonwebtoken_1.default.sign({ id: user.id, role: "user" }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15m" });
+        const newRefreshToken = jsonwebtoken_1.default.sign({ id: user.id, role: "user" }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "7d" });
+        // Set new cookies
+        (0, setCookie_1.setCookie)(res, "accessToken", newAccessToken);
+        (0, setCookie_1.setCookie)(res, "refreshToken", newRefreshToken);
+        console.log('✅ Token refreshed successfully for user:', user.email);
+        res.status(200).json({
+            message: "Token refreshed successfully",
+            status: "success"
+        });
+    }
+    catch (error) {
+        console.error('❌ Token refresh error:', error);
+        return next(error);
+    }
+};
+exports.refreshToken = refreshToken;
+const userForgotPassword = async (req, res, next) => {
+    try {
+        const { email } = req.body;
+        if (!email) {
+            throw new error_handler_1.ValidationError("Email is required", 400);
+        }
+        console.log('🔍 Checking if user exists for password reset:', email);
+        // Check if user exists
+        const user = await prisma_1.default.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new error_handler_1.ValidationError("User not found", 404);
+        }
+        // Check OTP restrictions
+        await (0, auth_helper_1.checkOtpRestrictions)(email, next);
+        await (0, auth_helper_1.trackOtpRequests)(email, next);
+        console.log('📧 Sending password reset OTP to:', email);
+        await (0, auth_helper_1.sendOtp)(email, user.name, "password-reset-mail"); // Using password reset template
+        console.log('✅ Password reset OTP sent to:', email);
+        res.status(200).json({
+            message: "Password reset OTP sent successfully. Please check your email.",
+            status: "success"
+        });
+    }
+    catch (error) {
+        console.error('❌ Forgot password error:', error);
+        return next(error);
+    }
+};
+exports.userForgotPassword = userForgotPassword;
+const verifyForgotpasswordOtp = async (req, res, next) => {
+    try {
+        const { email, otp } = req.body;
+        if (!email || !otp) {
+            throw new error_handler_1.ValidationError("Email and OTP are required", 400);
+        }
+        console.log('🔍 Verifying password reset OTP for:', email);
+        // Check if user exists
+        const user = await prisma_1.default.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new error_handler_1.ValidationError("User not found", 404);
+        }
+        // Verify OTP
+        await (0, auth_helper_1.verifyOtp)(email, otp, next);
+        // Generate a temporary token for password reset (valid for 10 minutes)
+        const resetToken = jsonwebtoken_1.default.sign({ id: user.id, email: user.email, type: "password_reset" }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "10m" });
+        console.log('✅ Password reset OTP verified for:', email);
+        res.status(200).json({
+            message: "OTP verified successfully. You can now reset your password.",
+            resetToken,
+            status: "success"
+        });
+    }
+    catch (error) {
+        console.error('❌ Verify forgot password OTP error:', error);
+        return next(error);
+    }
+};
+exports.verifyForgotpasswordOtp = verifyForgotpasswordOtp;
+const resetUserPassword = async (req, res, next) => {
+    try {
+        const { resetToken, newPassword } = req.body;
+        if (!resetToken || !newPassword) {
+            throw new error_handler_1.ValidationError("Reset token and new password are required", 400);
+        }
+        if (newPassword.length < 6) {
+            throw new error_handler_1.ValidationError("Password must be at least 6 characters long", 400);
+        }
+        console.log('🔍 Verifying reset token and updating password');
+        // Verify the reset token
+        const decoded = jsonwebtoken_1.default.verify(resetToken, process.env.ACCESS_TOKEN_SECRET);
+        if (!decoded || decoded.type !== "password_reset") {
+            throw new error_handler_1.ValidationError("Invalid or expired reset token", 401);
+        }
+        // Check if user exists
+        const user = await prisma_1.default.users.findUnique({ where: { id: decoded.id } });
+        if (!user) {
+            throw new error_handler_1.ValidationError("User not found", 404);
+        }
+        // Hash the new password
+        const hashedPassword = await bcryptjs_1.default.hash(newPassword, 10);
+        // Update the user's password
+        await prisma_1.default.users.update({
+            where: { id: decoded.id },
+            data: { password: hashedPassword }
+        });
+        console.log('✅ Password reset successfully for:', user.email);
+        res.status(200).json({
+            message: "Password reset successfully",
+            status: "success"
+        });
+    }
+    catch (error) {
+        console.error('❌ Reset password error:', error);
+        return next(error);
+    }
+};
+exports.resetUserPassword = resetUserPassword;
 
 
 /***/ }),
@@ -4255,11 +4391,19 @@ const app = (0, express_1.default)();
 app.use((0, morgan_1.default)('dev'));
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
-// Single CORS configuration
+// Updated CORS configuration to allow all frontend origins
 app.use((0, cors_1.default)({
-    origin: ['http://127.0.0.1:3000', 'http://127.0.0.1:8080'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
+    origin: [
+        'http://localhost:3000',
+        'http://127.0.0.1:3000',
+        'http://localhost:3001',
+        'http://127.0.0.1:3001',
+        'http://127.0.0.1:8080'
+    ],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    credentials: true,
+    optionsSuccessStatus: 200
 }));
 app.get('/', (req, res) => {
     res.send({ 'message': 'Hello API' });

@@ -18,12 +18,12 @@ type FormData = {
 
 const Signup = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  // const [serverError, setServerError] = useState<string | null>(null);
+  const [serverError, setServerError] = useState<string | null>(null);
   const [rememberMe, setRememberMe] = useState(false);
   const [canResend, setCanResend] = useState(true);
   const [otp, setOtp] = useState(["","","",""]);
   const [timer, setTimer] = useState(0);
-  const  [userData, setUserData] = useState<FormData | null>(null);
+  const [userData, setUserData] = useState<FormData | null>(null);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const [showOtp, setShowOtp] = useState(false);
 
@@ -34,8 +34,7 @@ const Signup = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-
-  const handleOtpChange =  (index: number , value: string) => {
+  const handleOtpChange = (index: number, value: string) => {
     if(!/^[0-9]?$/.test(value)) return;
     const newOtp = [...otp];
     newOtp[index] = value;
@@ -46,12 +45,11 @@ const Signup = () => {
     }
   }
 
-  const handleOtpKeyDown =  (index : number, e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleOtpKeyDown = (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
     if(e.key === 'Backspace' && !otp[index] && index>0){
         inputRefs.current[index-1]?.focus();
     }
   }
-
 
   const resendOtp = () => {
     if(userData){
@@ -60,7 +58,7 @@ const Signup = () => {
   }
 
   const startResendTimer = () => {
-    const interval =  setInterval(() => {
+    const interval = setInterval(() => {
         setTimer((prev) =>{
             if(prev <= 1){
                 clearInterval(interval);
@@ -74,12 +72,14 @@ const Signup = () => {
 
   const onSubmit = (data: FormData) => {
     console.log("formData = ", data)
+    setServerError(null); // Clear any previous errors
     signupMutation.mutate(data)
   };
 
-  const signupMutation =  useMutation({
+  const signupMutation = useMutation({
     mutationFn: async (data: FormData) => {
-        const response =  await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URI}/api/user-registeration`, data);
+        // Using API Gateway instead of direct auth service
+        const response = await axios.post(`http://127.0.0.1:8080/api/user-registration`, data);
         console.log(JSON.stringify(response?.data))
         return response.data;
     },
@@ -89,23 +89,50 @@ const Signup = () => {
         setCanResend(false);
         setTimer(60);
         startResendTimer()
+        setServerError(null);
+    },
+    onError: (error: any) => {
+        if (error instanceof AxiosError) {
+            setServerError(error.response?.data?.message || "Registration failed. Please try again.");
+        } else {
+            setServerError("Registration failed. Please try again.");
+        }
     }
   })
 
-
-  const verifyMutation =  useMutation({
+  const verifyMutation = useMutation({
     mutationFn: async () => {
       if(!userData) return;
-      const response  =  await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URI}/api/verify-user`,{
+      // Using API Gateway instead of direct auth service
+      const response = await axios.post(`http://127.0.0.1:8080/api/verify-user`,{
         ...userData,
         otp: otp.join("")
       })
       return response.data;
     },
     onSuccess: () => {
+      // Show success message and redirect to login
+      alert("Registration successful! Please login with your credentials.");
       router.push("/login")
+    },
+    onError: (error: any) => {
+        if (error instanceof AxiosError) {
+            setServerError(error.response?.data?.message || "OTP verification failed. Please try again.");
+        } else {
+            setServerError("OTP verification failed. Please try again.");
+        }
     }
   })
+
+  const handleVerifyOtp = () => {
+    const otpString = otp.join("");
+    if (otpString.length !== 4) {
+      setServerError("Please enter a valid 4-digit OTP");
+      return;
+    }
+    setServerError(null);
+    verifyMutation.mutate();
+  }
 
   return (
     <div className="w-full py-10 min-h-[85vh]">
@@ -139,9 +166,9 @@ const Signup = () => {
           </div>
 
            {!showOtp ?
+            (
                <form onSubmit={handleSubmit(onSubmit)}>
-
-               <label className="block text-gray-700 mb-1">Name</label>
+                 <label className="block text-gray-700 mb-1">Name</label>
                  <input
                    type="text"
                    placeholder="Ram"
@@ -207,41 +234,68 @@ const Signup = () => {
                      {passwordVisible ? <Eye /> : <EyeOff />}
                    </button>
                  </div>
-                 <button type="submit" disabled={signupMutation.isPending ? true : false} className="w-full text-lg cursor-pointer mt-4 bg-black text-white py-2 rounded-lg">
+                 <button 
+                   type="submit" 
+                   disabled={signupMutation.isPending} 
+                   className="w-full text-lg cursor-pointer mt-4 bg-black text-white py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                 >
                      {signupMutation.isPending ? "Signing up..." : "Signup"}
                  </button>
-                 {/* {serverError && (<p className="text-red-500 text-sm">{serverError}</p>)} */}
+                 {serverError && (
+                   <p className="text-red-500 text-sm mt-2 text-center">{serverError}</p>
+                 )}
                </form>
-               :
+           ) 
+           : 
+           (
                <div>
-                  <h3 className="text-xl font-semibold text-center mb-4">Enter OTP</h3>
-                   <div className="flex justify-center gap-6">
-                    {otp?.map((digit, index) => (<input
-                    key={index}
-                    type="text"
-                    ref={(element) => {if(element) inputRefs.current[index] = element}}
-                    maxLength={1}
-                    className="w-12 h-12 text-center border border-gray-300 outline-none !rounded"
-                    value={digit}
-                    onChange={(e) => handleOtpChange(index, e.target.value)}
-                    onKeyDown={(e) => handleOtpKeyDown(index, e)}
-                    />))}
-                   </div>
-                   <button disabled={verifyMutation.isPending} className="w-full mt-4 text-lg cursor-pointer bg-blue-500 text-white py-2 rounded-lg">
-                    {verifyMutation.isPending ? "Verifying..." : "Verify OTP"}
-                    </button>
-                    <p className="text-center text-sm mt-4">
-                        {canResend ? ( <button onClick={resendOtp} className="text-blue-500 cursor-pointer">Resend OTP</button> ) : (`Resend OTP in ${timer}`)}
-                    </p>
-                    {verifyMutation?.isError &&
-                    verifyMutation.error instanceof AxiosError && (
-                      <p className="text-red-500 text-sm mt-2">
-                         {verifyMutation.error.response?.data?.message || verifyMutation.error.message}
-                      </p>
-                    )
-                    }
+                 <h3 className="text-xl font-semibold text-center mb-4">Enter OTP</h3>
+                 <p className="text-center text-gray-600 mb-4">
+                   We've sent a verification code to <strong>{userData?.email}</strong>
+                 </p>
+                 <div className="flex justify-center gap-6 mb-4">
+                   {otp?.map((digit, index) => (
+                     <input
+                       key={index}
+                       type="text"
+                       ref={(element) => {if(element) inputRefs.current[index] = element}}
+                       maxLength={1}
+                       className="w-12 h-12 text-center border border-gray-300 outline-none !rounded text-lg font-semibold"
+                       value={digit}
+                       onChange={(e) => handleOtpChange(index, e.target.value)}
+                       onKeyDown={(e) => handleOtpKeyDown(index, e)}
+                     />
+                   ))}
+                 </div>
+                 <button 
+                   onClick={handleVerifyOtp}
+                   disabled={verifyMutation.isPending || otp.join("").length !== 4} 
+                   className="w-full mt-4 text-lg cursor-pointer bg-blue-500 text-white py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                 >
+                   {verifyMutation.isPending ? "Verifying..." : "Verify OTP"}
+                 </button>
+                 <p className="text-center text-sm mt-4">
+                   {canResend ? (
+                     <button onClick={resendOtp} className="text-blue-500 cursor-pointer hover:underline">
+                       Resend OTP
+                     </button>
+                   ) : (
+                     `Resend OTP in ${timer}s`
+                   )}
+                 </p>
+                 {serverError && (
+                   <p className="text-red-500 text-sm mt-2 text-center">{serverError}</p>
+                 )}
+                 <div className="text-center mt-4">
+                   <button 
+                     onClick={() => setShowOtp(false)} 
+                     className="text-gray-500 hover:text-gray-700 text-sm"
+                   >
+                     ← Back to registration
+                   </button>
+                 </div>
                </div>
-           }
+           )}
         </div>
       </div>
     </div>

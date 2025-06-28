@@ -26,12 +26,14 @@ const Login = () => {
   } = useForm<FormData>();
 
   const onSubmit = (data: FormData) => {
+    setServerError(null); // Clear any previous errors
     loginMutation.mutate(data);
   };
 
   const loginMutation = useMutation({
     mutationFn: async (data : FormData) => {
-      const response  = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URI}/api/login-user`, data, { withCredentials : true})
+      // Using API Gateway instead of direct auth service
+      const response = await axios.post(`http://127.0.0.1:8080/api/login-user`, data, { withCredentials : true})
       return response.data;
     },
     onSuccess: (data) =>{
@@ -132,10 +134,16 @@ const Login = () => {
                   Forgot Password
                 </Link>
             </div>
-            <button disabled={loginMutation.isPending} type="submit" className="w-full text-lg cursor-pointer bg-black text-white py-2 rounded-lg">
-                {loginMutation?.isPending ? "Loging..." : "Login"}
+            <button 
+              disabled={loginMutation.isPending} 
+              type="submit" 
+              className="w-full text-lg cursor-pointer bg-black text-white py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+                {loginMutation?.isPending ? "Logging in..." : "Login"}
             </button>
-            {serverError && (<p className="text-red-500 text-sm">{serverError}</p>)}
+            {serverError && (
+              <p className="text-red-500 text-sm mt-2 text-center">{serverError}</p>
+            )}
           </form>
         </div>
       </div>
