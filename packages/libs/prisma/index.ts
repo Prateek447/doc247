@@ -9,10 +9,8 @@ declare global {
 
 const prisma = new PrismaClient();
 
-if (process.env.NODE_ENV !== "production") {
-  if (!globalThis.prismadb) {
-    globalThis.prismadb = prisma;
-  }
+if (process.env.NODE_ENV === "production") {
+    globalThis.prismadb = prisma; 
 }
 
 export default prisma;

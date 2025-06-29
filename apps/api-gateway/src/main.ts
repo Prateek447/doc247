@@ -9,14 +9,16 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
 import { createProxyMiddleware } from 'http-proxy-middleware';
+import proxy from 'express-http-proxy';
 
 const app = express();
 
 // Basic middleware
 app.use(morgan('dev'));
-app.use(express.json({limit: '10mb'}));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+app.use(express.json({limit: '100mb'}));
+app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 app.use(cookieParser());
+app.set('trust proxy', true); // Trust the first proxy (for Heroku or similar environments)
 
 // CORS configuration - Updated to allow frontend requests
 app.use(cors({
@@ -50,23 +52,23 @@ app.get('/gateway-health', (req, res) => {
 });
 
 // Proxy configuration
-const proxyOptions = {
-  target: 'http://127.0.0.1:6001',
-  changeOrigin: true,
-  ws: true,
-  logLevel: 'debug' as const,
-  onError: (err: Error, req: express.Request, res: express.Response) => {
-    console.error('Proxy Error:', err);
-    res.status(500).send('Proxy Error');
-  },
-  onProxyReq: (proxyReq: any, req: express.Request, res: express.Response) => {
-    // Log proxy requests for debugging
-    console.log('Proxying:', req.method, req.url, 'to', proxyOptions.target + req.url);
-  }
-};
+// const proxyOptions = {
+//   target: 'http://127.0.0.1:6001',
+//   changeOrigin: true,
+//   ws: true,
+//   logLevel: 'debug' as const,
+//   onError: (err: Error, req: express.Request, res: express.Response) => {
+//     console.error('Proxy Error:', err);
+//     res.status(500).send('Proxy Error');
+//   },
+//   onProxyReq: (proxyReq: any, req: express.Request, res: express.Response) => {
+//     // Log proxy requests for debugging
+//     console.log('Proxying:', req.method, req.url, 'to', proxyOptions.target + req.url);
+//   }
+// };
 
 // Apply proxy middleware
-app.use('/', createProxyMiddleware(proxyOptions));
+app.use('/', proxy("http://127.0.0.1:6001"));
 
 const port = Number(process.env.PORT) || 8080;
 const server = app.listen(port, '0.0.0.0', () => {

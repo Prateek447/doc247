@@ -2,25 +2,24 @@
   "swagger": "2.0",
   "info": {
     "title": "Auth Service API",
-    "description": "API documentation for the Auth Service",
-    "version": "1.0.0"
+    "description": "Complete API documentation for the Auth Service with user registration, login, and password management",
+    "version": "1.0.0",
+    "contact": {
+      "name": "API Support",
+      "email": "support@doc24x7.com"
+    }
   },
   "host": "localhost:6001",
   "basePath": "/api",
-  "tags": [
-    {
-      "name": "Auth",
-      "description": "Authentication endpoints"
-    }
-  ],
   "schemes": [
     "http"
   ],
   "securityDefinitions": {
-    "bearerAuth": {
+    "cookieAuth": {
       "type": "apiKey",
-      "name": "Authorization",
-      "in": "header"
+      "in": "cookie",
+      "name": "refresh_token",
+      "description": "Refresh token stored in HTTP-only cookie"
     }
   },
   "paths": {
@@ -81,6 +80,165 @@
           "200": {
             "description": "OK"
           }
+        }
+      }
+    },
+    "/login-user": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/refresh-token-user": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/forgot-password-user": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/reset-password-user": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "resetToken": {
+                  "example": "any"
+                },
+                "newPassword": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/verify-forgot-password-user": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "otp": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "string"
+        },
+        "email": {
+          "type": "string",
+          "example": "string"
+        },
+        "name": {
+          "type": "string",
+          "example": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "example": "string"
+        },
+        "updatedAt": {
+          "type": "string",
+          "example": "string"
+        }
+      }
+    },
+    "Error": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "string"
+        },
+        "statusCode": {
+          "type": "string",
+          "example": "number"
+        },
+        "details": {
+          "type": "string",
+          "example": "string"
         }
       }
     }

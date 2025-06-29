@@ -6,7 +6,7 @@ export const setCookie = (res: Response, name: string, value: string) => {
         httpOnly: true,
         secure: true, // Use secure cookies in production
         sameSite: 'none', // Adjust as necessary
-        maxAge: 24 * 60 * 60 * 1000 // 1 day in milliseconds
+        maxAge: 7 * 24 * 60 * 60 * 1000 // 1 day in milliseconds
     };
 
     res.cookie(name, value, cookieOptions);

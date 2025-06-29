@@ -35,12 +35,12 @@ const errorMiddleware = (err, req, res, next) => {
             ...(err.details && { details: err.details }),
         });
     }
-    // console.error("Unhandled Error",err); // Log the error for debugging
-    // return res.status(500).json({
-    //     status: 'error',
-    //     message: 'Internal server error',
-    //     details: 'An unexpected error occurred. Please try again later.'
-    // });
+    console.error("Unhandled Error", err); // Log the error for debugging
+    return res.status(500).json({
+        status: 'error',
+        message: 'Internal server error',
+        details: 'An unexpected error occurred. Please try again later.'
+    });
 };
 exports.errorMiddleware = errorMiddleware;
 
@@ -152,10 +152,61 @@ exports.resetUserPassword = exports.verifyForgotpasswordOtp = exports.userForgot
 const tslib_1 = __webpack_require__(1);
 const auth_helper_1 = __webpack_require__(9);
 const prisma_1 = tslib_1.__importDefault(__webpack_require__(18));
-const error_handler_1 = __webpack_require__(10);
+const error_handler_1 = __webpack_require__(5);
 const bcryptjs_1 = tslib_1.__importDefault(__webpack_require__(33));
 const jsonwebtoken_1 = tslib_1.__importDefault(__webpack_require__(34));
 const setCookie_1 = __webpack_require__(35);
+/**
+ * @swagger
+ * /api/user-registration:
+ *   post:
+ *     summary: Register a new user
+ *     description: Register a new user by sending OTP to their email
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *               - email
+ *               - password
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: User's full name
+ *                 example: "John Doe"
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: User's email address
+ *                 example: "john@example.com"
+ *               password:
+ *                 type: string
+ *                 minLength: 6
+ *                 description: User's password (minimum 6 characters)
+ *                 example: "password123"
+ *     responses:
+ *       200:
+ *         description: OTP sent successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "OTP sent successfully. Please check your email to verify your account."
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *       400:
+ *         description: Bad request - validation error
+ *       409:
+ *         description: User already exists
+ */
 const userRegistration = async (req, res, next) => {
     try {
         console.log('📝 Registration request received:', { email: req.body.email, name: req.body.name });
@@ -184,6 +235,71 @@ const userRegistration = async (req, res, next) => {
     }
 };
 exports.userRegistration = userRegistration;
+/**
+ * @swagger
+ * /api/verify-user:
+ *   post:
+ *     summary: Verify user OTP and complete registration
+ *     description: Verify the OTP sent to user's email and complete the registration process
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - name
+ *               - email
+ *               - password
+ *               - otp
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: User's full name
+ *                 example: "John Doe"
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: User's email address
+ *                 example: "john@example.com"
+ *               password:
+ *                 type: string
+ *                 minLength: 6
+ *                 description: User's password (minimum 6 characters)
+ *                 example: "password123"
+ *               otp:
+ *                 type: string
+ *                 description: 4-digit OTP received via email
+ *                 example: "1234"
+ *     responses:
+ *       200:
+ *         description: User registered successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "User registered successfully"
+ *                 user:
+ *                   type: object
+ *                   properties:
+ *                     id:
+ *                       type: string
+ *                     email:
+ *                       type: string
+ *                     name:
+ *                       type: string
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *       400:
+ *         description: Bad request - validation error or user already exists
+ *       401:
+ *         description: Invalid OTP
+ */
 const verifyUser = async (req, res, next) => {
     try {
         const { email, otp, password, name } = req.body;
@@ -193,7 +309,7 @@ const verifyUser = async (req, res, next) => {
         console.log('🔍 Verifying OTP for user:', email);
         const existingUser = await prisma_1.default.users.findUnique({ where: { email } });
         if (existingUser) {
-            throw new error_handler_1.ValidationError("User already exists", 400);
+            throw new error_handler_1.ValidationError("User already exists with this email", 400);
         }
         await (0, auth_helper_1.verifyOtp)(email, otp, next);
         const hashedPassword = await bcryptjs_1.default.hash(password, 10);
@@ -217,6 +333,65 @@ const verifyUser = async (req, res, next) => {
     }
 };
 exports.verifyUser = verifyUser;
+/**
+ * @swagger
+ * /api/login-user:
+ *   post:
+ *     summary: User login
+ *     description: Authenticate user with email and password
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - email
+ *               - password
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: User's email address
+ *                 example: "john@example.com"
+ *               password:
+ *                 type: string
+ *                 description: User's password
+ *                 example: "password123"
+ *     responses:
+ *       200:
+ *         description: Login successful
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Login successful"
+ *                 user:
+ *                   type: object
+ *                   properties:
+ *                     id:
+ *                       type: string
+ *                     email:
+ *                       type: string
+ *                     name:
+ *                       type: string
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *         headers:
+ *           Set-Cookie:
+ *             description: Access and refresh tokens set as HTTP-only cookies
+ *       400:
+ *         description: Bad request - missing email or password
+ *       401:
+ *         description: Invalid credentials
+ *       404:
+ *         description: User not found
+ */
 const loginUser = async (req, res, next) => {
     try {
         const { email, password } = req.body;
@@ -237,12 +412,16 @@ const loginUser = async (req, res, next) => {
         }
         const accessToken = jsonwebtoken_1.default.sign({ id: user.id, role: "user" }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15m" });
         const refreshToken = jsonwebtoken_1.default.sign({ id: user.id, role: "user" }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "7d" });
-        (0, setCookie_1.setCookie)(res, "accessToken", accessToken);
-        (0, setCookie_1.setCookie)(res, "refreshToken", refreshToken);
+        (0, setCookie_1.setCookie)(res, "access_token", accessToken);
+        (0, setCookie_1.setCookie)(res, "refresh_token", refreshToken);
         console.log('✅ User logged in successfully:', email);
         res.status(200).json({
             message: "Login successful",
-            user,
+            user: {
+                id: user.id,
+                email: user.email,
+                name: user.name,
+            },
             status: "success"
         });
     }
@@ -252,6 +431,37 @@ const loginUser = async (req, res, next) => {
     }
 };
 exports.loginUser = loginUser;
+/**
+ * @swagger
+ * /api/refresh-token-user:
+ *   post:
+ *     summary: Refresh access token
+ *     description: Refresh the access token using the refresh token from cookies
+ *     tags: [Authentication]
+ *     security:
+ *       - cookieAuth: []
+ *     responses:
+ *       200:
+ *         description: Token refreshed successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Token refreshed successfully"
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *         headers:
+ *           Set-Cookie:
+ *             description: New access and refresh tokens set as HTTP-only cookies
+ *       401:
+ *         description: Invalid or missing refresh token
+ *       404:
+ *         description: User not found
+ */
 const refreshToken = async (req, res, next) => {
     try {
         const { refreshToken } = req.cookies;
@@ -287,6 +497,46 @@ const refreshToken = async (req, res, next) => {
     }
 };
 exports.refreshToken = refreshToken;
+/**
+ * @swagger
+ * /api/forgot-password-user:
+ *   post:
+ *     summary: Send password reset OTP
+ *     description: Send a password reset OTP to the user's email address
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - email
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: User's email address
+ *                 example: "john@example.com"
+ *     responses:
+ *       200:
+ *         description: Password reset OTP sent successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Password reset OTP sent successfully. Please check your email."
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *       400:
+ *         description: Bad request - email is required
+ *       404:
+ *         description: User not found
+ */
 const userForgotPassword = async (req, res, next) => {
     try {
         const { email } = req.body;
@@ -316,6 +566,56 @@ const userForgotPassword = async (req, res, next) => {
     }
 };
 exports.userForgotPassword = userForgotPassword;
+/**
+ * @swagger
+ * /api/verify-forgot-password-user:
+ *   post:
+ *     summary: Verify password reset OTP
+ *     description: Verify the OTP sent for password reset and return a reset token
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - email
+ *               - otp
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: User's email address
+ *                 example: "john@example.com"
+ *               otp:
+ *                 type: string
+ *                 description: 4-digit OTP received via email
+ *                 example: "1234"
+ *     responses:
+ *       200:
+ *         description: OTP verified successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "OTP verified successfully"
+ *                 resetToken:
+ *                   type: string
+ *                   description: Token to be used for password reset
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *       400:
+ *         description: Bad request - validation error
+ *       401:
+ *         description: Invalid OTP
+ *       404:
+ *         description: User not found
+ */
 const verifyForgotpasswordOtp = async (req, res, next) => {
     try {
         const { email, otp } = req.body;
@@ -345,6 +645,59 @@ const verifyForgotpasswordOtp = async (req, res, next) => {
     }
 };
 exports.verifyForgotpasswordOtp = verifyForgotpasswordOtp;
+/**
+ * @swagger
+ * /api/reset-password-user:
+ *   post:
+ *     summary: Reset user password
+ *     description: Reset user password using the reset token from OTP verification
+ *     tags: [Authentication]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - email
+ *               - resetToken
+ *               - newPassword
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 description: User's email address
+ *                 example: "john@example.com"
+ *               resetToken:
+ *                 type: string
+ *                 description: Reset token received from OTP verification
+ *                 example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+ *               newPassword:
+ *                 type: string
+ *                 minLength: 6
+ *                 description: New password (minimum 6 characters)
+ *                 example: "newpassword123"
+ *     responses:
+ *       200:
+ *         description: Password reset successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Password reset successfully"
+ *                 status:
+ *                   type: string
+ *                   example: "success"
+ *       400:
+ *         description: Bad request - validation error
+ *       401:
+ *         description: Invalid reset token
+ *       404:
+ *         description: User not found
+ */
 const resetUserPassword = async (req, res, next) => {
     try {
         const { resetToken, newPassword } = req.body;
@@ -394,29 +747,30 @@ exports.resetUserPassword = resetUserPassword;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.verifyOtp = exports.sendOtp = exports.trackOtpRequests = exports.checkOtpRestrictions = exports.validateRegistrationData = void 0;
 const tslib_1 = __webpack_require__(1);
-const error_handler_1 = __webpack_require__(10);
-const redis_1 = tslib_1.__importDefault(__webpack_require__(11));
-const sendEmail_1 = __webpack_require__(13);
+const error_handler_1 = __webpack_require__(5);
+const redis_1 = tslib_1.__importDefault(__webpack_require__(10));
+const sendEmail_1 = __webpack_require__(12);
+const crypto_1 = tslib_1.__importDefault(__webpack_require__(17));
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const validateRegistrationData = (data, userType) => {
     const { email, password, name, phone_number, country } = data;
     if (!email || !password || !name || (userType === "seller" && (!country || !phone_number))) {
-        return new error_handler_1.ValidationError("All fields are required");
+        throw new error_handler_1.ValidationError("All fields are required");
     }
     if (!emailRegex.test(email)) {
-        return new error_handler_1.ValidationError("Invalid email format");
+        throw new error_handler_1.ValidationError("Invalid email format");
     }
 };
 exports.validateRegistrationData = validateRegistrationData;
 const checkOtpRestrictions = async (email, next) => {
     if (await redis_1.default.get(`otp_lock: ${email}`)) {
-        return next(new error_handler_1.ValidationError("You have reached the maximum number of OTP requests. Please try again later.", 429));
+        throw next(new error_handler_1.ValidationError("Account locked due to multiple failed attempts! Try again after 30 minutes"));
     }
     if (await redis_1.default.get(`otp_spam_lock:${email}`)) {
-        return next(new error_handler_1.ValidationError("You have requested too many OTPs in a short period. Please try again later.", 429));
+        throw next(new error_handler_1.ValidationError("You have requested too many OTPs in a short period. Please try again later.", 429));
     }
     if (await redis_1.default.get(`otp_cooldown:${email}`)) {
-        return next(new error_handler_1.ValidationError("Please wait 1 minute before requesting new otp!", 429));
+        throw next(new error_handler_1.ValidationError("Please wait 1 minute before requesting new otp!", 429));
     }
 };
 exports.checkOtpRestrictions = checkOtpRestrictions;
@@ -424,7 +778,7 @@ const trackOtpRequests = async (email, next) => {
     const otpRequestKey = `otp_request_count:${email}`;
     let otpRequests = parseInt(await redis_1.default.get(otpRequestKey) || "0");
     if (otpRequests >= 5) {
-        await redis_1.default.set(`otp_lock:${email}`, "true", "EX", 3600); // Lock for 1 hour
+        await redis_1.default.set(`otp_spam_lock:${email}`, "locked", "EX", 3600); // Lock for 1 hour
         return next(new error_handler_1.ValidationError("You have reached the maximum number of OTP requests. Please try again later.", 429));
     }
     // await redis.incr(otpRequestKey);
@@ -432,7 +786,7 @@ const trackOtpRequests = async (email, next) => {
 };
 exports.trackOtpRequests = trackOtpRequests;
 const sendOtp = async (email, name, template) => {
-    const otp = Math.floor(1000 + Math.random() * 9000).toString();
+    const otp = crypto_1.default.randomInt(1000, 9999).toString();
     await (0, sendEmail_1.sendEmail)(email, "Verify Your Email", template, { name, otp });
     await redis_1.default.set(`otp:${email}`, otp, "EX", 300); // Store OTP for 5 minutes
     await redis_1.default.set(`otp_cooldown:${email}`, "true", "EX", 60); // Set cooldown for 1 minute
@@ -441,7 +795,7 @@ exports.sendOtp = sendOtp;
 const verifyOtp = async (email, otp, next) => {
     const storedOtp = await redis_1.default.get(`otp:${email}`);
     if (!storedOtp) {
-        return next(new error_handler_1.ValidationError("OTP has expired or is invalid", 400));
+        throw next(new error_handler_1.ValidationError("OTP has expired or is invalid", 400));
     }
     const failedAttemptsKey = `otp_attempts:${email}`;
     if (storedOtp !== otp) {
@@ -449,10 +803,10 @@ const verifyOtp = async (email, otp, next) => {
         if (failedAttempts >= 3) {
             await redis_1.default.set(`otp_lock:${email}`, "locked", "EX", 1800); // Lock for 1 hour
             await redis_1.default.del(`otp:${email}`, failedAttemptsKey);
-            return next(new error_handler_1.ValidationError("You have exceeded the maximum number of OTP attempts. Please try again later.", 429));
+            throw next(new error_handler_1.ValidationError("You have exceeded the maximum number of OTP attempts. Please try again later.", 429));
         }
         await redis_1.default.set(failedAttemptsKey, (failedAttempts + 1), "EX", 3000); // Increment failed attempts and set expiration to 1 hour
-        return next(new error_handler_1.ValidationError(`Incorrect OTP - ${2 - failedAttempts} attempts left`, 400));
+        throw next(new error_handler_1.ValidationError(`Incorrect OTP - ${2 - failedAttempts} attempts left`, 400));
     }
     await redis_1.default.del(`otp:${email}`, failedAttemptsKey); // Clear OTP after successful verification
 };
@@ -461,105 +815,34 @@ exports.verifyOtp = verifyOtp;
 
 /***/ }),
 /* 10 */
-/***/ ((__unused_webpack_module, exports) => {
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.RateLimitError = exports.DatabaseError = exports.ForbiddenError = exports.UnauthorizedError = exports.ValidationError = exports.BadRequestError = exports.NotFoundError = exports.AppError = void 0;
-class AppError extends Error {
-    statusCode;
-    isOperational;
-    details;
-    constructor(message, statusCode, isOperational, details) {
-        super(message);
-        this.statusCode = statusCode;
-        this.isOperational = isOperational;
-        this.details = details;
-        Error.captureStackTrace(this);
-    }
-}
-exports.AppError = AppError;
-class NotFoundError extends AppError {
-    constructor(message = 'Resource not found', details) {
-        super(message, 404, true, details);
-        this.name = 'NotFoundError';
-    }
-}
-exports.NotFoundError = NotFoundError;
-class BadRequestError extends AppError {
-    constructor(message = 'Bad request', details) {
-        super(message, 400, true, details);
-        this.name = 'BadRequestError';
-    }
-}
-exports.BadRequestError = BadRequestError;
-class ValidationError extends AppError {
-    constructor(message = 'Validation error', details) {
-        super(message, 422, true, details);
-        this.name = 'ValidationError';
-    }
-}
-exports.ValidationError = ValidationError;
-class UnauthorizedError extends AppError {
-    constructor(message = 'Unauthorized', details) {
-        super(message, 401, true, details);
-        this.name = 'UnauthorizedError';
-    }
-}
-exports.UnauthorizedError = UnauthorizedError;
-class ForbiddenError extends AppError {
-    constructor(message = 'Forbidden', details) {
-        super(message, 403, true, details);
-        this.name = 'ForbiddenError';
-    }
-}
-exports.ForbiddenError = ForbiddenError;
-class DatabaseError extends AppError {
-    constructor(message = 'Database error', details) {
-        super(message, 500, true, details);
-        this.name = 'DatabaseError';
-    }
-}
-exports.DatabaseError = DatabaseError;
-class RateLimitError extends AppError {
-    constructor(message = 'Rate limit exceeded', details) {
-        super(message, 429, true, details);
-        this.name = 'RateLimitError';
-    }
-}
-exports.RateLimitError = RateLimitError;
-
-
-/***/ }),
-/* 11 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __webpack_require__(1);
-const ioredis_1 = tslib_1.__importDefault(__webpack_require__(12));
+const ioredis_1 = tslib_1.__importDefault(__webpack_require__(11));
 const redis = new ioredis_1.default(process.env.REDIS_DATABASE_URL);
 exports["default"] = redis;
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ ((module) => {
 
 module.exports = require("ioredis");
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.sendEmail = void 0;
 const tslib_1 = __webpack_require__(1);
-const nodemailer_1 = tslib_1.__importDefault(__webpack_require__(14));
-const dotenv_1 = tslib_1.__importDefault(__webpack_require__(15));
-const path_1 = tslib_1.__importDefault(__webpack_require__(16));
-const ejs_1 = tslib_1.__importDefault(__webpack_require__(17));
+const nodemailer_1 = tslib_1.__importDefault(__webpack_require__(13));
+const dotenv_1 = tslib_1.__importDefault(__webpack_require__(14));
+const path_1 = tslib_1.__importDefault(__webpack_require__(15));
+const ejs_1 = tslib_1.__importDefault(__webpack_require__(16));
 dotenv_1.default.config();
 const transporter = nodemailer_1.default.createTransport({
     host: process.env.SMTP_HOST || "smtp.example.com",
@@ -591,35 +874,40 @@ const sendEmail = async (to, subject, template, data) => {
     catch (error) {
         console.error("Error sending email:", error);
         throw new Error("Failed to send email");
-        return false;
     }
 };
 exports.sendEmail = sendEmail;
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ ((module) => {
 
 module.exports = require("nodemailer");
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ ((module) => {
 
 module.exports = require("dotenv");
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ ((module) => {
 
 module.exports = require("path");
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ ((module) => {
 
 module.exports = require("ejs");
+
+/***/ }),
+/* 17 */
+/***/ ((module) => {
+
+module.exports = require("crypto");
 
 /***/ }),
 /* 18 */
@@ -629,10 +917,8 @@ module.exports = require("ejs");
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const prisma_1 = __webpack_require__(19);
 const prisma = new prisma_1.PrismaClient();
-if (process.env.NODE_ENV !== "production") {
-    if (!globalThis.prismadb) {
-        globalThis.prismadb = prisma;
-    }
+if (process.env.NODE_ENV === "production") {
+    globalThis.prismadb = prisma;
 }
 exports["default"] = prisma;
 
@@ -687,7 +973,7 @@ Prisma.NullTypes = {
     JsonNull: objectEnumValues.classes.JsonNull,
     AnyNull: objectEnumValues.classes.AnyNull
 };
-const path = __webpack_require__(16);
+const path = __webpack_require__(15);
 /**
  * Enums
  */
@@ -729,7 +1015,7 @@ const config = {
             "value": "prisma-client-js"
         },
         "output": {
-            "value": "/Users/qss/practice/test/doc247/generated/prisma",
+            "value": "/Users/qss/practice/doc247/generated/prisma",
             "fromEnvVar": null
         },
         "config": {
@@ -743,7 +1029,7 @@ const config = {
             }
         ],
         "previewFeatures": [],
-        "sourceFilePath": "/Users/qss/practice/test/doc247/prisma/schema.prisma",
+        "sourceFilePath": "/Users/qss/practice/doc247/prisma/schema.prisma",
         "isCustomOutput": true
     },
     "relativeEnvPaths": {
@@ -4317,7 +4603,7 @@ const setCookie = (res, name, value) => {
         httpOnly: true,
         secure: true, // Use secure cookies in production
         sameSite: 'none', // Adjust as necessary
-        maxAge: 24 * 60 * 60 * 1000 // 1 day in milliseconds
+        maxAge: 7 * 24 * 60 * 60 * 1000 // 1 day in milliseconds
     };
     res.cookie(name, value, cookieOptions);
 };
@@ -4334,7 +4620,7 @@ module.exports = require("swagger-ui-express");
 /* 37 */
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"swagger":"2.0","info":{"title":"Auth Service API","description":"API documentation for the Auth Service","version":"1.0.0"},"host":"localhost:6001","basePath":"/api","tags":[{"name":"Auth","description":"Authentication endpoints"}],"schemes":["http"],"securityDefinitions":{"bearerAuth":{"type":"apiKey","name":"Authorization","in":"header"}},"paths":{"/user-registration":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"name":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}},"/verify-user":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"otp":{"example":"any"},"password":{"example":"any"},"name":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}}}}');
+module.exports = /*#__PURE__*/JSON.parse('{"swagger":"2.0","info":{"title":"Auth Service API","description":"Complete API documentation for the Auth Service with user registration, login, and password management","version":"1.0.0","contact":{"name":"API Support","email":"support@doc24x7.com"}},"host":"localhost:6001","basePath":"/api","schemes":["http"],"securityDefinitions":{"cookieAuth":{"type":"apiKey","in":"cookie","name":"refresh_token","description":"Refresh token stored in HTTP-only cookie"}},"paths":{"/user-registration":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"name":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}},"/verify-user":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"otp":{"example":"any"},"password":{"example":"any"},"name":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}},"/login-user":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"password":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}},"/refresh-token-user":{"post":{"description":"","responses":{"200":{"description":"OK"}}}},"/forgot-password-user":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}},"/reset-password-user":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"resetToken":{"example":"any"},"newPassword":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}},"/verify-forgot-password-user":{"post":{"description":"","parameters":[{"name":"body","in":"body","schema":{"type":"object","properties":{"email":{"example":"any"},"otp":{"example":"any"}}}}],"responses":{"200":{"description":"OK"}}}}},"definitions":{"User":{"type":"object","properties":{"id":{"type":"string","example":"string"},"email":{"type":"string","example":"string"},"name":{"type":"string","example":"string"},"createdAt":{"type":"string","example":"string"},"updatedAt":{"type":"string","example":"string"}}},"Error":{"type":"object","properties":{"message":{"type":"string","example":"string"},"statusCode":{"type":"string","example":"number"},"details":{"type":"string","example":"string"}}}}}');
 
 /***/ }),
 /* 38 */

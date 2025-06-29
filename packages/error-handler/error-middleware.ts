@@ -10,10 +10,10 @@ export const errorMiddleware = (err : Error, req : Request, res : Response, next
             ...(err.details && { details: err.details }),
         });
     }
-    // console.error("Unhandled Error",err); // Log the error for debugging
-    // return res.status(500).json({
-    //     status: 'error',
-    //     message: 'Internal server error',
-    //     details: 'An unexpected error occurred. Please try again later.'
-    // });
+    console.error("Unhandled Error",err); // Log the error for debugging
+    return res.status(500).json({
+        status: 'error',
+        message: 'Internal server error',
+        details: 'An unexpected error occurred. Please try again later.'
+    });
 }

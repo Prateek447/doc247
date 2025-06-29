@@ -41,7 +41,7 @@ module.exports = require("express-rate-limit");
 /* 7 */
 /***/ ((module) => {
 
-module.exports = require("http-proxy-middleware");
+module.exports = require("express-http-proxy");
 
 /***/ })
 /******/ 	]);
@@ -87,13 +87,14 @@ const cors_1 = tslib_1.__importDefault(__webpack_require__(3));
 const morgan_1 = tslib_1.__importDefault(__webpack_require__(4));
 const cookie_parser_1 = tslib_1.__importDefault(__webpack_require__(5));
 const express_rate_limit_1 = tslib_1.__importDefault(__webpack_require__(6));
-const http_proxy_middleware_1 = __webpack_require__(7);
+const express_http_proxy_1 = tslib_1.__importDefault(__webpack_require__(7));
 const app = (0, express_1.default)();
 // Basic middleware
 app.use((0, morgan_1.default)('dev'));
-app.use(express_1.default.json({ limit: '10mb' }));
-app.use(express_1.default.urlencoded({ extended: true, limit: '10mb' }));
+app.use(express_1.default.json({ limit: '100mb' }));
+app.use(express_1.default.urlencoded({ extended: true, limit: '100mb' }));
 app.use((0, cookie_parser_1.default)());
+app.set('trust proxy', true); // Trust the first proxy (for Heroku or similar environments)
 // CORS configuration - Updated to allow frontend requests
 app.use((0, cors_1.default)({
     origin: [
@@ -122,22 +123,22 @@ app.get('/gateway-health', (req, res) => {
     res.send({ message: 'Welcome to api-gateway!' });
 });
 // Proxy configuration
-const proxyOptions = {
-    target: 'http://127.0.0.1:6001',
-    changeOrigin: true,
-    ws: true,
-    logLevel: 'debug',
-    onError: (err, req, res) => {
-        console.error('Proxy Error:', err);
-        res.status(500).send('Proxy Error');
-    },
-    onProxyReq: (proxyReq, req, res) => {
-        // Log proxy requests for debugging
-        console.log('Proxying:', req.method, req.url, 'to', proxyOptions.target + req.url);
-    }
-};
+// const proxyOptions = {
+//   target: 'http://127.0.0.1:6001',
+//   changeOrigin: true,
+//   ws: true,
+//   logLevel: 'debug' as const,
+//   onError: (err: Error, req: express.Request, res: express.Response) => {
+//     console.error('Proxy Error:', err);
+//     res.status(500).send('Proxy Error');
+//   },
+//   onProxyReq: (proxyReq: any, req: express.Request, res: express.Response) => {
+//     // Log proxy requests for debugging
+//     console.log('Proxying:', req.method, req.url, 'to', proxyOptions.target + req.url);
+//   }
+// };
 // Apply proxy middleware
-app.use('/', (0, http_proxy_middleware_1.createProxyMiddleware)(proxyOptions));
+app.use('/', (0, express_http_proxy_1.default)("http://127.0.0.1:6001"));
 const port = Number(process.env.PORT) || 8080;
 const server = app.listen(port, '0.0.0.0', () => {
     console.log(`API Gateway is running on http://127.0.0.1:${port}`);

@@ -6,10 +6,10 @@
     "version": "1.0.0"
   },
   "host": "localhost:6001",
-  "basePath": "/",
+  "basePath": "/api",
   "tags": [
     {
-      "name": "Auth",
+      "name": "Authentication",
       "description": "Authentication endpoints"
     }
   ],
@@ -19,98 +19,199 @@
   "paths": {
     "/user-registration": {
       "post": {
-        "description": "",
+        "tags": ["Authentication"],
+        "summary": "Register a new user",
+        "description": "Register a new user by sending OTP to their email",
         "parameters": [
           {
             "name": "body",
             "in": "body",
+            "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "email": {
-                  "example": "any"
-                },
-                "name": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/definitions/UserRegistrationRequest"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          }
+            "description": "OTP sent successfully"
+          },
+          "400": { "description": "Validation error" },
+          "409": { "description": "User already exists" }
         }
       }
     },
     "/verify-user": {
       "post": {
-        "description": "",
+        "tags": ["Authentication"],
+        "summary": "Verify user OTP and complete registration",
+        "description": "Verify the OTP sent to user's email and complete the registration process",
         "parameters": [
           {
             "name": "body",
             "in": "body",
+            "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "email": {
-                  "example": "any"
-                },
-                "otp": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                },
-                "name": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/definitions/VerifyUserRequest"
             }
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "200": { "description": "User registered successfully" },
+          "400": { "description": "Validation error or user already exists" },
+          "401": { "description": "Invalid OTP" }
+        }
+      }
+    },
+    "/login-user": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "User login",
+        "description": "Authenticate user with email and password",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoginUserRequest"
+            }
           }
+        ],
+        "responses": {
+          "200": { "description": "Login successful" },
+          "400": { "description": "Missing email or password" },
+          "401": { "description": "Invalid credentials" },
+          "404": { "description": "User not found" }
+        }
+      }
+    },
+    "/refresh-token-user": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Refresh access token",
+        "description": "Refresh the access token using the refresh token from cookies",
+        "parameters": [],
+        "responses": {
+          "200": { "description": "Token refreshed successfully" },
+          "401": { "description": "Invalid or missing refresh token" },
+          "404": { "description": "User not found" }
+        }
+      }
+    },
+    "/forgot-password-user": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Send password reset OTP",
+        "description": "Send a password reset OTP to the user's email address",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ForgotPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Password reset OTP sent successfully" },
+          "400": { "description": "Email is required" },
+          "404": { "description": "User not found" }
+        }
+      }
+    },
+    "/verify-forgot-password-user": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Verify password reset OTP",
+        "description": "Verify the OTP sent for password reset and return a reset token",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/VerifyForgotPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": { "description": "OTP verified successfully" },
+          "400": { "description": "Validation error" },
+          "401": { "description": "Invalid OTP" },
+          "404": { "description": "User not found" }
+        }
+      }
+    },
+    "/reset-password-user": {
+      "post": {
+        "tags": ["Authentication"],
+        "summary": "Reset user password",
+        "description": "Reset user password using the reset token from OTP verification",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ResetPasswordRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Password reset successfully" },
+          "400": { "description": "Validation error" },
+          "401": { "description": "Invalid reset token" },
+          "404": { "description": "User not found" }
         }
       }
     }
   },
   "definitions": {
-    "VerifyUserRequest": {
-      "type": "object",
-      "properties": {
-        "email": {
-          "type": "string",
-          "example": "user@example.com"
-        },
-        "otp": {
-          "type": "string",
-          "example": "123456"
-        },
-        "password": {
-          "type": "string",
-          "example": "password123"
-        },
-        "name": {
-          "type": "string",
-          "example": "John Doe"
-        }
-      }
-    },
     "UserRegistrationRequest": {
       "type": "object",
       "properties": {
-        "email": {
-          "type": "string",
-          "example": "user@example.com"
-        },
-        "name": {
-          "type": "string",
-          "example": "John Doe"
-        }
+        "email": { "type": "string", "example": "user@example.com" },
+        "name": { "type": "string", "example": "John Doe" },
+        "password": { "type": "string", "example": "password123" }
+      }
+    },
+    "VerifyUserRequest": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "example": "user@example.com" },
+        "otp": { "type": "string", "example": "1234" },
+        "password": { "type": "string", "example": "password123" },
+        "name": { "type": "string", "example": "John Doe" }
+      }
+    },
+    "LoginUserRequest": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "example": "user@example.com" },
+        "password": { "type": "string", "example": "password123" }
+      }
+    },
+    "ForgotPasswordRequest": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "example": "user@example.com" }
+      }
+    },
+    "VerifyForgotPasswordRequest": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "example": "user@example.com" },
+        "otp": { "type": "string", "example": "1234" }
+      }
+    },
+    "ResetPasswordRequest": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "example": "user@example.com" },
+        "resetToken": { "type": "string", "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." },
+        "newPassword": { "type": "string", "example": "newpassword123" }
       }
     }
   }
