@@ -138,7 +138,7 @@ router.post("/login-user", auth_controller_1.loginUser);
 router.post("/refresh-token-user", auth_controller_1.refreshToken);
 router.post("/forgot-password-user", auth_controller_1.userForgotPassword);
 router.post("/reset-password-user", auth_controller_1.resetUserPassword);
-router.post("/verify-forgot-password-user", auth_controller_1.verifyForgotpasswordOtp);
+router.post("/verify-forgot-password-user", auth_controller_1.verifyUserForgotPassword);
 exports["default"] = router;
 
 
@@ -148,7 +148,7 @@ exports["default"] = router;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.resetUserPassword = exports.verifyForgotpasswordOtp = exports.userForgotPassword = exports.refreshToken = exports.loginUser = exports.verifyUser = exports.userRegistration = void 0;
+exports.resetUserPassword = exports.verifyUserForgotPassword = exports.userForgotPassword = exports.refreshToken = exports.loginUser = exports.verifyUser = exports.userRegistration = void 0;
 const tslib_1 = __webpack_require__(1);
 const auth_helper_1 = __webpack_require__(9);
 const prisma_1 = tslib_1.__importDefault(__webpack_require__(18));
@@ -538,32 +538,7 @@ exports.refreshToken = refreshToken;
  *         description: User not found
  */
 const userForgotPassword = async (req, res, next) => {
-    try {
-        const { email } = req.body;
-        if (!email) {
-            throw new error_handler_1.ValidationError("Email is required", 400);
-        }
-        console.log('🔍 Checking if user exists for password reset:', email);
-        // Check if user exists
-        const user = await prisma_1.default.users.findUnique({ where: { email } });
-        if (!user) {
-            throw new error_handler_1.ValidationError("User not found", 404);
-        }
-        // Check OTP restrictions
-        await (0, auth_helper_1.checkOtpRestrictions)(email, next);
-        await (0, auth_helper_1.trackOtpRequests)(email, next);
-        console.log('📧 Sending password reset OTP to:', email);
-        await (0, auth_helper_1.sendOtp)(email, user.name, "password-reset-mail"); // Using password reset template
-        console.log('✅ Password reset OTP sent to:', email);
-        res.status(200).json({
-            message: "Password reset OTP sent successfully. Please check your email.",
-            status: "success"
-        });
-    }
-    catch (error) {
-        console.error('❌ Forgot password error:', error);
-        return next(error);
-    }
+    await (0, auth_helper_1.handleForgotPassword)(req, res, next, "User");
 };
 exports.userForgotPassword = userForgotPassword;
 /**
@@ -616,35 +591,10 @@ exports.userForgotPassword = userForgotPassword;
  *       404:
  *         description: User not found
  */
-const verifyForgotpasswordOtp = async (req, res, next) => {
-    try {
-        const { email, otp } = req.body;
-        if (!email || !otp) {
-            throw new error_handler_1.ValidationError("Email and OTP are required", 400);
-        }
-        console.log('🔍 Verifying password reset OTP for:', email);
-        // Check if user exists
-        const user = await prisma_1.default.users.findUnique({ where: { email } });
-        if (!user) {
-            throw new error_handler_1.ValidationError("User not found", 404);
-        }
-        // Verify OTP
-        await (0, auth_helper_1.verifyOtp)(email, otp, next);
-        // Generate a temporary token for password reset (valid for 10 minutes)
-        const resetToken = jsonwebtoken_1.default.sign({ id: user.id, email: user.email, type: "password_reset" }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "10m" });
-        console.log('✅ Password reset OTP verified for:', email);
-        res.status(200).json({
-            message: "OTP verified successfully. You can now reset your password.",
-            resetToken,
-            status: "success"
-        });
-    }
-    catch (error) {
-        console.error('❌ Verify forgot password OTP error:', error);
-        return next(error);
-    }
+const verifyUserForgotPassword = async (req, res, next) => {
+    await (0, auth_helper_1.verifyForgotpasswordOtp)(req, res, next);
 };
-exports.verifyForgotpasswordOtp = verifyForgotpasswordOtp;
+exports.verifyUserForgotPassword = verifyUserForgotPassword;
 /**
  * @swagger
  * /api/reset-password-user:
@@ -700,32 +650,29 @@ exports.verifyForgotpasswordOtp = verifyForgotpasswordOtp;
  */
 const resetUserPassword = async (req, res, next) => {
     try {
-        const { resetToken, newPassword } = req.body;
-        if (!resetToken || !newPassword) {
+        const { email, newPassword } = req.body;
+        if (!email || !newPassword) {
             throw new error_handler_1.ValidationError("Reset token and new password are required", 400);
         }
         if (newPassword.length < 6) {
             throw new error_handler_1.ValidationError("Password must be at least 6 characters long", 400);
         }
-        console.log('🔍 Verifying reset token and updating password');
-        // Verify the reset token
-        const decoded = jsonwebtoken_1.default.verify(resetToken, process.env.ACCESS_TOKEN_SECRET);
-        if (!decoded || decoded.type !== "password_reset") {
-            throw new error_handler_1.ValidationError("Invalid or expired reset token", 401);
-        }
         // Check if user exists
-        const user = await prisma_1.default.users.findUnique({ where: { id: decoded.id } });
+        const user = await prisma_1.default.users.findUnique({ where: { email } });
         if (!user) {
             throw new error_handler_1.ValidationError("User not found", 404);
+        }
+        const isSamePassword = await bcryptjs_1.default.compare(newPassword, user.password);
+        if (isSamePassword) {
+            throw new error_handler_1.ValidationError("New password cannot be the same as the old password", 400);
         }
         // Hash the new password
         const hashedPassword = await bcryptjs_1.default.hash(newPassword, 10);
         // Update the user's password
         await prisma_1.default.users.update({
-            where: { id: decoded.id },
+            where: { email },
             data: { password: hashedPassword }
         });
-        console.log('✅ Password reset successfully for:', user.email);
         res.status(200).json({
             message: "Password reset successfully",
             status: "success"
@@ -745,12 +692,13 @@ exports.resetUserPassword = resetUserPassword;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.verifyOtp = exports.sendOtp = exports.trackOtpRequests = exports.checkOtpRestrictions = exports.validateRegistrationData = void 0;
+exports.verifyForgotpasswordOtp = exports.handleForgotPassword = exports.verifyOtp = exports.sendOtp = exports.trackOtpRequests = exports.checkOtpRestrictions = exports.validateRegistrationData = void 0;
 const tslib_1 = __webpack_require__(1);
 const error_handler_1 = __webpack_require__(5);
 const redis_1 = tslib_1.__importDefault(__webpack_require__(10));
 const sendEmail_1 = __webpack_require__(12);
 const crypto_1 = tslib_1.__importDefault(__webpack_require__(17));
+const prisma_1 = tslib_1.__importDefault(__webpack_require__(18));
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const validateRegistrationData = (data, userType) => {
     const { email, password, name, phone_number, country } = data;
@@ -811,6 +759,50 @@ const verifyOtp = async (email, otp, next) => {
     await redis_1.default.del(`otp:${email}`, failedAttemptsKey); // Clear OTP after successful verification
 };
 exports.verifyOtp = verifyOtp;
+const handleForgotPassword = async (req, res, next, userType) => {
+    try {
+        const { email } = req.body;
+        if (!email || !emailRegex.test(email)) {
+            throw new error_handler_1.ValidationError("Invalid email format", 400);
+        }
+        const user = userType === "User" && await prisma_1.default.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new error_handler_1.ValidationError(`User with email ${email} does not exist`, 404);
+        }
+        await (0, exports.checkOtpRestrictions)(email, next);
+        await (0, exports.trackOtpRequests)(email, next);
+        await (0, exports.sendOtp)(email, user.name, "forgot-password-user-mail");
+        res.status(200).json({ message: "OTP sent to your email ! Please Verify Your Email" });
+    }
+    catch (error) {
+        next(error);
+    }
+};
+exports.handleForgotPassword = handleForgotPassword;
+const verifyForgotpasswordOtp = async (req, res, next) => {
+    try {
+        const { email, otp } = req.body;
+        if (!email || !otp) {
+            throw new error_handler_1.ValidationError("Email and OTP are required", 400);
+        }
+        // Check if user exists
+        const user = await prisma_1.default.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new error_handler_1.ValidationError("User not found", 404);
+        }
+        // Verify OTP
+        await (0, exports.verifyOtp)(email, otp, next);
+        res.status(200).json({
+            message: "OTP verified successfully. You can now reset your password.",
+            status: "success"
+        });
+    }
+    catch (error) {
+        console.error('❌ Verify forgot password OTP error:', error);
+        return next(error);
+    }
+};
+exports.verifyForgotpasswordOtp = verifyForgotpasswordOtp;
 
 
 /***/ }),

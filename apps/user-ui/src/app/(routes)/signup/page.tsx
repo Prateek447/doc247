@@ -79,8 +79,7 @@ const Signup = () => {
   const signupMutation = useMutation({
     mutationFn: async (data: FormData) => {
         // Using API Gateway instead of direct auth service
-        const response = await axios.post(`http://127.0.0.1:8080/api/user-registration`, data);
-        console.log(JSON.stringify(response?.data))
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URI}/api/user-registration`, data);
         return response.data;
     },
     onSuccess: (_, formData) => {
@@ -104,15 +103,13 @@ const Signup = () => {
     mutationFn: async () => {
       if(!userData) return;
       // Using API Gateway instead of direct auth service
-      const response = await axios.post(`http://127.0.0.1:8080/api/verify-user`,{
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URI}/api/verify-user`,{
         ...userData,
         otp: otp.join("")
       })
       return response.data;
     },
     onSuccess: () => {
-      // Show success message and redirect to login
-      alert("Registration successful! Please login with your credentials.");
       router.push("/login")
     },
     onError: (error: any) => {

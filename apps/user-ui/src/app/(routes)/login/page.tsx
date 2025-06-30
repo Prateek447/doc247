@@ -33,7 +33,7 @@ const Login = () => {
   const loginMutation = useMutation({
     mutationFn: async (data : FormData) => {
       // Using API Gateway instead of direct auth service
-      const response = await axios.post(`http://127.0.0.1:8080/api/login-user`, data, { withCredentials : true})
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URI}/api/login-user`, data, { withCredentials : true})
       return response.data;
     },
     onSuccess: (data) =>{

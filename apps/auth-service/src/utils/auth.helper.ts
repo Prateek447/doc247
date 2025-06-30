@@ -1,8 +1,9 @@
-import { NextFunction } from "express";
+import { NextFunction, Request, Response } from "express";
 import { ValidationError } from "../../../../packages/error-handler";
 import redis from "../../../../packages/libs/redis";
 import { sendEmail } from "./sendEmail";
 import crypto from "crypto";
+import prisma from "@packages/libs/prisma";
 
 
 
@@ -74,3 +75,55 @@ export const verifyOtp = async (email: string, otp: string, next: NextFunction) 
     }
     await redis.del(`otp:${email}`, failedAttemptsKey); // Clear OTP after successful verification
 }   
+
+export const handleForgotPassword = async (req: Request, res: Response, next: NextFunction, userType: "User" | "Seller") => { 
+    try {
+        const { email } = req.body;
+
+        if(!email || !emailRegex.test(email)) {
+            throw new ValidationError("Invalid email format", 400);
+        }
+
+        const user = userType === "User" && await prisma.users.findUnique({ where: { email } }) 
+
+        if (!user) {
+            throw new ValidationError(`User with email ${email} does not exist`, 404);
+        }
+
+        await checkOtpRestrictions(email, next);
+        await trackOtpRequests(email, next);
+
+        await sendOtp(email, user.name, "forgot-password-user-mail");
+        res.status(200).json({ message: "OTP sent to your email ! Please Verify Your Email" });
+    } catch (error) {
+        next(error);
+    }
+}
+
+export const verifyForgotpasswordOtp = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { email, otp } = req.body;
+        
+        if (!email || !otp) {
+            throw new ValidationError("Email and OTP are required", 400);
+        }
+
+        
+        // Check if user exists
+        const user = await prisma.users.findUnique({ where: { email } });
+        if (!user) {
+            throw new ValidationError("User not found", 404);
+        }
+
+        // Verify OTP
+        await verifyOtp(email, otp, next);
+
+        res.status(200).json({
+            message: "OTP verified successfully. You can now reset your password.",
+            status: "success"
+        });
+    } catch (error) {
+        console.error('❌ Verify forgot password OTP error:', error);
+        return next(error);
+    }
+}
